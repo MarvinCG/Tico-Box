@@ -55,6 +55,9 @@ for n, ln in enumerate(open(SRC, encoding='utf-8').read().splitlines(), 1):
             errors.append(f'línea {n}: clave de situación repetida «{cur["k"]}»')
         sits.append(cur)
         continue
+    if ln.startswith('~'):   # entrada eliminada: su ID queda reservado
+        entries.append({'i': len(entries), 'gone': 1, 'tx': None, 'st': 'eliminada'})
+        continue
     if cur is None:
         errors.append(f'línea {n}: entrada antes de la primera situación')
         continue
@@ -88,7 +91,13 @@ IDS = ROOT + '/tools/ids.json'
 prev = json.load(open(IDS, encoding='utf-8')) if os.path.exists(IDS) else []
 if len(entries) < len(prev):
     errors.append(f'hay {len(entries)} entradas pero ya se publicaron {len(prev)}: nunca borrar entradas, reemplazarlas en su lugar')
-changed = [i for i, tx in enumerate(prev) if i < len(entries) and entries[i]['tx'] != tx]
+reused = [i for i, tx in enumerate(prev) if tx is None and i < len(entries) and not entries[i].get('gone')]
+if reused:
+    errors.append(f'IDs eliminados no se reutilizan: {reused[:20]}')
+changed = [i for i, tx in enumerate(prev) if tx is not None and i < len(entries) and not entries[i].get('gone') and entries[i]['tx'] != tx]
+gone_now = [i for i, tx in enumerate(prev) if tx is not None and i < len(entries) and entries[i].get('gone')]
+if gone_now:
+    print(f'Aviso: {len(gone_now)} entradas eliminadas (sus IDs quedan reservados): {gone_now[:10]}…')
 if changed:
     print(f'Aviso: cambió el texto tico de {len(changed)} IDs (reemplazo en el mismo lugar): {changed[:20]}')
 
@@ -119,7 +128,7 @@ def patterns(tx):
     return out
 
 
-active = [e for e in entries if e['st'] == 'ok']
+active = [e for e in entries if e.get('st') == 'ok' and not e.get('gone')]
 pats = [(e['i'], p) for e in active for p in patterns(e['tx'])]
 for s_ in sits:
     for l in s_['dl']:
@@ -138,5 +147,5 @@ js = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
 with open(OUT + '/data.js', 'w', encoding='utf-8') as fh:
     fh.write('/* Generado por tools/prep.py desde tools/content.txt. No editar a mano. */\n')
     fh.write(f'window.SITS={js(sits)};\nwindow.ENTRIES={js(active)};\n')
-json.dump([e['tx'] for e in entries], open(IDS, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-print(f'content.txt: {len(entries)} entradas · publicadas («ok»): {len(active)} · líneas de diálogo publicadas: {sum(len(s["dl"]) for s in sits)} · {len(used)} emojis')
+json.dump([None if e.get('gone') else e['tx'] for e in entries], open(IDS, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
+print(f'content.txt: {len(entries)} IDs ({sum(1 for e in entries if not e.get("gone"))} entradas, {sum(1 for e in entries if e.get("gone"))} eliminadas) · publicadas («ok»): {len(active)} · líneas de diálogo publicadas: {sum(len(s["dl"]) for s in sits)} · {len(used)} emojis')

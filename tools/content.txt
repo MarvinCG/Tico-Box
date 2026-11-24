@@ -15,6 +15,7 @@
 #
 # IDs estables: el ID de cada entrada es su posición en este archivo (0, 1, 2…).
 # Nunca borrar ni reordenar entradas: se reemplazan en el mismo lugar.
+# Una entrada eliminada deja la línea «~ eliminada (…)» en su lugar: su ID queda reservado y nunca se reutiliza.
 # Las líneas de diálogo usan la clave de su situación y su posición dentro de ella.
 
 ## fam | Conocer a la familia tica | Poznajemy kostarykańską rodzinę | 👨‍👩‍👧‍👦 | Llegar a la casa, saludar a la suegra y a los tíos, comer y despedirse. En Costa Rica se ustedea a casi todo el mundo, también dentro de la familia. | Przyjazd do domu, powitanie teściowej i wujków, jedzenie i pożegnanie. W Kostaryce prawie do wszystkich mówi się „usted”, także w rodzinie.
@@ -55,44 +56,36 @@ Por dicha | Por suerte, afortunadamente | Na szczęście | neutral | Por dicha l
 > Yo | Muchas gracias por todo, doña Rosa. | Muchas gracias por todo, señora Rosa. | Bardzo dziękuję za wszystko, pani Roso.
 > Doña Rosa | Con mucho gusto. Vuelva cuando quiera, que Dios me la acompañe. | De nada. Vuelve cuando quieras, que te vaya bien. | Nie ma za co. Przychodź, kiedy chcesz, niech cię Bóg prowadzi.
 
-## ami | Con amigos («mae») | Z przyjaciółmi („mae”) | 🍻 | Hablar como los ticos entre amigos: mae, pura vida, tuanis, qué chiva. Aquí aparece el voseo del Valle Central. | Jak mówią Kostarykanie między przyjaciółmi: mae, pura vida, tuanis, qué chiva. Tu pojawia się voseo z Doliny Centralnej.
-Mae | Tío / tío (España); amigo, chico | Stary / ziomek | coloquial | Mae, ¿qué hacés? | La palabra más tica que hay. Sirve para llamar a alguien, como muletilla y como «tipo, persona» («ese mae»). Hombres y mujeres la usan. | 🧑 | |
-¡Pura vida! | ¡Qué bien! / Hola / Gracias / Todo bien | Super! / Cześć / Dzięki / Wszystko gra | informal | —¿Cómo está? —¡Pura vida! | Saludo, despedida, agradecimiento, respuesta a «¿cómo está?»… Es también el lema del país. | 🌴 | |
-¿Qué es la vara? | ¿Qué pasa? / ¿De qué se trata? | O co chodzi? / Co jest grane? | coloquial | Mae, ¿qué es la vara con Andrés? | «Vara» = cosa, asunto. Palabra comodín. | ❓ | |
-Una vara | Una cosa, un asunto | Sprawa / rzecz | coloquial | Tengo que contarle una vara. | | 📦 | |
-Chunche | Cosa, cachivache | Rzecz / ustrojstwo | coloquial | Páseme ese chunche. | Para cualquier objeto cuyo nombre no viene a la mente. | 🔧 | |
-Tuanis | Genial, chévere | Super / spoko | coloquial | Qué tuanis su camisa. | | 😎 | |
-¡Qué chiva! | ¡Qué genial! | Ale czad! / Ekstra! | coloquial | ¿Se va para Tortuguero? ¡Qué chiva! | También «está chiva» = está muy bueno. | 🤩 | |
-¡A cachete! | ¡Buenísimo! / ¡Perfecto! | Świetnie! / Bomba! | coloquial | —¿Vamos a la playa el sábado? —¡A cachete! | | 👌 | |
-¡Qué nota! / ¡Qué buena nota! | ¡Qué bien! | Ale fajnie! | coloquial | Qué buena nota que vino. | «Nota» = situación, ambiente. «Qué mala nota» = qué mal. | 🎶 | |
-Brutal | Increíble, buenísimo | Mega / niesamowite | coloquial | El concierto estuvo brutal. | Siempre positivo en este uso. | 🔥 | |
-Birra | Cerveza | Piwo | coloquial | ¿Nos tomamos unas birras? | | 🍺 | |
-Guaro | Aguardiente (licor de caña) | Wódka z trzciny (gorzałka) | coloquial | Un guaro con hielo, por favor. | El guaro Cacique es el más conocido. «Chiliguaro» = trago de guaro con salsa picante. | 🥃 | |
-Una boca / unas bocas | Una tapa / unas tapas | Przekąska do piwa | neutral | ¿Qué bocas tienen hoy? | En muchos bares la boca viene gratis con el trago. | 🍢 | |
-Estar de goma | Tener resaca | Mieć kaca | coloquial | Hoy estoy de goma, no me hablen fuerte. | | 🤕 | |
-Andar tapis | Estar borracho | Być pijanym | coloquial | Ese mae anda tapis desde las seis. | | 🥴 | |
-Vacilar | Bromear, divertirse | Żartować / dobrze się bawić | coloquial | Tranquilo, solo lo estoy vacilando. | «Un vacilón» = algo muy divertido. | 😜 | |
-¡Qué vacilón! | ¡Qué divertido! | Ale zabawa! | coloquial | La fiesta de anoche, ¡qué vacilón! | | 🎉 | |
-Jalar | Ser novios / salir con alguien | Chodzić ze sobą | coloquial | Andrés y María están jalando. | «Jalar» también es irse: «Ya jalo» = ya me voy. | 💑 | |
-Echar los perros | Coquetear, intentar conquistar | Podrywać | coloquial | Ese mae le está echando los perros a María. | | 😏 | |
-Mopri | Primo (también amigo) | Kuzyn / ziomek | coloquial | Voy con mi mopri al partido. | Es «primo» al revés. | 👬 | |
-Compa | Compañero, amigo | Kumpel | coloquial | Es compa mío del cole. | | 🤜 | |
-El cole | El colegio (secundaria) | Liceum / szkoła średnia | neutral | Nos conocemos desde el cole. | «La escuela» = primaria, «el cole» = secundaria, «la U» = universidad. | 🏫 | |
-Hablar paja | Decir tonterías, hablar por hablar | Gadać bzdury | coloquial | Ese mae solo habla paja. | «Paja» = mentira o tontería. | 💬 | |
-Rajón / rajona | Presumido, fanfarrón | Chwalipięta | coloquial | No sea rajón, nadie le cree. | «Rajar» = presumir. | 🦚 | |
-Jetón / jetona | Mentiroso, exagerado | Kłamczuch / gaduła | coloquial | Qué jetón, eso nunca pasó. | | 🤥 | |
-Hacerse el mae | Hacerse el tonto | Udawać głupiego | coloquial | No se haga el mae, usted sabe de qué hablo. | | 🙄 | |
-¡Nos vidrios! | ¡Nos vemos! | Na razie! / Do zobaczenia! | coloquial | Bueno, mae, nos vidrios. | Juego de palabras con «vemos / vidrios». | 👋 | |
-Ser un pura vida | Ser buena persona, alguien tranquilo y agradable | Być porządnym, sympatycznym człowiekiem | coloquial | Su hermano es un pura vida, le cae bien a todo el mundo. | «Pura vida» también funciona como adjetivo para personas. | 😇 | |
-Dar pelota | Prestar atención, hacer caso (a veces, coquetear) | Zwracać uwagę / dawać komuś szansę | coloquial | Le escribe todos los días, pero ella no le da pelota. | | 👀 | |
-Estar en otra nota | Estar distraído, pensando en otra cosa | Być myślami gdzie indziej | coloquial | Perdón, estaba en otra nota, ¿qué me dijo? | | 🎧 | |
-> Andrés | ¡Diay, mae! ¿Qué hacés? | ¡Hola, tío! ¿Qué haces? | Siema, stary! Co robisz?
-> Yo | ¡Pura vida! Aquí, viendo qué es la vara para hoy. | ¡Todo bien! Aquí, viendo qué planes hay para hoy. | Spoko! Tu, patrzę, co dziś robimy.
-> Andrés | Vamos por unas birras al bar de la esquina. Tienen bocas gratis. | Vamos a tomar unas cervezas al bar de la esquina. Tienen tapas gratis. | Chodźmy na piwo do baru na rogu. Mają darmowe przekąski.
-> Yo | ¡A cachete! Pero solo un toque, mañana tengo brete. | ¡Perfecto! Pero solo un rato, mañana trabajo. | Super! Ale tylko na chwilę, jutro pracuję.
-> Andrés | Tranquila, nada de quedar de goma. | Tranquila, nada de terminar con resaca. | Spokojnie, żadnego kaca.
-> Yo | Diay, eso dijo usted la otra vez. | Bueno, eso dijiste la otra vez. | No, to samo mówiłeś ostatnio.
-> Andrés | ¡No sea jetona! Jale, pues. | ¡No exageres! Vamos, pues. | Nie przesadzaj! No to idziemy.
+~ eliminada (ID 28, situación «ami»)
+~ eliminada (ID 29, situación «ami»)
+~ eliminada (ID 30, situación «ami»)
+~ eliminada (ID 31, situación «ami»)
+~ eliminada (ID 32, situación «ami»)
+~ eliminada (ID 33, situación «ami»)
+~ eliminada (ID 34, situación «ami»)
+~ eliminada (ID 35, situación «ami»)
+~ eliminada (ID 36, situación «ami»)
+~ eliminada (ID 37, situación «ami»)
+~ eliminada (ID 38, situación «ami»)
+~ eliminada (ID 39, situación «ami»)
+~ eliminada (ID 40, situación «ami»)
+~ eliminada (ID 41, situación «ami»)
+~ eliminada (ID 42, situación «ami»)
+~ eliminada (ID 43, situación «ami»)
+~ eliminada (ID 44, situación «ami»)
+~ eliminada (ID 45, situación «ami»)
+~ eliminada (ID 46, situación «ami»)
+~ eliminada (ID 47, situación «ami»)
+~ eliminada (ID 48, situación «ami»)
+~ eliminada (ID 49, situación «ami»)
+~ eliminada (ID 50, situación «ami»)
+~ eliminada (ID 51, situación «ami»)
+~ eliminada (ID 52, situación «ami»)
+~ eliminada (ID 53, situación «ami»)
+~ eliminada (ID 54, situación «ami»)
+~ eliminada (ID 55, situación «ami»)
+~ eliminada (ID 56, situación «ami»)
+~ eliminada (ID 57, situación «ami»)
 
 ## trat | Usted, vos y tú | Usted, vos i tú | 🗣️ | Cómo tratar a la gente en Costa Rica: el ustedeo general, el voseo del Valle Central y por qué el «tú» suena extranjero. | Jak zwracać się do ludzi w Kostaryce: powszechne „usted”, voseo z Doliny Centralnej i dlaczego „tú” brzmi obco.
 ¿Cómo está usted? | ¿Cómo estás? | Jak się masz? | neutral | Hola, mi amor, ¿cómo está usted? | El «usted» tico no siempre es distancia: se usa con la pareja, los hijos, los amigos y las mascotas. Para una hablante de polaco: no equivale al «Pan/Pani». | 🙂 | |
@@ -271,108 +264,84 @@ Vieras qué rico | No te imaginas lo rico que está | Nie uwierzysz, jakie pyszn
 > Yo | ¡Qué dicha! Muchas gracias. | ¡Qué bien! Muchas gracias. | Super! Bardzo dziękuję.
 > Vendedor | A usted. ¡La espero el otro sábado! | Gracias a usted. ¡La espero el próximo sábado! | To ja dziękuję. Czekam w przyszłą sobotę!
 
-## futbol | Fútbol | Piłka nożna | ⚽ | El fútbol se vive en todas partes: la Sele, los clásicos, la mejenga del barrio y las expresiones del narrador. | Piłką żyje się wszędzie: reprezentacja, klasyki, osiedlowy mecz i powiedzonka komentatorów.
-La Sele | La selección nacional | Reprezentacja narodowa | coloquial | Hoy juega la Sele contra México. | | 🇨🇷 | |
-Una mejenga | Un partido informal, una pachanga | Mecz dla zabawy, „kopanina” | coloquial | Mejenga en la plaza a las cuatro. | | ⚽ | |
-Mejenguear | Jugar un partido informal | Pograć w piłkę | coloquial | Los domingos vamos a mejenguear. | | 🥅 | |
-La plaza | El campo de fútbol del pueblo | Boisko we wsi | neutral | Nos vemos en la plaza. | En los pueblos, la plaza suele ser la cancha frente a la iglesia. | 🏟️ | |
-El Saprissa / los morados | Deportivo Saprissa | Klub Deportivo Saprissa | neutral | Mi suegro es morado de corazón. | Uno de los dos equipos grandes; su color es el morado. | 💜 | |
-La Liga / los manudos | Liga Deportiva Alajuelense | Klub Liga Deportiva Alajuelense | neutral | Los manudos ganaron el clásico. | El otro grande, de Alajuela; colores rojo y negro. | ❤️ | Alajuela |
-El clásico | Partido Saprissa contra Liga | Klasyk Saprissa–Liga | neutral | El domingo es el clásico, no se habla de otra cosa. | | 🔥 | |
-Los erizos / los brumosos | Herediano / Cartaginés | Herediano / Cartaginés | neutral | Los brumosos por fin salieron campeones. | Apodos de otros equipos históricos. | 🦔 | |
-¿De qué equipo es? | ¿De qué equipo eres? | Komu kibicujesz? | neutral | ¿Usted de qué equipo es? | Pregunta casi obligatoria al conocer a alguien. | 🤔 | |
-¡Golazo! | ¡Qué gol! | Ale gol! | neutral | ¡Golazo en el último minuto! | | 🥅 | |
-El mundial | La Copa del Mundo | Mistrzostwa świata | neutral | En el mundial de 2014 todo el país salió a la calle. | Costa Rica llegó a cuartos de final en Brasil 2014; se recuerda con mucho orgullo. | 🏆 | |
-Ir a la Sabana | Ir al Estadio Nacional | Iść na Stadion Narodowy | neutral | Vamos a la Sabana a ver a la Sele. | El Estadio Nacional está en el parque La Sabana. | 🏟️ | San José |
-Una barra | Una hinchada organizada | Grupa kibiców | neutral | La barra no paró de cantar. | | 📣 | |
-Penal | Penalti | Rzut karny | neutral | ¡Fue penal, árbitro! | | ⚠️ | |
-Marcar / anotar | Meter gol | Strzelić gola | neutral | Anotó en el último minuto. | | 🎯 | |
-Hacer una sopa | Hacer un caño (pasar el balón entre las piernas) | Założyć siatkę | coloquial | Le hizo una sopa al defensa. | | 🦵 | | dudoso
-Ser muy pata | Ser malo jugando | Być drewnianym (słabo grać) | coloquial | Ese mae es muy pata, no lo pongan de delantero. | | 🦶 | | dudoso
-Jugar de local / de visita | Jugar en casa / fuera | Grać u siebie / na wyjeździe | neutral | El Saprissa juega de visita en Alajuela. | | 🏠 | |
-Empatar / quedar tablas | Empatar | Zremisować | neutral | Quedaron uno a uno. | | 🤝 | |
-Ver el partido en una soda | Ver el partido en un bar | Oglądać mecz w barze | neutral | Vamos a ver el partido en la soda, que tiene tele grande. | | 📺 | |
-Pura vida, ¡ganamos! | ¡Qué bien, ganamos! | Super, wygraliśmy! | informal | —¿Y el partido? —¡Pura vida, ganamos! | | 🎉 | |
-Árbitro vendido | Árbitro comprado, parcial | Sprzedany sędzia | coloquial | ¡Árbitro vendido! | Grito clásico desde la gradería. | 🧑‍⚖️ | |
-La gradería | Las gradas | Trybuny | neutral | Estábamos en la gradería de sombra. | | 🪜 | |
-> Andrés | ¿Usted de qué equipo es? | ¿Tú de qué equipo eres? | A ty komu kibicujesz?
-> Yo | De ninguno todavía. ¿Usted es morado? | De ninguno todavía. ¿Tú eres del Saprissa? | Jeszcze nikomu. Ty jesteś za Saprissą?
-> Andrés | ¡Morado de corazón! El domingo es el clásico contra los manudos. | ¡Del Saprissa de corazón! El domingo es el clásico contra la Liga. | Saprissa całym sercem! W niedzielę klasyk z Ligą.
-> Yo | ¿Vamos a la gradería o lo vemos en la soda? | ¿Vamos al estadio o lo vemos en un bar? | Idziemy na trybuny czy oglądamy w barze?
-> Andrés | En la soda, que hay chifrijo. Y el sábado hay mejenga en la plaza. | En el bar, que hay chifrijo. Y el sábado hay partido informal en el campo del barrio. | W barze, bo jest chifrijo. A w sobotę gramy na boisku.
-> Yo | Diay, yo juego, pero soy muy pata. | Bueno, yo juego, pero soy muy mala jugando. | No, zagram, ale jestem drewniana.
-> Andrés | Tranquila, aquí todos somos pata. | Tranquila, aquí todos jugamos mal. | Spokojnie, tu wszyscy są drewniani.
+~ eliminada (ID 186, situación «futbol»)
+~ eliminada (ID 187, situación «futbol»)
+~ eliminada (ID 188, situación «futbol»)
+~ eliminada (ID 189, situación «futbol»)
+~ eliminada (ID 190, situación «futbol»)
+~ eliminada (ID 191, situación «futbol»)
+~ eliminada (ID 192, situación «futbol»)
+~ eliminada (ID 193, situación «futbol»)
+~ eliminada (ID 194, situación «futbol»)
+~ eliminada (ID 195, situación «futbol»)
+~ eliminada (ID 196, situación «futbol»)
+~ eliminada (ID 197, situación «futbol»)
+~ eliminada (ID 198, situación «futbol»)
+~ eliminada (ID 199, situación «futbol»)
+~ eliminada (ID 200, situación «futbol»)
+~ eliminada (ID 201, situación «futbol»)
+~ eliminada (ID 202, situación «futbol»)
+~ eliminada (ID 203, situación «futbol»)
+~ eliminada (ID 204, situación «futbol»)
+~ eliminada (ID 205, situación «futbol»)
+~ eliminada (ID 206, situación «futbol»)
+~ eliminada (ID 207, situación «futbol»)
+~ eliminada (ID 208, situación «futbol»)
 
-## brete | El brete | Praca | 💼 | Vocabulario del trabajo en Costa Rica: el brete, la jefa, la quincena, el aguinaldo y el cafecito de la tarde. | Słownictwo pracy w Kostaryce: robota, szefowa, wypłata co dwa tygodnie, trzynastka i kawka po południu.
-El brete | El trabajo | Robota / praca | coloquial | Mañana tengo brete temprano. | | 💼 | |
-Bretear | Trabajar | Pracować / harować | coloquial | Estoy breteando desde las siete. | | 🛠️ | |
-Bretero / bretera | Trabajador, muy trabajador | Pracuś | coloquial | Mi hermano es muy bretero. | | 👷 | |
-Estar en una carga / ser una carga | Ser muy bueno en algo | Być w czymś mistrzem | coloquial | Esa mae es una carga para Excel. | «Carga» = experto. «Qué carga» = qué crack. | 🏅 | |
-La quincena | El sueldo que se paga cada dos semanas | Wypłata co dwa tygodnie | neutral | Me pagan la quincena el viernes. | En Costa Rica muchos salarios se pagan cada quince días. | 💰 | |
-El aguinaldo | La paga extra de diciembre | Trzynastka | neutral | Con el aguinaldo pagamos las deudas. | Por ley se paga en diciembre. Se gasta rapidísimo. | 🎁 | |
-La planilla | La nómina | Lista płac | neutral | ¿Usted está en planilla o por servicios profesionales? | | 📋 | |
-Un cafecito | Una pausa para el café | Przerwa na kawę | neutral | ¿Vamos por un cafecito? | El café de la tarde (a eso de las tres) es casi sagrado. | ☕ | |
-La jefa / el jefe | La jefa / el jefe | Szefowa / szef | neutral | La jefa está en reunión. | | 👩‍💼 | |
-Una reunión | Una reunión | Spotkanie / zebranie | neutral | Tenemos reunión a las diez. | | 🗓️ | |
-Ahorita se lo mando. | Se lo envío en un momento. | Zaraz to wyślę. | neutral | —¿Y el informe? —Ahorita se lo mando. | Ojo con el «ahorita»: puede tardar. | 📤 | |
-Estar a mil | Estar muy ocupado | Mieć urwanie głowy | coloquial | Esta semana estoy a mil. | | 🏃 | |
-Volar pata | Caminar mucho / trabajar duro | Się nachodzić / nabiegać | coloquial | Hoy volé pata todo el día haciendo vueltas. | | 👟 | |
-Hacer vueltas | Hacer recados, gestiones | Załatwiać sprawy | neutral | Salgo temprano a hacer unas vueltas. | | 🔁 | |
-Pulsearla | Esforzarse mucho para lograr algo | Starać się z całych sił | coloquial | Hay que pulsearla para conseguir ese puesto. | «Pulseador» = alguien que se esfuerza (o que insiste demasiado). | 💪 | |
-Ponerse las pilas | Ponerse a trabajar en serio | Wziąć się do roboty | coloquial | Me tengo que poner las pilas con el proyecto. | | 🔋 | |
-Jugar de vivo | Hacerse el listo | Cwaniakować | coloquial | No juegue de vivo con la jefa. | | 🦊 | |
-Serruchar el piso | Intrigar para quitarle el puesto a alguien | Podkopywać czyjąś pozycję | coloquial | Ese compañero me está serruchando el piso. | | 🪚 | |
-Un chorizo | Un negocio corrupto, un fraude | Przekręt / afera | coloquial | Ese contrato es un chorizo. | «Choricear» = robar o hacer trampa con dinero público. | 🌭 | |
-Feriado | Día festivo | Dzień wolny / święto | neutral | El lunes es feriado. | | 📅 | |
-Andar con el tiempo encima | Tener prisa, ir justo de tiempo | Mieć nóż na gardle | neutral | Ando con el tiempo encima, después hablamos. | | ⏰ | |
-¿Me colabora con…? | ¿Me ayuda con…? | Pomoże mi Pan/Pani z…? | neutral | ¿Me colabora con esta firma? | «Colaborar» = ayudar, muy usado en atención al cliente y oficinas. | 🤝 | |
-Con todo gusto | Claro, con mucho gusto | Z największą przyjemnością | formal | —¿Me colabora? —Con todo gusto. | | 😊 | |
-Teletrabajo | Trabajo remoto | Praca zdalna | neutral | Los viernes hago teletrabajo. | | 💻 | |
-Las vacaciones | Las vacaciones | Urlop | neutral | Voy a sacar vacaciones en diciembre. | «Sacar vacaciones» = tomarse vacaciones. | 🏖️ | |
-Qué pereza | Qué flojera, qué poca gana | Nie chce mi się | coloquial | Lunes otra vez, qué pereza. | | 🥱 | |
-> Jefa | Buenos días. ¿Me colabora con el informe para las once? | Buenos días. ¿Me ayudas con el informe para las once? | Dzień dobry. Pomoże mi Pani z raportem na jedenastą?
-> Yo | Con todo gusto. Ahorita se lo mando. | Por supuesto. Se lo envío en un momento. | Oczywiście. Zaraz go wyślę.
-> Compañero | Diay, ¿«ahorita» de verdad o ahorita tica? | Bueno, ¿«ahora» de verdad o «ahora» a la costarricense? | No, „zaraz” naprawdę czy „zaraz” po kostarykańsku?
-> Yo | De verdad. Hoy ando a mil. | De verdad. Hoy estoy muy ocupada. | Naprawdę. Dziś mam urwanie głowy.
-> Compañero | Tranquila, a las tres hacemos un cafecito. | Tranquila, a las tres tomamos un café. | Spokojnie, o trzeciej idziemy na kawę.
-> Yo | ¡A cachete! Y el viernes es quincena. | ¡Perfecto! Y el viernes pagan. | Super! A w piątek wypłata.
-> Compañero | Y en diciembre, aguinaldo. ¡Pura vida! | Y en diciembre, la paga extra. ¡Qué bien! | A w grudniu trzynastka. Super!
+~ eliminada (ID 209, situación «brete»)
+~ eliminada (ID 210, situación «brete»)
+~ eliminada (ID 211, situación «brete»)
+~ eliminada (ID 212, situación «brete»)
+~ eliminada (ID 213, situación «brete»)
+~ eliminada (ID 214, situación «brete»)
+~ eliminada (ID 215, situación «brete»)
+~ eliminada (ID 216, situación «brete»)
+~ eliminada (ID 217, situación «brete»)
+~ eliminada (ID 218, situación «brete»)
+~ eliminada (ID 219, situación «brete»)
+~ eliminada (ID 220, situación «brete»)
+~ eliminada (ID 221, situación «brete»)
+~ eliminada (ID 222, situación «brete»)
+~ eliminada (ID 223, situación «brete»)
+~ eliminada (ID 224, situación «brete»)
+~ eliminada (ID 225, situación «brete»)
+~ eliminada (ID 226, situación «brete»)
+~ eliminada (ID 227, situación «brete»)
+~ eliminada (ID 228, situación «brete»)
+~ eliminada (ID 229, situación «brete»)
+~ eliminada (ID 230, situación «brete»)
+~ eliminada (ID 231, situación «brete»)
+~ eliminada (ID 232, situación «brete»)
+~ eliminada (ID 233, situación «brete»)
+~ eliminada (ID 234, situación «brete»)
 
-## tram | Trámites (EBAIS, banco, Sinpe) | Sprawy urzędowe (przychodnia, bank, Sinpe) | 🏦 | Ir al EBAIS, sacar cita en la Caja, hacer fila en el banco, pagar con Sinpe Móvil y entender las siglas de la vida diaria. | Wizyta w EBAIS, umawianie się w Caja, kolejka w banku, płatności Sinpe Móvil i skróty z codziennego życia.
-El EBAIS | El centro de salud de atención primaria | Przychodnia podstawowej opieki zdrowotnej | neutral | Tengo cita en el EBAIS a las siete. | Equipo Básico de Atención Integral en Salud: la primera puerta del sistema público. | 🏥 | |
-La Caja | La seguridad social (CCSS) | Kostarykański ZUS / NFZ (CCSS) | neutral | ¿Usted está asegurada en la Caja? | Caja Costarricense de Seguro Social. «Ir a la Caja» = ir al médico público. | 🩺 | |
-Sacar cita | Pedir hora / cita | Umówić wizytę | neutral | Saqué cita por la app del EDUS. | | 📅 | |
-La ficha | El número de turno | Numerek w kolejce | neutral | Llegué a las cinco para agarrar ficha. | | 🎫 | |
-Hacer fila | Hacer cola | Stać w kolejce | neutral | Hay que hacer fila en el banco. | | 🧍 | |
-La cédula | El documento de identidad | Dowód osobisty | neutral | ¿Me presta la cédula? | Para extranjeros: el DIMEX. | 🪪 | |
-El número de cédula | El número de identificación | Numer dowodu | neutral | Me pidieron el número de cédula para todo. | En Costa Rica la cédula se pide en casi cualquier trámite, incluso en el súper para la factura. | 🔢 | |
-Sinpe Móvil | Transferencia inmediata por celular | Natychmiastowy przelew na numer telefonu | neutral | Le pago por Sinpe Móvil. | Del Banco Central; casi todo el país lo usa. | 📱 | |
-Sinpear | Pagar o transferir por Sinpe | Przelać przez Sinpe | coloquial | Ahorita le sinpeo. | Verbo nuevo y muy común. | 💸 | | dudoso
-El Banco Nacional / el BCR | Bancos públicos | Banki państwowe | neutral | Tengo cuenta en el Nacional. | | 🏦 | |
-El cajero | El cajero automático | Bankomat | neutral | Voy al cajero a sacar plata. | | 🏧 | |
-Sacar plata | Retirar dinero | Wypłacić pieniądze | neutral | Necesito sacar plata antes de ir a la feria. | | 💵 | |
-La factura electrónica | La factura | Faktura elektroniczna | neutral | ¿La factura a nombre de quién? | | 🧾 | |
-El recibo de la luz / del agua | La factura de la electricidad / del agua | Rachunek za prąd / za wodę | neutral | Ya llegó el recibo de la luz. | | 💡 | |
-El AyA | La empresa pública del agua | Państwowe wodociągi | neutral | El AyA cortó el agua todo el día. | Acueductos y Alcantarillados. | 🚰 | |
-El ICE | La empresa pública de electricidad y telecomunicaciones | Państwowa firma energetyczna i telekomunikacyjna | neutral | Pagué el celular del ICE. | Su marca de telefonía es Kölbi. | ⚡ | |
-El marchamo | El impuesto anual de circulación | Roczny podatek drogowy / ubezpieczenie OC | neutral | Hay que pagar el marchamo antes de fin de año. | Incluye un seguro obligatorio. | 🚗 | |
-La Riteve | La inspección técnica de vehículos | Przegląd techniczny | neutral | Mi carro no pasó la Riteve. | | 🔧 | |
-La Muni | La municipalidad, el ayuntamiento | Urząd gminy | coloquial | Hay que ir a la Muni por el permiso. | | 🏛️ | |
-La ventanilla | El mostrador de atención | Okienko | neutral | Pase a la ventanilla tres. | | 🪟 | |
-Venga mañana. | Vuelva mañana. | Proszę przyjść jutro. | neutral | El sistema está caído, venga mañana. | Frase temida en cualquier trámite. | 😩 | |
-El sistema está caído | El sistema no funciona | System nie działa | neutral | No se puede, el sistema está caído. | | 💻 | |
-Una constancia | Un certificado, un justificante | Zaświadczenie | neutral | Ocupo una constancia de salario. | | 📄 | |
-Una incapacidad | Una baja médica | Zwolnienie lekarskie | neutral | El doctor me dio tres días de incapacidad. | | 🤒 | |
-La farmacia del EBAIS | La farmacia del centro de salud | Apteka przychodni | neutral | Las pastillas las retira en la farmacia del EBAIS. | | 💊 | |
-El chunche de las fichas | La máquina de turnos | Automat z numerkami | coloquial | Saque la ficha en el chunche de la entrada. | | 🎟️ | |
-¿Qué ocupo traer? | ¿Qué tengo que traer? | Co muszę przynieść? | neutral | Para el pasaporte, ¿qué ocupo traer? | | 📋 | |
-> Funcionaria | Buenos días. ¿Trae ficha? | Buenos días. ¿Tiene número? | Dzień dobry. Ma Pani numerek?
-> Yo | Sí, la cuarenta y dos. Vengo a abrir una cuenta. | Sí, el cuarenta y dos. Vengo a abrir una cuenta. | Tak, czterdzieści dwa. Chcę otworzyć konto.
-> Funcionaria | ¿Me presta su DIMEX y un recibo de la luz? | ¿Me da su documento de residencia y una factura de la luz? | Poproszę DIMEX i rachunek za prąd.
-> Yo | Aquí están. ¿Qué más ocupo? | Aquí los tiene. ¿Qué más necesito? | Proszę. Co jeszcze potrzebuję?
-> Funcionaria | Una constancia de salario. Sin eso, diay… venga mañana. | Un certificado de salario. Sin eso, pues… vuelva mañana. | Zaświadczenie o zarobkach. Bez tego… proszę przyjść jutro.
-> Yo | ¡Qué salado! Pero puedo activar Sinpe Móvil hoy, ¿verdad? | ¡Qué mala suerte! Pero puedo activar Sinpe Móvil hoy, ¿no? | Ale pech! Ale Sinpe Móvil mogę dziś aktywować, prawda?
-> Funcionaria | Sí, eso sí. Con mucho gusto le colaboro. | Sí, eso sí. Con gusto la ayudo. | Tak, to tak. Chętnie pomogę.
+~ eliminada (ID 235, situación «tram»)
+~ eliminada (ID 236, situación «tram»)
+~ eliminada (ID 237, situación «tram»)
+~ eliminada (ID 238, situación «tram»)
+~ eliminada (ID 239, situación «tram»)
+~ eliminada (ID 240, situación «tram»)
+~ eliminada (ID 241, situación «tram»)
+~ eliminada (ID 242, situación «tram»)
+~ eliminada (ID 243, situación «tram»)
+~ eliminada (ID 244, situación «tram»)
+~ eliminada (ID 245, situación «tram»)
+~ eliminada (ID 246, situación «tram»)
+~ eliminada (ID 247, situación «tram»)
+~ eliminada (ID 248, situación «tram»)
+~ eliminada (ID 249, situación «tram»)
+~ eliminada (ID 250, situación «tram»)
+~ eliminada (ID 251, situación «tram»)
+~ eliminada (ID 252, situación «tram»)
+~ eliminada (ID 253, situación «tram»)
+~ eliminada (ID 254, situación «tram»)
+~ eliminada (ID 255, situación «tram»)
+~ eliminada (ID 256, situación «tram»)
+~ eliminada (ID 257, situación «tram»)
+~ eliminada (ID 258, situación «tram»)
+~ eliminada (ID 259, situación «tram»)
+~ eliminada (ID 260, situación «tram»)
+~ eliminada (ID 261, situación «tram»)
 
 ## playa | Playa y naturaleza | Plaża i przyroda | 🏖️ | Ir a la playa, entender el clima («verano» e «invierno»), los animales y las expresiones de paseo. | Wyjazd na plażę, zrozumienie klimatu („lato” i „zima”), zwierzęta i wyrażenia wycieczkowe.
 El verano | La estación seca (diciembre a abril) | Pora sucha (od grudnia do kwietnia) | neutral | En verano vamos a Guanacaste. | Nada que ver con los meses del verano europeo. | ☀️ | |

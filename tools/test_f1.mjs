@@ -17,8 +17,9 @@ mkdirSync(join(ROOT, 'shots'), { recursive: true });
 const SRC = readFileSync(join(ROOT, 'tools/content.txt'), 'utf8').split('\n').filter(l => l.trim() && !(l.startsWith('#') && !l.startsWith('##')));
 const srcSits = SRC.filter(l => l.startsWith('##')).length, srcEntries = SRC.filter(l => !l.startsWith('#') && !l.startsWith('>'));
 const srcOk = srcEntries.map((l, i) => [i, l.split('|')[8]?.trim()]).filter(([, st]) => st === 'ok').map(([i]) => i);
-ok(srcSits >= 12 && srcSits <= 15, `content.txt: ${srcSits} situaciones (12–15)`);
-ok(srcEntries.length >= 350 && srcEntries.length <= 450, `content.txt: ${srcEntries.length} entradas (350–450)`);
+ok(srcSits === 11, `content.txt: ${srcSits} situaciones (se eliminaron amigos, fútbol, brete y trámites)`);
+const gone = srcEntries.filter(l => l.startsWith('~')).length;
+ok(srcEntries.length === 391 && gone === 106, `content.txt: ${srcEntries.length} IDs, ${srcEntries.length - gone} entradas y ${gone} eliminadas`);
 const js = readFileSync(join(ROOT, 'web/data.js'), 'utf8');
 const win = {}; new Function('window', js)(win);
 const { SITS, ENTRIES } = win;
@@ -30,7 +31,8 @@ const okIds = new Set(srcOk);
 ok(SITS.every(s => s.dl.every(l => l.u && l.u.length && l.u.every(i => okIds.has(i)))), 'cada línea de diálogo publicada usa al menos una entrada «ok»');
 ok(new Set(SITS.flatMap(s => s.dl.map(l => l.vk))).size === SITS.reduce((a, s) => a + s.dl.length, 0), 'claves de diálogo únicas');
 const IDS = JSON.parse(readFileSync(join(ROOT, 'tools/ids.json'), 'utf8'));
-ok(srcEntries.length >= IDS.length && IDS.every((tx, i) => srcEntries[i].split('|')[0].trim() === tx), `IDs estables: las ${IDS.length} entradas registradas siguen en su lugar`);
+ok(srcEntries.length >= IDS.length && IDS.every((tx, i) => tx === null ? srcEntries[i].startsWith('~') : srcEntries[i].split('|')[0].trim() === tx), `IDs estables: los ${IDS.length} IDs registrados siguen en su lugar (eliminados reservados)`);
+ok(!SITS.some(s => ['ami', 'futbol', 'brete', 'tram'].includes(s.k)), 'no quedan las situaciones eliminadas');
 const shown = SITS.map((s, k) => k).filter(k => SITS[k].dl.length || ENTRIES.some(e => e.s === k));
 
 /* ---- servidor y navegador */
