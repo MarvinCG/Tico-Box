@@ -1,0 +1,16 @@
+# Fuente de contenido de Tico Box. prep.py la convierte en web/data.js.
+# El contenido se carga en la Fase 1. Este archivo define el formato.
+#
+# Situación:
+#   ## clave | título en español | tytuł po polsku | emoji | descripción en español | opis po polsku
+# Entrada (una por línea, debajo de su situación):
+#   tico | neutro | polaco | registro | ejemplo | nota | emoji | zona | estado
+#   registro: formal · neutral · informal · coloquial · vulgar
+#   estado:   vacío (validado por Aaron) o «dudoso» (falta que Aaron lo valide)
+#   El polaco lo propone Claude y queda «por revisar» hasta que la estudiante lo corrija en su app.
+# Línea de diálogo:
+#   > personaje | tico | neutro | polaco
+#
+# IDs estables: el ID de cada entrada es su posición en este archivo (0, 1, 2…).
+# Nunca borrar ni reordenar entradas: se reemplazan en el mismo lugar.
+# Las líneas de diálogo usan la clave de su situación y su posición dentro de ella.

@@ -1,0 +1,17 @@
+{
+  "name": "tico-box-tools",
+  "version": "1.0.0",
+  "description": "Herramientas de Tico Box",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "prep": "python3 prep.py",
+    "test": "node test_f0.mjs"
+  },
+  "dependencies": {
+    "@twemoji/svg": "^15.0.0"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0"
+  }
+}
