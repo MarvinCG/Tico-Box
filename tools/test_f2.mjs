@@ -52,7 +52,7 @@ async function device(name, url, vp, lang) {
 }
 const sync = d => d.p.evaluate(() => TBSync.run('test'));
 const knownIds = d => d.p.evaluate(() => Object.keys(window.__tb.S().cards).filter(k => window.__tb.S().cards[k].k).map(Number).sort((a, b) => a - b));
-const ids = await (async () => { const d = await device('ids'); const r = await d.p.evaluate(() => window.__tb.E.filter(Boolean).slice(0, 6).map(e => e.i)); await d.ctx.close(); return r; })();
+const ids = await (async () => { const d = await device('ids'); const r = await d.p.evaluate(() => window.__tb.E().filter(Boolean).slice(0, 6).map(e => e.i)); await d.ctx.close(); return r; })();
 
 /* ---- 1. Aaron crea el enlace de la estudiante sin conectar su dispositivo */
 const T = await device('tutor', B, { width: 1280, height: 860 });
@@ -83,7 +83,7 @@ ok((await P.p.textContent('#synccard')).includes('Synchronizacja'), 'tarjeta de 
 await P.p.screenshot({ path: join(ROOT, 'shots/f2_estudiante_pl.png') });
 
 /* ---- 3. progreso en el teléfono: «La sé» y fichas vistas */
-for (const i of ids.slice(0, 3)) { await P.p.evaluate(i => window.__tb.A.entry({ i }), i); await P.p.click('[data-a="known"]'); await P.p.click('#ov .btn.g'); }
+for (const i of ids.slice(0, 3)) { await P.p.evaluate(i => window.__tb.A.entry({ i }), i); await P.p.click('[data-a="known"]'); await P.p.click('#ov .sheet [data-a="close"]'); }
 await sync(P);
 ok(JSON.stringify(Object.keys(remote().cards).map(Number).sort((a, b) => a - b)) === JSON.stringify(ids.slice(0, 3)), 'el progreso del teléfono llega al repo (3 frases aprendidas)');
 const pdev = await P.p.evaluate(() => window.__tb.S().dev);
@@ -94,9 +94,9 @@ const Q = await device('tablet', B + '#' + code, { width: 1280, height: 800 }, '
 await Q.p.waitForTimeout(800);
 ok(JSON.stringify(await knownIds(Q)) === JSON.stringify(ids.slice(0, 3)), 'la tablet recibe las 3 frases aprendidas del teléfono');
 await Q.p.evaluate(() => { window.__tb.A.tab({ k: 'me' }); });
-ok((await Q.p.textContent('main')).includes('3/'), 'Progreso de la tablet muestra 3 aprendidas');
-await Q.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[0]); await Q.p.click('[data-a="known"]'); await Q.p.click('#ov .btn.g');   // desmarca la primera
-await Q.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[4]); await Q.p.click('[data-a="known"]'); await Q.p.click('#ov .btn.g');   // marca otra
+{ const tx = await Q.p.textContent('main'); ok(tx.includes('3/'), 'Progreso de la tablet muestra 3 aprendidas'); if (!tx.includes('3/')) console.log(await Q.p.evaluate(() => JSON.stringify({ n: window.__tb.E().filter(Boolean).length, hid: window.__tb.S().hid, cards: window.__tb.S().cards }))); }
+await Q.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[0]); await Q.p.click('[data-a="known"]'); await Q.p.click('#ov .sheet [data-a="close"]');   // desmarca la primera
+await Q.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[4]); await Q.p.click('[data-a="known"]'); await Q.p.click('#ov .sheet [data-a="close"]');   // marca otra
 await sync(Q); await sync(P);
 const want = [ids[1], ids[2], ids[4]];
 ok(JSON.stringify(await knownIds(P)) === JSON.stringify(want) && JSON.stringify(await knownIds(Q)) === JSON.stringify(want), 'gana el cambio más nuevo por frase: teléfono y tablet quedan iguales');
@@ -107,12 +107,12 @@ ok(await Q.p.evaluate(() => window.__tb.S().cfg.ui) === 'es' && await P.p.evalua
 const C = await device('pc', B + '#' + code, { width: 1366, height: 900 }, 'es');
 await C.p.waitForTimeout(800);
 ok(JSON.stringify(await knownIds(C)) === JSON.stringify(want), 'la PC recibe el mismo progreso');
-await C.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[5]); await C.p.click('[data-a="known"]'); await C.p.click('#ov .btn.g');
+await C.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[5]); await C.p.click('[data-a="known"]'); await C.p.click('#ov .sheet [data-a="close"]');
 force409 = 1; await sync(C);
 ok(remote().cards[ids[5]] && remote().cards[ids[5]].k === 1 && await C.p.evaluate(() => !TBSync.state.err), 'conflicto 409: vuelve a leer, fusiona y guarda');
 
 /* ---- 6. sin conexión: avisa sin marcar error grave; al volver, sincroniza */
-await P.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[3]); await P.p.click('[data-a="known"]'); await P.p.click('#ov .btn.g');
+await P.p.evaluate(i => { window.__tb.A.entry({ i }); }, ids[3]); await P.p.click('[data-a="known"]'); await P.p.click('#ov .sheet [data-a="close"]');
 offline = true; await sync(P);
 ok(await P.p.evaluate(() => TBSync.state.err) === 'offline', 'sin conexión: estado «offline»');
 offline = false; await sync(P);

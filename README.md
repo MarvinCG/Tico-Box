@@ -58,6 +58,31 @@ La app sincroniza al abrir, al cambiar de app, cada 4 minutos, unos segundos des
 
 > ⚠️ El enlace y el código llevan el token. Compártelos solo con la estudiante y con tus dispositivos. El código va en el `#` de la dirección (el navegador nunca lo envía al servidor) y la app lo borra de la barra de direcciones al leerlo. Si se filtra, revoca el token en GitHub y crea otro.
 
+### Página del tutor
+
+**https://marvincg.github.io/Tico-Box/tutor.html** — solo en español. Se conecta con el mismo repositorio y un token (o pegando el enlace `TBX1.`); **no** se conecta al progreso de la app.
+
+| Pestaña | Qué hace |
+|---|---|
+| ➕ Agregar | texto tico, neutro, polaco (opcional), registro, situación, ejemplo, nota y foto de la galería. El emoji se asigna solo. «Revisar» usa [LanguageTool](https://dev.languagetool.org/public-http-api) en español y oculta las alertas de las palabras de la **lista tica** (todas las frases aprobadas + las que agregas o marcas con «Es tico, permitir»). |
+| 🎙️ Grabar en serie | recorre lo que no tiene tu voz o quedó desactualizado, filtrado por situación: ver → grabar → escuchar → guardar o repetir → siguiente. Contador «X de Y grabadas». La subida va en cola, en segundo plano y con reintentos. Teclado: Espacio, Enter, P, →. |
+| 📚 Frases | filtros *sin voz · desactualizada · sin foto · ocultas · polaco por revisar*; por frase o línea de diálogo: editar, grabar, foto, ocultar y eliminar definitivamente. |
+| 💬 Preguntas | la bandeja de «Pregunta al tutor»; tu respuesta le aparece a ella en la ficha y en Progreso. |
+
+Grabación: [MediaRecorder](https://developer.mozilla.org/es/docs/Web/API/MediaRecorder) → recorte de silencios y normalización → MP3 de 24 kHz y 48 kbps con [lamejs](https://github.com/zhuker/lamejs) (LGPL). Fotos: JPEG, lado mayor 720 px, calidad 0.82. Cada grabación guarda el texto que se grabó: si el texto cambia, la app la ignora y la frase queda «desactualizada» hasta que la grabes de nuevo.
+
+Si agregas una frase sin polaco queda «polaco pendiente»: Claude lo propone en la próxima actualización y queda «por revisar» para ella.
+
+**En la app de ella:** tu voz en velocidad normal y lenta (`playbackRate` 0.75 con [`preservesPitch`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/preservesPitch)), diálogos con «Escuchar el diálogo» (solo las líneas grabadas), tus fotos en lugar del emoji, tus frases nuevas, y en cada ficha: editar (sobre todo el polaco), ocultar, eliminar y **Pregunta al tutor**. En Progreso puede descargar todas las grabaciones para usarlas sin internet.
+
+| Archivo del repo de datos | Contenido |
+|---|---|
+| `progress.json` | progreso, ocultos (`hid`) y ediciones (`ed`) de los dos |
+| `words.json` | frases del tutor (IDs desde 5000; solo se agregan, las borradas se marcan) |
+| `voice.json`, `voice/*.mp3` | tus grabaciones, con el texto grabado |
+| `img.json`, `img/*.jpg` | tus fotos |
+| `asks.json` | preguntas y respuestas |
+
 ---
 
 ## Contenido
@@ -91,7 +116,8 @@ Con pantalla ancha o en horizontal, la navegación pasa a un riel lateral y el c
 ```
 web/              la app (HTML/CSS/JS sin frameworks)
   app.js          app de la estudiante · textos en T.es y T.pl (nada en inglés)
-  sync.js         sincronización con el repo privado y reglas de fusión
+  sync.js         sincronización con el repo privado, reglas de fusión y medios del tutor (IndexedDB)
+  tutor.html/js   página del tutor · recorder.js grabador · vendor/lame.min.js codificador MP3
   data.js         generado por tools/prep.py — no editar a mano
   sw.js           caché sin conexión: red primero para la app, caché primero para emojis e íconos
   e/              emojis Twemoji locales (CC-BY 4.0) · icons/ íconos de la PWA
@@ -102,12 +128,13 @@ tools/
   test_f0.mjs     pruebas con Playwright: carga, es/pl, sin conexión, sin voz sintética y prueba monkey
   test_f1.mjs     integridad del contenido, recorrido por todas las situaciones y fichas, sin contenido vulgar
   test_f2.mjs     sincronización con GitHub simulado: enlace de la estudiante, 3 dispositivos, fusión, 409, sin conexión
+  test_f3.mjs     página del tutor y lado de la estudiante (micrófono falso, GitHub y LanguageTool simulados)
 ```
 
 ```bash
 cd tools && npm i            # Twemoji y Playwright
 python3 prep.py              # regenerar web/data.js y web/e/
-npm test                     # pruebas F0, F1 y F2 (levantan su propio servidor local)
+npm test                     # pruebas F0 a F3 (levantan su propio servidor local)
 cd ../web && python3 -m http.server 8765   # probar en http://localhost:8765
 ```
 

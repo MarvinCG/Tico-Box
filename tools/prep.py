@@ -11,7 +11,7 @@ TW = ROOT + '/tools/node_modules/@twemoji/svg/'
 SRC = ROOT + '/tools/content.txt'
 REG = {'formal': 'F', 'neutral': 'N', 'informal': 'I', 'coloquial': 'C'}   # sin registro vulgar (decisión de Aaron, F1)
 ESTADOS = ('', 'ok', 'corrección', 'correccion', 'dudoso', 'quitar')
-UI_EMOJI = '📦 🇨🇷 🇵🇱 💬 📝'   # íconos fijos de la interfaz (situación sin ícono, frase sin emoji…)
+UI_EMOJI = '📦 🇨🇷 🇵🇱 💬 📝 🧑‍🏫'   # íconos fijos de la interfaz (situación sin ícono, frase sin emoji…)
 
 if not os.path.isdir(TW):
     sys.exit('Falta @twemoji/svg: ejecuta «npm i» dentro de tools/.')

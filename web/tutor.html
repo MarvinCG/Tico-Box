@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#002b7f">
+<meta name="robots" content="noindex">
+<title>Tico Box · Tutor</title>
+<link rel="icon" href="icons/icon-192.png">
+<link rel="stylesheet" href="style.css">
+<style>
+  body{user-select:text;-webkit-user-select:text;overflow:auto}
+  .tw{max-width:1180px;margin:0 auto;padding:16px max(16px,env(safe-area-inset-left)) 60px}
+  .tgrid{display:grid;gap:16px}
+  @media (min-width:900px){.tgrid{grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);align-items:start}}
+  label{display:block;font-size:13px;font-weight:700;color:var(--mute);margin:12px 0 5px}
+  textarea.field{font-family:inherit;font-size:16px;min-height:64px}
+  .big-in{font-size:22px;font-weight:700}
+  .issue{border-radius:14px;padding:10px 12px;margin-top:8px;background:var(--ambb)}
+  .issue.ok{background:var(--okb)}.issue.bad{background:var(--badb)}
+  .issue b{display:block}.issue .ctx{font-size:14px;color:var(--mute);margin:3px 0}.issue mark{background:var(--amb);color:#fff;border-radius:4px;padding:0 3px}
+  .sug{display:inline-block;margin:4px 6px 0 0;padding:5px 10px;border-radius:9px;background:var(--card);color:var(--co);font-weight:700;box-shadow:var(--sh)}
+  .seg{flex-wrap:wrap}.seg.r button{padding:8px 12px}
+  .tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:14px}.tabs button{padding:10px 14px;border-radius:12px;background:var(--card);box-shadow:var(--sh);font-weight:700;color:var(--mute)}
+  .tabs button.on{background:var(--co);color:#fff}.tabs .n{background:var(--bad);color:#fff;border-radius:99px;padding:0 7px;margin-left:6px;font-size:12px}
+  .lvl{height:8px;background:var(--line);border-radius:9px;overflow:hidden}.lvl i{display:block;height:100%;width:0;background:var(--ok);transition:width .08s}
+  .rbtns{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px}.rbtns .btn{min-height:56px}
+  .recb{font-size:19px}.recc{border:2px solid var(--co)}
+  .vlist{max-height:62vh;overflow-y:auto}.vlist .wrow.sel{background:var(--sky);border-radius:12px;padding-left:8px}
+  @media (max-width:560px){.rbtns{grid-template-columns:1fr 1fr}.rbtns .recb{grid-column:1/3}}
+  @media (hover:none){.kbh{display:none}}
+  h3.sec{font-size:15px;margin:18px 0 8px;padding-top:12px;border-top:1px solid var(--line)}
+  .filebtn{display:flex;align-items:center;justify-content:center;cursor:pointer}
+  .phrow{display:flex;gap:12px;align-items:center}.thumb{width:84px;height:84px;object-fit:cover;border-radius:14px}
+  .bdg{font-size:15px;white-space:nowrap}.wrow.dim b{text-decoration:line-through;opacity:.6}
+  .hidc{border-color:var(--amb)}
+  .lt{font-size:12px;color:var(--mute);margin-top:16px}.lt a{color:var(--co)}
+  .serial-tx{font-size:clamp(26px,5vw,40px);font-weight:800;line-height:1.2;margin:8px 0}
+  .q-item{border-top:1px solid var(--line);padding:12px 0}.q-item:first-child{border-top:0}
+  .up{position:fixed;right:16px;bottom:16px;background:var(--card);box-shadow:var(--sh);border-radius:14px;padding:10px 14px;font-weight:700;z-index:30}
+  .up.err{background:var(--badb);color:var(--bad)}
+  .top{position:sticky;top:0;z-index:10}
+</style>
+</head><body>
+<div class="top"><h1>Tico Box<small>Tutor</small></h1><span id="upst"></span></div>
+<div class="tw" id="tw"></div>
+<div id="upbox"></div>
+<script src="data.js"></script><script src="vendor/lame.min.js"></script><script src="recorder.js"></script><script src="tutor.js"></script>
+</body></html>

@@ -1,10 +1,14 @@
 (function () {
 'use strict';
 /* Tico Box — app de la estudiante. Arquitectura copiada y adaptada de Polski Box.
-   Sin voz sintética: la única voz es la grabación del tutor (llega en la Fase 3). */
-const SITS = window.SITS || [], E = [];   // E[id] -> entrada; solo llegan las publicadas («ok»), así que E tiene huecos (las del tutor empiezan en CB)
-(window.ENTRIES || []).forEach(e => { E[e.i] = e; });
+   Sin voz sintética: la única voz es la grabación del tutor; lo que no grabó se estudia por texto. */
 const CB = 5000, SITE = 'https://marvincg.github.io/Tico-Box/';
+const SITS = (window.SITS || []).slice();
+/* situación para las frases que el tutor agrega sin situación */
+const TSIT = SITS.push({ k: 'tutor', es: 'De tu tutor', pl: 'Od nauczyciela', ic: '1f9d1-200d-1f3eb', ds: 'Frases que tu tutor agregó para ti.', dp: 'Zwroty, które nauczyciel dodał specjalnie dla ciebie.', dl: [] }) - 1;
+const BASE = [];   // BASE[id] -> entrada publicada («ok»); hay huecos porque los IDs son estables
+(window.ENTRIES || []).forEach(e => { BASE[e.i] = e; });
+let CUSTOM = [], ASKS = [], E = [];   // E[id] -> entrada con las ediciones aplicadas (las del tutor desde CB)
 const $ = (s, r) => (r || document).querySelector(s);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 const today = () => { const d = new Date(); return Math.floor((d.getTime() - d.getTimezoneOffset() * 6e4) / 864e5) + (window.__shift || 0); };
@@ -43,7 +47,19 @@ es: {
  syncWarn: 'El enlace y el código llevan el token de acceso: compártelos solo con la estudiante y con tus dispositivos. Si se filtran, revoca el token en GitHub.',
  syncPublic: 'Ojo: ese repositorio es público. El progreso debe ir en un repositorio privado.', linked: '¡Listo! Tu app quedó conectada.',
  e_token: 'GitHub rechazó el token. Revísalo o crea uno nuevo.', e_forbidden: 'El token no tiene acceso a este repositorio (Contents: lectura y escritura).', e_repo: 'No se encontró el repositorio. Revisa dueño/nombre y el acceso del token.', e_offline: 'Sin conexión. Se sincronizará después.', e_conflict: 'Otro dispositivo sincronizó al mismo tiempo. Inténtalo de nuevo.',
- ago_now: 'ahora mismo', ago_m: 'hace {n} min', ago_h: 'hace {n} h', ago_d: 'hace {n} d'
+ ago_now: 'ahora mismo', ago_m: 'hace {n} min', ago_h: 'hace {n} h', ago_d: 'hace {n} d',
+ say: 'Escuchar', slow: 'Lento', playAll: 'Escuchar el diálogo', noVoiceDl: 'Este diálogo todavía no tiene voz: léelo en voz alta.',
+ plPend: 'polaco pendiente', edited: 'editada', fromTutor: 'de tu tutor', hidTag: 'oculta',
+ hide: 'Ocultar', unhide: 'Volver a mostrar', hidden: 'Ocultas', hiddenSub: 'No aparecen en la app. Tu tutor también puede ocultar frases.',
+ hidToast: 'Oculta. La encuentras en Frases › Ocultas.', unhidToast: 'Visible otra vez.',
+ del: 'Eliminar', delQ: '¿Eliminar para siempre? Toca otra vez', delSub: 'Desaparece de tu app en todos tus dispositivos. No se puede recuperar.', delToast: 'Eliminada.',
+ edit: 'Editar', editT: 'Editar', editSub: 'Corrige sobre todo la traducción al polaco. Tu tutor ve el cambio al sincronizar.',
+ eSave: 'Guardar', eSaved: 'Cambios guardados.', eRestore: 'Volver al original', eRestored: 'Se restauró el original.', cancel: 'Cancelar',
+ askBtn: 'Pregunta al tutor', askSub: '¿No entiendes este uso? Escríbele a tu tutor; la respuesta aparece aquí y en Progreso.',
+ askPh: 'Por ejemplo: ¿cuándo se usa esto? ¿Lo puedo decir en el trabajo?', askSend: 'Enviar pregunta', askSent: 'Pregunta enviada.',
+ askNoSync: 'Para preguntar, la app tiene que estar conectada (Progreso › Sincronización).', askWait: 'Esperando respuesta…', myAsks: 'Tus preguntas',
+ vTitle: 'Grabaciones del tutor', vAll: 'Descargar todas las grabaciones', vAllSub: 'Para escucharlas sin internet. En este dispositivo: {n} de {t}.',
+ e_nosync: 'La app no está conectada.', tutorLink: 'Página del tutor (agregar frases y grabar tu voz):'
 },
 pl: {
  today: 'Dziś', sit: 'Sytuacje', words: 'Zwroty', me: 'Postępy',
@@ -77,7 +93,19 @@ pl: {
  syncWarn: 'Link i kod zawierają token dostępu: udostępniaj je tylko uczennicy i swoim urządzeniom. Jeśli wyciekną, unieważnij token w GitHub.',
  syncPublic: 'Uwaga: to repozytorium jest publiczne. Postępy muszą być w repozytorium prywatnym.', linked: 'Gotowe! Twoja aplikacja jest połączona.',
  e_token: 'GitHub odrzucił token. Sprawdź go albo utwórz nowy.', e_forbidden: 'Token nie ma dostępu do tego repozytorium (Contents: odczyt i zapis).', e_repo: 'Nie znaleziono repozytorium. Sprawdź właściciela/nazwę i dostęp tokenu.', e_offline: 'Brak połączenia. Zsynchronizuję później.', e_conflict: 'Inne urządzenie synchronizowało w tym samym czasie. Spróbuj ponownie.',
- ago_now: 'przed chwilą', ago_m: '{n} min temu', ago_h: '{n} godz. temu', ago_d: '{n} dni temu'
+ ago_now: 'przed chwilą', ago_m: '{n} min temu', ago_h: '{n} godz. temu', ago_d: '{n} dni temu',
+ say: 'Posłuchaj', slow: 'Wolno', playAll: 'Posłuchaj dialogu', noVoiceDl: 'Ten dialog nie ma jeszcze nagrania: przeczytaj go na głos.',
+ plPend: 'polski w przygotowaniu', edited: 'zmienione', fromTutor: 'od nauczyciela', hidTag: 'ukryte',
+ hide: 'Ukryj', unhide: 'Pokaż znowu', hidden: 'Ukryte', hiddenSub: 'Nie pojawiają się w aplikacji. Nauczyciel też może ukrywać zwroty.',
+ hidToast: 'Ukryto. Znajdziesz je w Zwroty › Ukryte.', unhidToast: 'Znowu widoczne.',
+ del: 'Usuń', delQ: 'Usunąć na zawsze? Dotknij jeszcze raz', delSub: 'Zniknie z aplikacji na wszystkich twoich urządzeniach. Nie da się go odzyskać.', delToast: 'Usunięto.',
+ edit: 'Edytuj', editT: 'Edytuj', editSub: 'Popraw przede wszystkim tłumaczenie na polski. Nauczyciel zobaczy zmianę po synchronizacji.',
+ eSave: 'Zapisz', eSaved: 'Zmiany zapisane.', eRestore: 'Przywróć oryginał', eRestored: 'Przywrócono oryginał.', cancel: 'Anuluj',
+ askBtn: 'Zapytaj nauczyciela', askSub: 'Nie rozumiesz tego użycia? Napisz do nauczyciela; odpowiedź pojawi się tutaj i w Postępach.',
+ askPh: 'Na przykład: kiedy się tego używa? Czy mogę tak powiedzieć w pracy?', askSend: 'Wyślij pytanie', askSent: 'Pytanie wysłane.',
+ askNoSync: 'Żeby zapytać, aplikacja musi być połączona (Postępy › Synchronizacja).', askWait: 'Czekam na odpowiedź…', myAsks: 'Twoje pytania',
+ vTitle: 'Nagrania nauczyciela', vAll: 'Pobierz wszystkie nagrania', vAllSub: 'Żeby słuchać ich bez internetu. Na tym urządzeniu: {n} z {t}.',
+ e_nosync: 'Aplikacja nie jest połączona.', tutorLink: 'Strona nauczyciela (dodawanie zwrotów i nagrań):'
 }
 };
 const t = (k, v) => { let s = (T[S.cfg.ui] || T.es)[k]; if (s == null) s = T.es[k] || k; if (v) for (const x in v) s = s.replace('{' + x + '}', v[x]); return s; };
@@ -98,7 +126,27 @@ function norm(o) {
   return r;
 }
 let S = norm(store.get());
-const save = () => { store.set(S); if (window.TBSync) TBSync.soon(4000); };
+/* ediciones (progress.json → ed, compartidas con el tutor): se parte del original y se aplica la última */
+const EDF = ['tx', 'ne', 'pl', 'nc', 'ej', 'r'];
+function overlay(o) {
+  const e = S.ed[o.vk]; if (!e || e.reset) return o;
+  const x = Object.assign({}, o, { _o: o, edd: 1 });
+  EDF.forEach(k => { if (k in e && e[k] != null) x[k] = e[k]; });
+  if (e.plOk) x.plOk = 1;
+  if (x.pl) x.plp = 0;
+  return x;
+}
+function refresh() {
+  E = [];
+  BASE.forEach(e => { if (e) E[e.i] = overlay(e); });
+  CUSTOM.forEach((w, k) => {
+    if (!w || w.del || !w.tx) return;
+    const si = SITS.findIndex(x => x.k === w.s), i = CB + k;
+    E[i] = overlay({ i, vk: 't' + k, s: si >= 0 ? si : TSIT, tx: w.tx, ne: w.ne || '', pl: w.pl || '', r: w.r || 'N', ej: w.ej || '', nc: w.nc || '', em: w.em || '📝', tch: 1, plp: w.pl ? 0 : 1, at: w.at || 0 });
+  });
+}
+const lines = k => (SITS[k] ? SITS[k].dl : []).map(overlay).filter(l => !isHid(l));
+const save = () => { store.set(S); refresh(); if (window.TBSync) TBSync.soon(4000); };
 const V = { tab: 'today', sit: null, sheet: null, q: '' };
 const views = {};   // scroll guardado por vista
 
@@ -107,10 +155,11 @@ const sTitle = s => S.cfg.ui === 'pl' ? (s.pl || s.es) : s.es;
 const sOther = s => S.cfg.ui === 'pl' ? s.es : (s.pl || '');
 const sDesc = s => S.cfg.ui === 'pl' ? (s.dp || s.ds) : s.ds;
 const regChip = e => e.r ? `<em class="rg ${e.r}">${t('r_' + e.r)}</em>` : '';
-const isHid = e => { const h = S.hid[e.vk]; return !!(h && h.h); };
+function isHid(e) { const h = S.hid[e.vk]; return !!(h && h.h); }
+function isDel(e) { const h = S.hid[e.vk]; return !!(h && h.h && h.x); }
 const live = () => E.filter(e => e && !isHid(e));
 /* situaciones con algo publicado: frases «ok» o líneas de diálogo que las usan */
-const sitHas = k => !!SITS[k] && (SITS[k].dl.length > 0 || live().some(e => e.s === k));
+const sitHas = k => !!SITS[k] && (lines(k).length > 0 || live().some(e => e.s === k));
 const sitList = () => SITS.map((s, k) => k).filter(sitHas);
 const known = i => !!(S.cards[i] && S.cards[i].k);
 /* registro por día: este dispositivo (log) + los demás (ol) */
@@ -126,12 +175,43 @@ const ICO = {
 const TABS = ['today', 'sit', 'words', 'me'];
 function picHTML(e, cls) {
   cls = cls || '';
+  const ph = window.TBSync && TBSync.img.url(e.vk); if (ph) return `<div class="pic photo ${cls}"><img src="${ph}" alt=""></div>`;
+  if (e.em) return `<div class="pic ${cls}"><span class="emo">${esc(e.em)}</span></div>`;
   const f = e.p || (SITS[e.s] && SITS[e.s].ic) || '1f4dd';
   return `<div class="pic ${cls}"><img src="e/${f}.svg" alt=""></div>`;
 }
+/* ---- voz: solo la grabación del tutor, y solo si se grabó el texto actual (si el texto cambió, se ignora) */
+const hasVoice = x => !!(x && window.TBSync && TBSync.voice.has(x.vk) && (TBSync.voice.meta(x.vk) || {}).tx === x.tx);
+const Voice = (() => {
+  let au = null, res = null, seq = 0;
+  const fin = () => { if (res) { const r = res; res = null; r(); } };
+  function stop() { seq++; try { if (au) { au.onended = au.onerror = null; au.pause(); } } catch (e) {} au = null; fin(); }
+  function say(x, slow) {
+    stop(); const my = seq;
+    return new Promise(done => {
+      res = done;
+      if (!hasVoice(x)) return fin();
+      TBSync.voice.get(x.vk).then(b64 => {
+        if (my !== seq) return;
+        if (!b64) return fin();
+        try {
+          au = new Audio('data:audio/mpeg;base64,' + b64);
+          /* lenta: 0.75 sin cambiar el tono — https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/preservesPitch */
+          au.preservesPitch = true; au.mozPreservesPitch = true; au.webkitPreservesPitch = true;
+          au.playbackRate = slow ? 0.75 : 1;
+          au.onended = au.onerror = fin; const p = au.play(); if (p && p.catch) p.catch(fin);
+        } catch (e) { fin(); }
+      });
+    });
+  }
+  return { say, stop };
+})();
+const speakerSvg = '<svg viewBox="0 0 24 24"><path d="M3 9v6h4l5 4V5L7 9H3zm13.5 3A4.5 4.5 0 0 0 14 8v8a4.5 4.5 0 0 0 2.5-4zM14 3.2v2.1a7 7 0 0 1 0 13.4v2.1a9 9 0 0 0 0-17.6z"/></svg>';
 /* Sin grabación del tutor no hay botón de reproducir: la entrada se estudia por texto (sección 6). */
 const voiceTag = () => `<span class="tag nv">🔇 ${t('noVoice')}</span>`;
-const stateTags = e => `${e.du ? `<span class="tag du">❓ ${t('dudoso')}</span> ` : ''}${e.pl ? `<span class="tag rv">✏️ ${t('plRev')}</span>` : ''}`;
+const playBtns = (x, big, line) => hasVoice(x) ? `<span class="pbtns"><button class="say${big ? ' big' : ''}" data-a="play" data-k="${esc(x.vk)}"${line ? ` data-l="${line}"` : ''} aria-label="${esc(t('say'))}">${speakerSvg}</button><button class="say slow" data-a="play" data-k="${esc(x.vk)}" data-s="1"${line ? ` data-l="${line}"` : ''} aria-label="${esc(t('slow'))}" title="${esc(t('slow'))}">🐢</button></span>` : '';
+const stateTags = e => `${e.du ? `<span class="tag du">❓ ${t('dudoso')}</span> ` : ''}${e.plp ? `<span class="tag rv">⏳ ${t('plPend')}</span>` : e.pl && !e.plOk ? `<span class="tag rv">✏️ ${t('plRev')}</span>` : ''}${e.edd ? ` <span class="tag d">✏️ ${t('edited')}</span>` : ''}${e.tch ? ` <span class="tag">🧑‍🏫 ${t('fromTutor')}</span>` : ''}`;
+const byKey = vk => { for (const e of E) if (e && e.vk === vk) return e; for (let k = 0; k < SITS.length; k++) { const l = SITS[k].dl.find(x => x.vk === vk); if (l) return overlay(l); } return null; };
 function toast(msg) { const d = document.createElement('div'); d.textContent = msg; d.style.cssText = 'position:fixed;left:50%;bottom:90px;transform:translateX(-50%);background:#14244a;color:#fff;padding:10px 18px;border-radius:99px;z-index:99;font-weight:600'; document.body.appendChild(d); setTimeout(() => d.remove(), 1700); }
 function copyText(txt) {
   const done = () => toast(t('copied'));
@@ -144,7 +224,7 @@ function copyText(txt) {
 /* Volver a pintar reemplaza la página: se conserva el scroll de cada vista.
    Las actualizaciones en segundo plano esperan a que la persona deje de tocar o hacer scroll. */
 let lastTouch = 0, bgT = 0;
-['touchstart', 'touchmove', 'wheel', 'scroll', 'pointerdown'].forEach(ev => document.addEventListener(ev, () => { lastTouch = Date.now(); }, { capture: true, passive: true }));
+['touchstart', 'touchmove', 'wheel', 'scroll', 'pointerdown', 'keydown', 'input'].forEach(ev => document.addEventListener(ev, () => { lastTouch = Date.now(); }, { capture: true, passive: true }));
 function bgRender() {
   clearTimeout(bgT);
   bgT = setTimeout(() => { if (Date.now() - lastTouch < 1300) return bgRender(); render(); }, Math.max(150, 1400 - (Date.now() - lastTouch)));
@@ -172,7 +252,7 @@ function vToday() {
   const sit = s ? `<div class="card"><h2>${t('sitToday')}</h2><button class="wrow" style="border:0;padding:0" data-a="sitopen" data-s="${sk}"><img src="e/${s.ic}.svg" width="44" height="44" alt=""><div class="t"><b style="font-size:18px">${esc(sTitle(s))}</b><span class="gl">${esc(sOther(s))}</span></div><span class="tag">${t('open')}</span></button></div>` : '';
   return hero + `<div class="card"><h2>${t('fDay')}</h2>${erow(e)}</div>` + sit;
 }
-const erow = e => `<button class="wrow" data-a="entry" data-i="${e.i}">${picHTML(e, 'sm')}<div class="t"><b class="tico">${esc(e.tx)}</b><span class="gl neu">${esc(S.cfg.ui === 'pl' && e.pl ? e.pl : e.ne)}${regChip(e)}</span></div>${known(e.i) ? `<span class="tag m">✓ ${t('knownTag')}</span>` : e.du ? '<span class="tag du">❓</span>' : ''}</button>`;
+const erow = e => `<button class="wrow" data-a="entry" data-i="${e.i}">${picHTML(e, 'sm')}<div class="t"><b class="tico">${esc(e.tx)}</b><span class="gl neu">${esc(S.cfg.ui === 'pl' && e.pl ? e.pl : e.ne)}${regChip(e)}</span></div>${hasVoice(e) ? '<span class="bdg">🎙️</span>' : ''}${known(e.i) ? `<span class="tag m">✓ ${t('knownTag')}</span>` : e.du ? '<span class="tag du">❓</span>' : ''}</button>`;
 function vSits() {
   const sl = sitList();
   if (!sl.length) return `<div class="card"><h2>${t('sit')}</h2><div class="empty">${t('noSit')}</div></div>`;
@@ -184,8 +264,9 @@ function vSits() {
 }
 function vSitOne(k) {
   const s = SITS[k]; if (!s || !sitHas(k)) { V.sit = null; return vSits(); }
-  const es = live().filter(e => e.s === k);
-  const dl = s.dl.length ? `<div class="card"><h2>${t('dialogues')}</h2>${s.dl.map(l => `<div class="dl"><small>${esc(l.w)}</small><b>${esc(l.tx)}</b><span>${esc(S.cfg.ui === 'pl' && l.pl ? l.pl : l.ne)}</span></div>`).join('')}</div>` : '';
+  const es = live().filter(e => e.s === k), ls = lines(k), nv = ls.filter(hasVoice).length;
+  const dl = ls.length ? `<div class="card"><h2>${t('dialogues')}</h2>${ls.map((l, j) => `<div class="dl" id="dl${j}"><div style="display:flex;gap:8px;align-items:flex-start"><div style="flex:1"><small>${esc(l.w)}</small><b>${esc(l.tx)}</b><span>${esc(S.cfg.ui === 'pl' && l.pl ? l.pl : l.ne)}</span></div>${playBtns(l, false, 1)}</div></div>`).join('')}
+    ${nv ? `<button class="btn s sm mt" data-a="dial" data-s="${k}">▶ ${t('playAll')}</button>` : `<div class="small mt">🔇 ${t('noVoiceDl')}</div>`}</div>` : '';
   return `<button class="back" data-a="sitback">${t('back')}</button><div class="card"><div class="wrow" style="border:0;padding:0"><img src="e/${s.ic}.svg" width="46" height="46" alt=""><div class="t"><b style="font-size:20px">${esc(sTitle(s))}</b><span class="gl">${esc(sOther(s))}</span></div></div>${sDesc(s) ? `<p class="desc">${esc(sDesc(s))}</p>` : ''}</div>
   ${dl}${es.length ? `<div class="card"><h2>${t('phrases')} (${es.length})</h2>${es.map(erow).join('')}</div>` : ''}`;
 }
@@ -197,7 +278,9 @@ function wresHTML() {
   const L = live(); if (!L.length) return `<div class="card mt"><div class="empty">${t('emptyT')}</div></div>`;
   const q = fold(V.q.trim());
   const r = q ? L.filter(e => [e.tx, e.ne, e.pl, e.ej].some(x => fold(x).includes(q))) : L;
-  return `<div class="card mt">${r.length ? r.slice(0, 120).map(erow).join('') : `<div class="empty">${t('noResults')}</div>`}</div>`;
+  const hw = E.filter(e => e && isHid(e) && !isDel(e));
+  return `<div class="card mt">${r.length ? r.slice(0, 120).map(erow).join('') : `<div class="empty">${t('noResults')}</div>`}</div>` +
+    (hw.length && !q ? `<div class="card"><h2>🚫 ${t('hidden')} (${hw.length})</h2><p class="small" style="margin:0 0 6px">${t('hiddenSub')}</p>${hw.map(e => `<div class="wrow">${picHTML(e, 'sm')}<div class="t"><b class="tico">${esc(e.tx)}</b><span class="gl">${esc(e.ne)}</span></div><button class="btn s sm" style="width:auto" data-a="hide" data-i="${e.i}">↩️ ${t('unhide')}</button></div>`).join('')}</div>` : '');
 }
 function vMe() {
   const seg = (key, opts) => `<div class="seg">${opts.map(([v, l]) => `<button class="${String(S.cfg[key]) === String(v) ? 'on' : ''}" data-a="cfg" data-k="${key}" data-v="${v}">${l}</button>`).join('')}</div>`;
@@ -205,6 +288,8 @@ function vMe() {
   let days = 0; for (let k = 0; k < 7; k++) if (LG(d - k).v) days++;
   return `<div class="card"><h2>${t('stats')}</h2><div class="stats"><div class="stat"><b>${nk}<small style="font-size:14px;font-weight:600">/${L.length}</small></b><span>${t('sKnown')}</span></div><div class="stat"><b>${LG(d).v}</b><span>${t('sToday')}</span></div><div class="stat"><b>${days}</b><span>${t('sDays')}</span></div></div></div>
   ${syncCard()}
+  ${asksCard()}
+  ${voiceCard()}
   <div class="card"><h2>${t('settings')}</h2>
    <div class="srow"><div class="l">${t('ui')}</div>${seg('ui', [['es', 'Español'], ['pl', 'Polski']])}</div>
    <div class="srow"><div class="l small">${t('keys')}</div></div></div>
@@ -212,6 +297,19 @@ function vMe() {
   <div class="card"><h2>${t('backup')}</h2><div class="btns two"><button class="btn s sm" data-a="export">${t('export')}</button><button class="btn s sm" data-a="import">${t('import')}</button></div>
    <button class="btn bad sm mt" data-a="reset">${t('reset')}</button></div>
   <div class="card"><h2>${t('about')}</h2><p class="small" style="margin:0">${t('aboutTxt', { n: live().length, s: sitList().length })}</p></div>`;
+}
+function asksCard() {
+  if (!ASKS.length) return '';
+  return `<div class="card"><h2>💬 ${t('myAsks')}</h2>${ASKS.slice().reverse().slice(0, 30).map(askHTML).join('')}</div>`;
+}
+function askHTML(q) {
+  const e = byKey(q.k);
+  return `<div class="ask">${e ? `<button class="linkbtn" data-a="askopen" data-k="${esc(q.k)}"><b class="tico">${esc(e.tx)}</b></button>` : ''}<div class="q">❓ ${esc(q.q)}</div>${q.a ? `<div class="a">🧑‍🏫 ${esc(q.a)}</div>` : `<div class="small">${t('askWait')}</div>`}</div>`;
+}
+function voiceCard() {
+  if (!window.TBSync || !TBSync.conf() || !TBSync.voice.count()) return '';
+  const on = TBSync.allVoice();
+  return `<div class="card"><h2>🎙️ ${t('vTitle')}</h2><div class="srow"><div class="l">${t('vAll')}<small>${t('vAllSub', { n: TBSync.voice.localCount(), t: TBSync.voice.count() })}</small></div><button class="sw ${on ? 'on' : ''}" data-a="dlall" aria-label="${esc(t('vAll'))}"></button></div></div>`;
 }
 function syncCard() {
   if (!window.TBSync) return '';
@@ -235,6 +333,20 @@ function installCard() {
   return `<div class="card"><h2>📲 ${t('inst')}</h2><p class="small" style="margin:0 0 10px">${t('instSub')}</p>${instEv ? `<button class="btn sm" data-a="install">${t('instBtn')}</button>` : `<div class="fb warn small">${how}</div>`}${ios2}</div>`;
 }
 
+/* ------------------------------------------------------------ diálogo: solo las líneas grabadas, una tras otra */
+let dRun = 0;
+async function playDial(k) {
+  const id = ++dRun, ls = lines(k);
+  for (let j = 0; j < ls.length; j++) {
+    if (id !== dRun) return; if (!hasVoice(ls[j])) continue;
+    const el = document.getElementById('dl' + j); if (el) { el.classList.add('cur'); try { el.scrollIntoView({ block: 'nearest' }); } catch (x) {} }
+    await Voice.say(ls[j]);
+    if (el) el.classList.remove('cur');
+    await new Promise(r => setTimeout(r, 250));
+  }
+}
+function stopDial() { dRun++; Voice.stop(); document.querySelectorAll('.dl.cur').forEach(e => e.classList.remove('cur')); }
+
 /* ------------------------------------------------------------ hojas */
 function sheetHTML() {
   const s = V.sheet; if (!s) return '';
@@ -242,10 +354,31 @@ function sheetHTML() {
   if (s.k === 'entry') {
     const e = E[s.i]; if (!e) { V.sheet = null; return ''; }
     const fld = (k, v) => v ? `<div class="fld"><small>${t(k)}</small><div>${esc(v)}</div></div>` : '';
+    const qs = ASKS.filter(q => q.k === e.vk);
     b = `<div class="center">${picHTML(e, 'lg')}<div class="tico mt" style="font-size:28px">${esc(e.tx)}</div><div class="mt">${regChip(e)}</div>
-    <div class="mt">${voiceTag()} ${stateTags(e)}</div>
+    <div class="mt" style="display:flex;gap:12px;justify-content:center;align-items:center;flex-wrap:wrap">${hasVoice(e) ? playBtns(e, true) : voiceTag()}</div>
+    <div class="mt">${stateTags(e)}${isHid(e) ? ` <span class="tag">🚫 ${t('hidTag')}</span>` : ''}</div>
     <button class="btn ${known(e.i) ? '' : 's'} sm mt" data-a="known" data-i="${e.i}" style="max-width:260px;margin-left:auto;margin-right:auto">${known(e.i) ? '✓ ' + t('knownOn') : t('known')}</button><div class="small mt">${t('knownHint')}</div></div>
-    ${fld('fNeu', e.ne)}${fld('fPl', e.pl)}${fld('fEj', e.ej)}${fld('fNote', e.nc)}${fld('fZone', e.z)}`;
+    ${fld('fNeu', e.ne)}${fld('fPl', e.pl)}${fld('fEj', e.ej)}${fld('fNote', e.nc)}${fld('fZone', e.z)}
+    ${qs.length ? `<div class="fld"><small>💬 ${t('myAsks')}</small>${qs.map(askHTML).join('')}</div>` : ''}
+    <div class="btns two mt2"><button class="btn s sm" data-a="ask" data-i="${e.i}">💬 ${t('askBtn')}</button><button class="btn s sm" data-a="edit" data-i="${e.i}">✏️ ${t('edit')}</button></div>
+    <div class="btns two mt"><button class="btn g sm" data-a="hide" data-i="${e.i}">${isHid(e) ? '↩️ ' + t('unhide') : '🚫 ' + t('hide')}</button><button class="btn g sm" data-a="delw" data-i="${e.i}">${s.dq ? '⚠️ ' + t('delQ') : '🗑 ' + t('del')}</button></div>
+    ${s.dq ? `<div class="small center mt">${t('delSub')}</div>` : ''}`;
+  } else if (s.k === 'edit') {
+    const e = E[s.i]; if (!e) { V.sheet = null; return ''; }
+    const f = s.f || (s.f = { pl: e.pl || '', ne: e.ne || '', nc: e.nc || '' });
+    b = `<h3>✏️ ${t('editT')}</h3><div class="tico" style="font-size:20px">${esc(e.tx)}</div><p class="gl small">${t('editSub')}</p>
+    <label class="small" for="e_pl">${t('fPl')}</label><input class="field" id="e_pl" lang="pl" value="${esc(f.pl)}" autocomplete="off" spellcheck="true">
+    <label class="small mt" style="display:block" for="e_ne">${t('fNeu')}</label><input class="field" id="e_ne" value="${esc(f.ne)}" autocomplete="off">
+    <label class="small mt" style="display:block" for="e_nc">${t('fNote')}</label><textarea class="field" id="e_nc" rows="3">${esc(f.nc)}</textarea>
+    <div class="btns two mt"><button class="btn sm" data-a="edsave">✓ ${t('eSave')}</button><button class="btn g sm" data-a="entry" data-i="${e.i}">${t('cancel')}</button></div>
+    ${e.edd ? `<button class="btn g sm mt" data-a="edreset">↩️ ${t('eRestore')}</button>` : ''}`;
+  } else if (s.k === 'ask') {
+    const e = E[s.i]; if (!e) { V.sheet = null; return ''; }
+    const on = window.TBSync && TBSync.conf();
+    b = `<h3>💬 ${t('askBtn')}</h3><div class="tico" style="font-size:20px">${esc(e.tx)}</div><p class="gl small">${t('askSub')}</p>
+    ${on ? `<textarea class="field" id="askq" rows="4" placeholder="${esc(t('askPh'))}">${esc(s.q || '')}</textarea>${s.err ? `<div class="fb bad mt small">${syncErr(s.err)}</div>` : ''}
+    <div class="btns two mt"><button class="btn sm" data-a="asksend" id="asksend">${t('askSend')}</button><button class="btn g sm" data-a="entry" data-i="${e.i}">${t('cancel')}</button></div>` : `<div class="fb warn small">${t('askNoSync')}</div><button class="btn g sm mt" data-a="entry" data-i="${e.i}">${t('cancel')}</button>`}`;
   } else if (s.k === 'welcome') {
     b = `<div class="center"><div style="font-size:46px">🇨🇷</div><h3>Tico Box</h3><p class="gl">${T.es.wTxt}<br>${T.pl.wTxt}</p></div>
     <div class="btns two"><button class="btn" data-a="lang" data-v="es">Español</button><button class="btn" data-a="lang" data-v="pl">Polski</button></div>`;
@@ -260,6 +393,7 @@ function sheetHTML() {
     <div id="serr">${s.err ? `<div class="fb bad mt small">${syncErr(s.err)}</div>` : ''}</div>
     <div class="btns mt"><button class="btn" data-a="syncgo" id="sgo">${t('syncGo')}</button><button class="btn s" data-a="syncstud" id="sstud">${t('syncStudBtn')}</button></div>
     ${s.link ? `<div class="card mt" style="margin-bottom:0"><h2>${t('syncStudT')}</h2><p class="small" style="margin:0 0 8px">${t('syncStudSub')}</p><textarea class="field" id="slink" readonly rows="3" style="font-size:13px">${esc(s.link)}</textarea>${s.pub ? `<div class="fb warn mt small">${t('syncPublic')}</div>` : ''}<button class="btn sm mt" data-a="copylink">${t('syncCopyLink')}</button><div class="small mt">${t('syncWarn')}</div></div>` : ''}
+    <div class="small mt">🧑‍🏫 ${t('tutorLink')} <a href="tutor.html">tutor.html</a></div>
     <button class="btn g sm mt" data-a="close">${t('close')}</button>`;
   } else if (s.k === 'import') {
     b = `<h3>${t('import')}</h3><textarea class="field mt" id="imp" placeholder="${esc(t('importPh'))}"></textarea><button class="btn mt" data-a="importgo">${t('importGo')}</button>`;
@@ -270,12 +404,12 @@ function sheetHTML() {
 
 /* ------------------------------------------------------------ acciones */
 const A = {
-  tab: d => { if (TABS.indexOf(d.k) < 0) return; V.tab = d.k; V.sit = null; V.sheet = null; views[vkey()] = 0; render(); },
+  tab: d => { if (TABS.indexOf(d.k) < 0) return; stopDial(); V.tab = d.k; V.sit = null; V.sheet = null; views[vkey()] = 0; render(); },
   sit: d => { V.sit = Number(d.s); views[vkey()] = 0; render(); },
-  sitback: () => { V.sit = null; render(); },
-  entry: d => { const i = Number(d.i); V.sheet = { k: 'entry', i }; const day = today(), l = S.log[day] || (S.log[day] = { v: 0 }); l.v = (l.v || 0) + 1; save(); render(); },
+  sitback: () => { stopDial(); V.sit = null; render(); },
+  entry: d => { const i = Number(d.i); if (!V.sheet || V.sheet.k !== 'entry' || V.sheet.i !== i) Voice.stop(); V.sheet = { k: 'entry', i }; const day = today(), l = S.log[day] || (S.log[day] = { v: 0 }); l.v = (l.v || 0) + 1; save(); render(); },
   known: d => { const i = Number(d.i); S.cards[i] = { k: known(i) ? 0 : 1, t: Date.now() }; save(); render(); },
-  close: () => { V.sheet = null; render(); },
+  close: () => { Voice.stop(); V.sheet = null; render(); },
   cfg: d => { if (d.k !== 'ui') return; S.cfg.ui = d.v === 'pl' ? 'pl' : 'es'; S.cfgT = Date.now(); save(); render(); },
   sitopen: d => { V.tab = 'sit'; V.sit = Number(d.s); V.sheet = null; views[vkey()] = 0; render(); },
   lang: d => { S.cfg.ui = d.v === 'pl' ? 'pl' : 'es'; S.cfg.ok = true; S.cfgT = Date.now(); save(); V.sheet = null; render(); },
@@ -287,6 +421,38 @@ const A = {
   },
   reset: () => { V.sheet = { k: 'reset' }; render(); },
   resetgo: () => { const ui = S.cfg.ui, dev = S.dev; S = blank(); S.cfg.ui = ui; S.cfg.ok = true; S.dev = dev; S.resetAt = Date.now(); save(); V.sheet = null; render(); },
+  play: d => { const x = byKey(d.k); if (x) Voice.say(x, !!d.s); },
+  dial: d => { playDial(Number(d.s)); },
+  edit: d => { V.sheet = { k: 'edit', i: Number(d.i) }; render(); },
+  edsave: () => {
+    const s = V.sheet, e = s && E[s.i]; if (!e) return;
+    const v = { pl: ($('#e_pl') || {}).value || '', ne: ($('#e_ne') || {}).value || '', nc: ($('#e_nc') || {}).value || '' };
+    const prev = S.ed[e.vk] && !S.ed[e.vk].reset ? S.ed[e.vk] : {};
+    S.ed[e.vk] = Object.assign({}, prev, { pl: v.pl.trim(), ne: v.ne.trim(), nc: v.nc.trim(), plOk: true, t: Date.now(), by: 's' });
+    save(); V.sheet = { k: 'entry', i: e.i }; render(); toast(t('eSaved'));
+  },
+  edreset: () => { const s = V.sheet, e = s && E[s.i]; if (!e) return; S.ed[e.vk] = { reset: true, t: Date.now(), by: 's' }; save(); V.sheet = { k: 'entry', i: e.i }; render(); toast(t('eRestored')); },
+  hide: d => {
+    const e = E[Number(d.i)]; if (!e) return; const was = isHid(e);
+    S.hid[e.vk] = { h: !was, t: Date.now(), by: 's' }; save();
+    if (!was && V.sheet && V.sheet.k === 'entry') V.sheet = null;
+    render(); toast(was ? t('unhidToast') : t('hidToast'));
+  },
+  delw: d => {
+    const e = E[Number(d.i)]; if (!e) return; const s = V.sheet;
+    if (s && s.k === 'entry' && !s.dq) { s.dq = 1; render(); return; }
+    S.hid[e.vk] = { h: true, x: true, t: Date.now(), by: 's' }; delete S.cards[e.i];
+    V.sheet = null; save(); render(); toast(t('delToast'));
+  },
+  ask: d => { V.sheet = { k: 'ask', i: Number(d.i) }; render(); const q = $('#askq'); if (q) q.focus(); },
+  askopen: d => { const e = byKey(d.k); if (e && e.i != null) { V.sheet = { k: 'entry', i: e.i }; render(); } },
+  asksend: async () => {
+    const s = V.sheet, e = s && E[s.i]; if (!e) return; const q = (($('#askq') || {}).value || '').trim(); if (!q) return;
+    const b = $('#asksend'); if (b) { b.disabled = true; b.textContent = t('syncing'); }
+    try { await TBSync.ask(e.vk, q, deviceName()); V.sheet = { k: 'entry', i: e.i }; render(); toast(t('askSent')); }
+    catch (er) { s.err = er.message; s.q = q; render(); }
+  },
+  dlall: async () => { const on = !TBSync.allVoice(); const p = TBSync.downloadAll(on); render(); await p; render(); },
   syncsetup: () => { V.sheet = { k: 'sync' }; render(); },
   syncnow: () => { if (window.TBSync) TBSync.run('manual'); },
   synccode: () => copyText(TBSync.makeCode(TBSync.conf())),
@@ -317,6 +483,7 @@ function back() {
   return false;
 }
 function boot() {
+  refresh();
   const app = $('#app'); app.innerHTML = '<div id="base" style="display:contents"></div>';
   app.addEventListener('click', ev => {
     const a = ev.target.closest('[data-a]'); if (!a) return;
@@ -339,7 +506,10 @@ function boot() {
   if (!window.TBSync) return;
   TBSync.attach({
     get: () => S,
-    set: n => { const before = JSON.stringify(S), ui = S.cfg.ui, ok = S.cfg.ok; S = norm(n); S.cfg.ui = ui; S.cfg.ok = ok || S.cfg.ok; if (JSON.stringify(S) === before) return; store.set(S); bgRender(); },
+    set: n => { const before = JSON.stringify(S), ui = S.cfg.ui, ok = S.cfg.ok; S = norm(n); S.cfg.ui = ui; S.cfg.ok = ok || S.cfg.ok; if (JSON.stringify(S) === before) return; store.set(S); refresh(); bgRender(); },
+    custom: list => { const k = JSON.stringify(list); if (k === lastCustom) return; lastCustom = k; CUSTOM = list || []; refresh(); bgRender(); },
+    asks: list => { const k = JSON.stringify(list); if (k === lastAsks) return; lastAsks = k; ASKS = list || []; bgRender(); },
+    media: () => bgRender(),
     device: () => deviceName(),
     status: () => {   // solo cambian el indicador y la tarjeta de sincronización: no se repinta la vista, así nunca se interrumpe el scroll
       const st = TBSync.state, sy = $('.chip.sy'); if (sy) { sy.classList.toggle('spin', !!st.running); sy.classList.toggle('err', !st.running && !!st.err && st.err !== 'offline'); }
@@ -354,7 +524,8 @@ function boot() {
     TBSync.connect(code.r, code.t, code.n).then(() => { render(); toast(S.cfg.ok ? t('linked') : T.es.linked + ' · ' + T.pl.linked); }, e => { V.sheet = { k: 'sync', err: e.message, repo: code.r }; render(); });
   }
 }
+let lastCustom = '', lastAsks = '';
 function deviceName() { const u = navigator.userAgent; return /iPad/.test(u) || (/Macintosh/.test(u) && navigator.maxTouchPoints > 1) ? 'iPad' : /Android/.test(u) ? 'Android' : /Windows/.test(u) ? 'Windows' : /Mac/.test(u) ? 'Mac' : 'web'; }
-window.__tb = { S: () => S, LG, V, A, E, SITS, render, T, bgRender };   // para las pruebas
+window.__tb = { S: () => S, LG, V, A, E: () => E, SITS, byKey, hasVoice, ASKS: () => ASKS, render, T, bgRender };   // para las pruebas
 boot();
 })();

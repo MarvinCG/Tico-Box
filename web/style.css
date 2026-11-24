@@ -244,3 +244,10 @@ nav{order:3}
 .tag.nv{background:var(--line);color:var(--mute)}.tag.rv{background:var(--ambb);color:var(--amb)}.tag.du{background:var(--badb);color:var(--bad)}
 .tico{font-weight:700}.neu{color:var(--mute)}
 .fld{margin-top:12px;text-align:left}.fld small{display:block;color:var(--mute);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px}.fld div{font-size:17px}
+/* F3: voz, preguntas */
+.pbtns{display:inline-flex;gap:8px;align-items:center}
+.dl .say{width:36px;height:36px;font-size:16px}.dl .say svg{width:18px;height:18px}
+.ask{padding:8px 0;border-top:1px solid var(--line)}.ask:first-of-type{border-top:0}.ask .q{margin-top:2px}.ask .a{margin-top:4px;background:var(--okb);border-radius:10px;padding:6px 10px}
+.linkbtn{background:none;border:0;color:var(--co);font-weight:700;cursor:pointer;padding:0;text-align:left}
+.bdg{font-size:14px;margin-right:4px}
+.pic.photo img{width:100%;height:100%;object-fit:cover}

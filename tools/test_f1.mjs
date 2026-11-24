@@ -65,7 +65,7 @@ async function device(name, vp) {
   ok(true, 'cada situación muestra solo sus frases y líneas publicadas');
   const broken = await p.evaluate(async () => {
     const tb = window.__tb, bad = [];
-    for (const e of tb.E.filter(Boolean)) { tb.A.entry({ i: e.i }); const sh = document.querySelector('#ov'); if (!sh || !sh.textContent.includes(e.tx)) bad.push(e.i); }
+    for (const e of tb.E().filter(Boolean)) { tb.A.entry({ i: e.i }); const sh = document.querySelector('#ov'); if (!sh || !sh.textContent.includes(e.tx)) bad.push(e.i); }
     tb.A.close(); return bad;
   });
   ok(!broken.length, 'todas las fichas publicadas abren ' + JSON.stringify(broken.slice(0, 5)));

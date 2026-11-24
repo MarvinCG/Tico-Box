@@ -18,7 +18,7 @@ const walk = d => readdirSync(d).flatMap(f => { const p = join(d, f); if (/node_
 const files = walk(ROOT).filter(p => /\.(js|mjs|html|py|yml|webmanifest|json|css)$/.test(p) && !p.endsWith('test_f0.mjs') && !/package(-lock)?\.json$/.test(p));
 const hits = files.filter(p => TTS.test(readFileSync(p, 'utf8')));
 ok(hits.length === 0, 'sin código de voz sintética en el repo' + (hits.length ? ': ' + hits.join(', ') : ''));
-ok(readdirSync(join(ROOT, 'web')).every(f => !/^(a|audio.*|ipa\.js|vendor)$/.test(f)), 'web/ no trae audio generado ni motor de voz');
+ok(readdirSync(join(ROOT, 'web')).every(f => !/^(a|audio.*|ipa\.js)$/.test(f)), 'web/ no trae audio generado ni motor de voz (vendor/ solo tiene el codificador MP3 de las grabaciones)');
 
 /* ---- servidor local */
 const srv = spawn('python3', ['-m', 'http.server', '8766', '--bind', '127.0.0.1', '--directory', join(ROOT, 'web')], { stdio: 'ignore' });
@@ -81,7 +81,7 @@ const txt = (p, s) => p.evaluate(s => [...document.querySelectorAll(s)].map(e =>
   ok(await p.evaluate(() => !document.querySelector('#ov .say, #ov audio, #ov [data-a="play"]')), 'entrada sin grabar: sin botón de reproducir');
   ok(sheet.includes('polaco por revisar') && sheet.includes('dudoso') && sheet.includes('Valle Central'), 'etiquetas «por revisar», «dudoso» y zona');
   await p.screenshot({ path: join(ROOT, 'shots/f0_ficha.png') });
-  await p.click('#ov .btn.g');
+  await p.click('#ov .sheet [data-a="close"]');
   await p.click('[data-a="tab"][data-k="words"]');
   await p.fill('#q', 'prueba 4'); await p.waitForTimeout(50);
   ok((await txt(p, '#wres .wrow')).length === 11, 'búsqueda filtra (prueba 4, 40–49)');
@@ -89,7 +89,7 @@ const txt = (p, s) => p.evaluate(s => [...document.querySelectorAll(s)].map(e =>
   await p.evaluate(() => { document.querySelector('#main').scrollTop = 1500; });
   const y0 = await p.evaluate(() => document.querySelector('#main').scrollTop);
   await p.evaluate(() => document.querySelectorAll('#wres .wrow')[25].click()); await p.waitForTimeout(50);
-  await p.click('#ov .btn.g'); await p.waitForTimeout(50);
+  await p.click('#ov .sheet [data-a="close"]'); await p.waitForTimeout(50);
   const y1 = await p.evaluate(() => document.querySelector('#main').scrollTop);
   ok(y0 > 500 && Math.abs(y1 - y0) < 2, `scroll conservado al abrir y cerrar una ficha (${y0} → ${y1})`);
   await p.evaluate(() => { window.__tb.bgRender(); });

@@ -2,7 +2,13 @@
    (por defecto MarvinCG/tico-box-data) con la API de contenidos de GitHub.
    https://docs.github.com/en/rest/repos/contents
    No se envía nada a ningún otro lado. El token solo se guarda en este dispositivo.
-   Copiado y adaptado de Polski Box (sync.js). Los medios del tutor (voz y fotos) llegan en la Fase 3. */
+   Copiado y adaptado de Polski Box (sync.js).
+   Archivos del repo de datos:
+     progress.json          progreso (tarjetas, registros, ocultos y ediciones) — se fusiona
+     words.json             frases que agrega el tutor (IDs desde 5000; solo se agregan, las borradas se marcan)
+     voice.json, voice/*.mp3  grabaciones del tutor (cada una guarda el texto que se grabó)
+     img.json, img/*.jpg    fotos del tutor
+     asks.json              preguntas de la estudiante («Pregunta al tutor») y respuestas */
 (function () {
 'use strict';
 const KEY = 'ticobox.sync', LAST = 'ticobox.synclast', API = 'https://api.github.com';
@@ -99,6 +105,80 @@ function toRemote(S) {
 }
 const same = (a, b) => JSON.stringify(a) === JSON.stringify(b);
 
+/* ---------------- medios del tutor, guardados en el dispositivo (IndexedDB) para usarlos sin conexión */
+const okKey = k => /^[A-Za-z0-9_-]{1,40}$/.test(k);
+let idb = null;
+function db() {
+  if (idb) return idb;
+  idb = new Promise((res, rej) => {
+    try {
+      const r = indexedDB.open('ticobox', 1);
+      r.onupgradeneeded = () => { const d = r.result; ['voice', 'img'].forEach(n => { if (!d.objectStoreNames.contains(n)) d.createObjectStore(n); }); };
+      r.onsuccess = () => res(r.result); r.onerror = () => rej(r.error);
+    } catch (e) { rej(e); }
+  });
+  return idb;
+}
+function store(name) {
+  const mem = {};
+  return {
+    async get(k) {
+      if (mem[k]) return mem[k];
+      try { const d = await db(); return await new Promise(r => { const q = d.transaction(name).objectStore(name).get(k); q.onsuccess = () => r(q.result || null); q.onerror = () => r(null); }); } catch (e) { return null; }
+    },
+    async put(k, b64) { try { const d = await db(); await new Promise(r => { const tx = d.transaction(name, 'readwrite'); tx.objectStore(name).put(b64, k); tx.oncomplete = tx.onerror = r; }); } catch (e) { mem[k] = b64; } },
+    async del(k) { delete mem[k]; try { const d = await db(); d.transaction(name, 'readwrite').objectStore(name).delete(k); } catch (e) {} }
+  };
+}
+function media(kind, ext, onNew) {
+  const IK = 'ticobox.' + kind + 'idx', MK = 'ticobox.' + kind + 'meta', S = store(kind);
+  let idx = {}, loc = {}, pref = false;
+  try { idx = JSON.parse(sget(IK) || '{}'); loc = JSON.parse(sget(MK) || '{}'); } catch (e) {}
+  async function fetchOne(c, k) {
+    const r = await gh(c, 'GET', kind + '/' + k + '.' + ext + '?t=' + Date.now());
+    if (r.status !== 200) throw httpErr(r);
+    const b64 = JSON.parse(r.text).content.replace(/\s/g, '');
+    await S.put(k, b64); loc[k] = (idx[k] && idx[k].at) || Date.now(); sset(MK, JSON.stringify(loc));
+    if (onNew) onNew(k, b64);
+    return b64;
+  }
+  return {
+    setIndex(items, c, all) { idx = items || {}; sset(IK, JSON.stringify(idx)); return this.prefetch(c, all); },
+    /** baja lo nuevo o reemplazado (las fotos siempre; las voces, solo las que ya estaban o si all) y borra lo que se quitó */
+    async prefetch(c, all) {
+      if (pref) return; pref = true;
+      try {
+        for (const k in loc) if (!idx[k]) { await S.del(k); delete loc[k]; if (onNew) onNew(k, null); }
+        sset(MK, JSON.stringify(loc));
+        for (const k in idx) {
+          if (!okKey(k) || (loc[k] || 0) >= (idx[k].at || 0)) continue;
+          if (!all && !(k in loc)) continue;
+          try { await fetchOne(c, k); } catch (e) { if (e.message === 'offline') break; }
+        }
+      } finally { pref = false; }
+    },
+    has: k => !!(k && idx[k]),
+    meta: k => idx[k] || null,
+    keys: () => Object.keys(idx),
+    count: () => Object.keys(idx).length,
+    local: k => (loc[k] || 0) >= ((idx[k] && idx[k].at) || 1),
+    localCount: () => Object.keys(idx).filter(k => (loc[k] || 0) >= (idx[k].at || 1)).length,
+    async get(k) { if (!idx[k]) return null; let b = (loc[k] || 0) >= (idx[k].at || 0) ? await S.get(k) : null; if (!b && conf()) { try { b = await fetchOne(conf(), k); } catch (e) { b = await S.get(k); } } return b; },
+    raw: S
+  };
+}
+const VOICE = media('voice', 'mp3');
+/* las fotos se muestran con <img src="blob:…">: se convierten una vez y quedan en memoria */
+const IMGURL = {};
+function setImgURL(k, b64) {
+  if (IMGURL[k]) { try { URL.revokeObjectURL(IMGURL[k]); } catch (e) {} delete IMGURL[k]; }
+  if (b64) { try { const bin = atob(b64), u8 = new Uint8Array(bin.length); for (let i = 0; i < bin.length; i++) u8[i] = bin.charCodeAt(i); IMGURL[k] = URL.createObjectURL(new Blob([u8], { type: 'image/jpeg' })); } catch (e) {} }
+  clearTimeout(setImgURL.t); setImgURL.t = setTimeout(() => api && api.media && api.media(), 120);
+}
+const IMG = media('img', 'jpg', setImgURL);
+async function loadImgs() { for (const k of IMG.keys()) { if (IMGURL[k] || !IMG.local(k)) continue; const b = await IMG.raw.get(k); if (b) setImgURL(k, b); } }
+const cacheGet = k => { try { return JSON.parse(sget(k) || 'null'); } catch (e) { return null; } };
+
 /* ---------------- el motor, conectado a la app con TBSync.attach(api) */
 let api = null, busy = null, again = false, timer = null;
 const st = { last: Number(sget(LAST) || 0), err: '', running: false };
@@ -113,6 +193,11 @@ async function run(reason) {
         api.set(merge(api.get(), rf.data));
         const up = toRemote(api.get());
         if (!rf.data || !same(up, rf.data)) await putFile(c, 'progress.json', up, rf.sha, `progreso (${api.device()})`);
+        const opt = async (p, fn) => { try { fn((await getFile(c, p)).data); } catch (e) { if (e.message !== 'repo') throw e; } };
+        await opt('words.json', d => { const list = (d && d.words) || []; sset('ticobox.words', JSON.stringify(list)); api.custom && api.custom(list); });
+        await opt('asks.json', d => { const list = (d && d.items) || []; sset('ticobox.asks', JSON.stringify(list)); api.asks && api.asks(list); });
+        await opt('voice.json', d => { VOICE.setIndex(d && d.items, c, sget('ticobox.allvoice') === '1'); api.media && api.media(); });
+        await opt('img.json', d => { IMG.setIndex(d && d.items, c, true); });
         st.last = Date.now(); st.err = ''; sset(LAST, String(st.last)); break;
       } catch (e) {
         st.err = e.message || 'error';
@@ -129,6 +214,9 @@ window.TBSync = {
   DEFAULT_REPO,
   attach(a) {
     api = a;
+    const w = cacheGet('ticobox.words'); if (w && w.length && api.custom) api.custom(w);
+    const q = cacheGet('ticobox.asks'); if (q && api.asks) api.asks(q);
+    loadImgs();
     if (conf()) setTimeout(() => run('boot'), 600);
     setInterval(() => { if (document.visibilityState !== 'hidden') run('tick'); }, 4 * 60 * 1000);
     document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') run('hide'); else soon(500); });
@@ -147,6 +235,23 @@ window.TBSync = {
     const info = await check(c);
     return { code: makeCode(c, { n: 'est' }), private: info.private };
   },
-  disconnect() { setConf(null); }
+  disconnect() { setConf(null); },
+  /** grabaciones del tutor: has(k), meta(k) → { at, tx }, get(k) → MP3 en base64 (se baja si no está en el dispositivo) */
+  voice: { has: VOICE.has, meta: VOICE.meta, count: VOICE.count, localCount: VOICE.localCount, get: k => VOICE.get(k) },
+  /** fotos del tutor: url(k) → URL blob si la foto ya está en este dispositivo */
+  img: { url: k => IMGURL[k] || null, count: IMG.count },
+  /** descargar todas las grabaciones para usarlas sin conexión (y seguir bajando las nuevas) */
+  async downloadAll(on) { sset('ticobox.allvoice', on ? '1' : null); if (on && conf()) await VOICE.prefetch(conf(), true); },
+  allVoice: () => sget('ticobox.allvoice') === '1',
+  /** «Pregunta al tutor»: agrega la pregunta a asks.json (leer, agregar, escribir; reintenta si otro escribió a la vez) */
+  async ask(k, q, dev) {
+    const c = conf(); if (!c) throw new Error('nosync');
+    const item = { id: 'q' + Date.now().toString(36) + Math.random().toString(36).slice(2, 5), k, q, at: Date.now(), dev };
+    for (let n = 0; n < 4; n++) {
+      const f = await getFile(c, 'asks.json'); const d = f.data || { v: 1, items: [] }; d.items = d.items || []; d.items.push(item);
+      try { await putFile(c, 'asks.json', d, f.sha, 'pregunta de la estudiante'); sset('ticobox.asks', JSON.stringify(d.items)); api && api.asks && api.asks(d.items); return item; }
+      catch (e) { if (e.message !== 'conflict' || n === 3) throw e; }
+    }
+  }
 };
 })();
