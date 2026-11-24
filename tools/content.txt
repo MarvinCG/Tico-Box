@@ -6,10 +6,12 @@
 # Entrada (una por línea, debajo de su situación):
 #   tico | neutro | polaco | registro | ejemplo | nota | emoji | zona | estado
 #   registro: formal · neutral · informal · coloquial (no se incluye contenido vulgar)
-#   estado:   vacío (validado por Aaron) o «dudoso» (falta que Aaron lo valide)
+#   estado:   lo que Aaron marcó en la hoja de revisión: ok · corrección · dudoso · quitar (vacío = sin revisar)
+#             Solo las entradas «ok» se publican en la app; las demás se conservan aquí para no mover los IDs.
 #   El polaco lo propone Claude y queda «por revisar» hasta que la estudiante lo corrija en su app.
 # Línea de diálogo:
 #   > personaje | tico | neutro | polaco
+#   Una línea se publica solo si usa alguna entrada «ok» (prep.py lo detecta en el texto tico).
 #
 # IDs estables: el ID de cada entrada es su posición en este archivo (0, 1, 2…).
 # Nunca borrar ni reordenar entradas: se reemplazan en el mismo lugar.
@@ -116,7 +118,7 @@ Vosear | Tratar de vos | Mówić na „vos” | neutral | Mis amigos me vosean, 
 ¿Usted me entiende? | ¿Me entiendes? | Rozumiesz mnie? | neutral | ¿Usted me entiende cuando hablo rápido? | | 👂 | |
 Siéntese, por favor. | Siéntate, por favor. | Usiądź, proszę. | neutral | Siéntese, mi amor, ya le sirvo. | | 🪑 | |
 No sea malo, ayúdeme. | Por favor, ayúdame. | Bądź tak dobry, pomóż mi. | neutral | No sea malo, ¿me presta el cargador? | «No sea malo / mala» = fórmula de ruego amable, sin reproche. | 🥺 | |
-¡Qué tuanis estás! | ¡Qué guapa estás! | Świetnie wyglądasz! | informal | —¡Qué tuanis estás! —Mae, ¿y ese «tú»? | Dicho en «tú» por un tico suele sonar a coqueteo o a broma. | 😉 | | dudoso
+¡Qué tuanis estás! | ¡Qué guapa estás! | Świetnie wyglądasz! | informal | —¡Qué tuanis estás! —Mae, ¿y ese «tú»? | Dicho en «tú» por un tico suele sonar a coqueteo o a broma. | 😉 |  | quitar
 > Andrés | Mi amor, ¿usted ya está lista? | Cariño, ¿ya estás lista? | Kochanie, jesteś już gotowa?
 > Yo | Casi. ¿Por qué usted me habla de usted si somos novios? | Casi. ¿Por qué me tratas de usted si somos novios? | Prawie. Czemu mówisz do mnie „usted”, skoro jesteśmy parą?
 > Andrés | Diay, aquí es así. Hasta al perro le digo usted. | Bueno, aquí es así. Hasta al perro lo trato de usted. | No, tutaj tak jest. Nawet do psa mówię „usted”.
@@ -522,7 +524,7 @@ Qué pena con usted | Disculpe la molestia, me da vergüenza | Bardzo przeprasza
 Diay, ¿qué le vamos a hacer? | Bueno, qué se le va a hacer | No, trudno | neutral | Se fue la luz. Diay, ¿qué le vamos a hacer? | | 🤷 | |
 Ahí vamos | Más o menos, tirando | Jakoś leci | neutral | —¿Cómo está? —Ahí vamos. | | 🐢 | |
 Aquí nada más | Aquí, sin novedades | Nic nowego | neutral | —¿Qué hace? —Aquí nada más. | | 🛋️ | |
-Estoy hecho leña | Estoy agotado | Jestem wykończony | coloquial | Después del brete estoy hecho leña. | | 🪵 | | dudoso
+Estoy hecho leña | Estoy agotado | Jestem wykończony | coloquial | Después del brete estoy hecho leña. |  | 🪵 |  | ok
 Estar quemado | Estar agotado (o con mala fama) | Być wypalonym / spalonym | coloquial | Estoy quemada con este proyecto. | | 🔥 | |
 Estar en la luna | Estar distraído | Bujać w obłokach | neutral | Perdón, estaba en la luna. | | 🌙 | |
 Qué ganas | Qué ilusión / tengo muchas ganas | Ale mi się chce! / Nie mogę się doczekać | neutral | ¿Vamos a la playa? ¡Qué ganas! | | 🤩 | |

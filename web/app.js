@@ -2,7 +2,8 @@
 'use strict';
 /* Tico Box — app de la estudiante. Arquitectura copiada y adaptada de Polski Box.
    Sin voz sintética: la única voz es la grabación del tutor (llega en la Fase 3). */
-const SITS = window.SITS || [], E = (window.ENTRIES || []).slice();   // E[id] -> entrada (las del tutor empiezan en CB)
+const SITS = window.SITS || [], E = [];   // E[id] -> entrada; solo llegan las publicadas («ok»), así que E tiene huecos (las del tutor empiezan en CB)
+(window.ENTRIES || []).forEach(e => { E[e.i] = e; });
 const CB = 5000;
 const $ = (s, r) => (r || document).querySelector(s);
 const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
@@ -80,6 +81,9 @@ const sDesc = s => S.cfg.ui === 'pl' ? (s.dp || s.ds) : s.ds;
 const regChip = e => e.r ? `<em class="rg ${e.r}">${t('r_' + e.r)}</em>` : '';
 const isHid = e => { const h = S.hid[e.vk]; return !!(h && h.h); };
 const live = () => E.filter(e => e && !isHid(e));
+/* situaciones con algo publicado: frases «ok» o líneas de diálogo que las usan */
+const sitHas = k => !!SITS[k] && (SITS[k].dl.length > 0 || live().some(e => e.s === k));
+const sitList = () => SITS.map((s, k) => k).filter(sitHas);
 const ICO = {
   today: '<svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
   sit: '<svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4zM8 9h8M8 12h5"/></svg>',
@@ -127,27 +131,28 @@ function render() {
 }
 function vToday() {
   const L = live();
-  const hero = `<div class="card hero"><h2>${t('today')}</h2><div class="big">${t('hello')}</div><p>${t('heroSub')}</p>${L.length ? `<p style="margin:0"><b>${t('heroStat', { n: L.length, s: SITS.length })}</b></p>` : ''}</div>`;
+  const hero = `<div class="card hero"><h2>${t('today')}</h2><div class="big">${t('hello')}</div><p>${t('heroSub')}</p>${L.length ? `<p style="margin:0"><b>${t('heroStat', { n: L.length, s: sitList().length })}</b></p>` : ''}</div>`;
   if (!L.length) return hero + `<div class="card"><div class="empty"><div style="font-size:42px">📦</div><b>${t('emptyT')}</b><p class="small">${t('emptySub')}</p></div></div>`;
-  const d = today(), e = L[(d * 37) % L.length], sk = d % SITS.length, s = SITS[sk];
+  const d = today(), e = L[(d * 37) % L.length], sl = sitList(), sk = sl.length ? sl[d % sl.length] : -1, s = SITS[sk];
   const sit = s ? `<div class="card"><h2>${t('sitToday')}</h2><button class="wrow" style="border:0;padding:0" data-a="sitopen" data-s="${sk}"><img src="e/${s.ic}.svg" width="44" height="44" alt=""><div class="t"><b style="font-size:18px">${esc(sTitle(s))}</b><span class="gl">${esc(sOther(s))}</span></div><span class="tag">${t('open')}</span></button></div>` : '';
   return hero + `<div class="card"><h2>${t('fDay')}</h2>${erow(e)}</div>` + sit;
 }
 const erow = e => `<button class="wrow" data-a="entry" data-i="${e.i}">${picHTML(e, 'sm')}<div class="t"><b class="tico">${esc(e.tx)}</b><span class="gl neu">${esc(S.cfg.ui === 'pl' && e.pl ? e.pl : e.ne)}${regChip(e)}</span></div>${e.du ? '<span class="tag du">❓</span>' : ''}</button>`;
 function vSits() {
-  if (!SITS.length) return `<div class="card"><h2>${t('sit')}</h2><div class="empty">${t('noSit')}</div></div>`;
+  const sl = sitList();
+  if (!sl.length) return `<div class="card"><h2>${t('sit')}</h2><div class="empty">${t('noSit')}</div></div>`;
   const L = live();
-  return `<div class="card"><h2>${t('sit')}</h2><p style="margin:0">${t('sitIntro')}</p></div>` + SITS.map((s, k) => {
-    const n = L.filter(e => e.s === k).length;
+  return `<div class="card"><h2>${t('sit')}</h2><p style="margin:0">${t('sitIntro')}</p></div>` + sl.map(k => {
+    const s = SITS[k], n = L.filter(e => e.s === k).length;
     return `<button class="ucard" data-a="sit" data-s="${k}"><img src="e/${s.ic}.svg" alt=""><div class="t"><b>${esc(sTitle(s))}</b><small>${esc(sOther(s))} · ${n}</small></div></button>`;
   }).join('');
 }
 function vSitOne(k) {
-  const s = SITS[k]; if (!s) { V.sit = null; return vSits(); }
+  const s = SITS[k]; if (!s || !sitHas(k)) { V.sit = null; return vSits(); }
   const es = live().filter(e => e.s === k);
   const dl = s.dl.length ? `<div class="card"><h2>${t('dialogues')}</h2>${s.dl.map(l => `<div class="dl"><small>${esc(l.w)}</small><b>${esc(l.tx)}</b><span>${esc(S.cfg.ui === 'pl' && l.pl ? l.pl : l.ne)}</span></div>`).join('')}</div>` : '';
   return `<button class="back" data-a="sitback">${t('back')}</button><div class="card"><div class="wrow" style="border:0;padding:0"><img src="e/${s.ic}.svg" width="46" height="46" alt=""><div class="t"><b style="font-size:20px">${esc(sTitle(s))}</b><span class="gl">${esc(sOther(s))}</span></div></div>${sDesc(s) ? `<p class="desc">${esc(sDesc(s))}</p>` : ''}</div>
-  ${dl}<div class="card"><h2>${t('phrases')} (${es.length})</h2>${es.map(erow).join('') || `<div class="empty">${t('noResults')}</div>`}</div>`;
+  ${dl}${es.length ? `<div class="card"><h2>${t('phrases')} (${es.length})</h2>${es.map(erow).join('')}</div>` : ''}`;
 }
 function vWords() {
   return `<input class="field" id="q" placeholder="${esc(t('search'))}" value="${esc(V.q)}" autocomplete="off" autocapitalize="off" spellcheck="false"><div id="wres">${wresHTML()}</div>`;
@@ -167,7 +172,7 @@ function vMe() {
   ${installCard()}
   <div class="card"><h2>${t('backup')}</h2><div class="btns two"><button class="btn s sm" data-a="export">${t('export')}</button><button class="btn s sm" data-a="import">${t('import')}</button></div>
    <button class="btn bad sm mt" data-a="reset">${t('reset')}</button></div>
-  <div class="card"><h2>${t('about')}</h2><p class="small" style="margin:0">${t('aboutTxt', { n: live().length, s: SITS.length })}</p></div>`;
+  <div class="card"><h2>${t('about')}</h2><p class="small" style="margin:0">${t('aboutTxt', { n: live().length, s: sitList().length })}</p></div>`;
 }
 /* instalar como app (Android/Windows: aviso del navegador; iPad/iPhone: Compartir › Añadir a pantalla de inicio) */
 let instEv = null;

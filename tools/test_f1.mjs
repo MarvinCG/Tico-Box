@@ -1,4 +1,4 @@
-// Pruebas de la Fase 1: el contenido real cargado en web/data.js (sin contenido vulgar) y un recorrido por todas las situaciones.
+// Pruebas de la Fase 1: content.txt completo, data.js solo con lo marcado «ok» en la hoja, sin contenido vulgar, y recorrido de lo publicado.
 // Uso: cd tools && node test_f1.mjs     (levanta su propio servidor local en el puerto 8767)
 import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
@@ -13,23 +13,25 @@ const ok = (c, m) => { if (!c) { errs.push('FALLA ' + m); console.log('✗', m);
 mkdirSync(join(ROOT, 'shots'), { recursive: true });
 
 /* ---- 1. integridad de los datos */
+// content.txt guarda todo (IDs estables); data.js publica solo lo que Aaron marcó «ok» en la hoja de revisión.
+const SRC = readFileSync(join(ROOT, 'tools/content.txt'), 'utf8').split('\n').filter(l => l.trim() && !(l.startsWith('#') && !l.startsWith('##')));
+const srcSits = SRC.filter(l => l.startsWith('##')).length, srcEntries = SRC.filter(l => !l.startsWith('#') && !l.startsWith('>'));
+const srcOk = srcEntries.map((l, i) => [i, l.split('|')[8]?.trim()]).filter(([, st]) => st === 'ok').map(([i]) => i);
+ok(srcSits >= 12 && srcSits <= 15, `content.txt: ${srcSits} situaciones (12–15)`);
+ok(srcEntries.length >= 350 && srcEntries.length <= 450, `content.txt: ${srcEntries.length} entradas (350–450)`);
 const js = readFileSync(join(ROOT, 'web/data.js'), 'utf8');
 const win = {}; new Function('window', js)(win);
 const { SITS, ENTRIES } = win;
-ok(SITS.length >= 12 && SITS.length <= 15, `situaciones: ${SITS.length} (12–15)`);
-ok(ENTRIES.length >= 350 && ENTRIES.length <= 450, `entradas: ${ENTRIES.length} (350–450)`);
-ok(ENTRIES.every((e, i) => e.i === i && e.vk === 'e' + i), 'IDs posicionales y claves e<ID>');
-ok(ENTRIES.every(e => e.tx && e.ne && e.pl), 'toda entrada trae tico, neutro y polaco');
+ok(SITS.length === srcSits, 'data.js conserva todas las situaciones (posiciones estables)');
+ok(JSON.stringify(ENTRIES.map(e => e.i)) === JSON.stringify(srcOk), `data.js publica solo las «ok»: ${ENTRIES.length} de ${srcEntries.length}`);
+ok(ENTRIES.every(e => e.vk === 'e' + e.i && e.tx && e.ne && e.pl && e.p), 'cada entrada publicada conserva su ID y trae sus campos');
 ok(ENTRIES.every(e => ['F', 'N', 'I', 'C'].includes(e.r)), 'registro válido en todas (sin vulgar)');
-ok(ENTRIES.every(e => e.p), 'toda entrada trae emoji');
-ok(SITS.every(s => s.dl.length >= 5), 'cada situación trae un diálogo (≥ 5 líneas)');
-ok(SITS.every((s, k) => ENTRIES.filter(e => e.s === k).length >= 20), 'cada situación trae al menos 20 entradas');
+const okIds = new Set(srcOk);
+ok(SITS.every(s => s.dl.every(l => l.u && l.u.length && l.u.every(i => okIds.has(i)))), 'cada línea de diálogo publicada usa al menos una entrada «ok»');
 ok(new Set(SITS.flatMap(s => s.dl.map(l => l.vk))).size === SITS.reduce((a, s) => a + s.dl.length, 0), 'claves de diálogo únicas');
-const dud = ENTRIES.filter(e => e.du).length, vul = ENTRIES.filter(e => e.r === 'V').length;
-console.log(`  · ${dud} entradas «dudoso», ${vul} vulgares`);
-ok(dud > 0 && vul === 0, 'hay entradas «dudoso» y ninguna vulgar');
 const IDS = JSON.parse(readFileSync(join(ROOT, 'tools/ids.json'), 'utf8'));
-ok(ENTRIES.length >= IDS.length && IDS.every((tx, i) => ENTRIES[i].tx === tx), `IDs estables: las ${IDS.length} entradas publicadas siguen en su lugar`);
+ok(srcEntries.length >= IDS.length && IDS.every((tx, i) => srcEntries[i].split('|')[0].trim() === tx), `IDs estables: las ${IDS.length} entradas registradas siguen en su lugar`);
+const shown = SITS.map((s, k) => k).filter(k => SITS[k].dl.length || ENTRIES.some(e => e.s === k));
 
 /* ---- servidor y navegador */
 const srv = spawn('python3', ['-m', 'http.server', '8767', '--bind', '127.0.0.1', '--directory', join(ROOT, 'web')], { stdio: 'ignore' });
@@ -49,24 +51,27 @@ async function device(name, vp) {
 {
   const { ctx, p } = await device('recorrido', { width: 412, height: 860 });
   await p.click('[data-a="lang"][data-v="es"]');
-  ok((await p.textContent('main')).includes('Frase del día') && (await p.textContent('main')).includes('Situación del día'), 'Hoy: frase y situación del día');
-  for (let k = 0; k < SITS.length; k++) {
+  if (ENTRIES.length) ok((await p.textContent('main')).includes('Frase del día'), 'Hoy: frase del día');
+  await p.click('[data-a="tab"][data-k="sit"]');
+  const listed = await p.evaluate(() => [...document.querySelectorAll('[data-a="sit"]')].map(b => Number(b.dataset.s)));
+  ok(JSON.stringify(listed) === JSON.stringify(shown), `solo se listan las situaciones con algo publicado (${listed.length})`);
+  for (const k of shown) {
     await p.evaluate(k => { const tb = window.__tb; tb.A.tab({ k: 'sit' }); tb.A.sit({ s: k }); }, k);
-    const n = await p.evaluate(() => document.querySelectorAll('[data-a="entry"]').length);
-    if (n !== ENTRIES.filter(e => e.s === k).length) errs.push(`situación ${SITS[k].k}: ${n} frases en pantalla`);
+    const n = await p.evaluate(() => [document.querySelectorAll('[data-a="entry"]').length, document.querySelectorAll('.dl').length]);
+    if (n[0] !== ENTRIES.filter(e => e.s === k).length || n[1] !== SITS[k].dl.length) errs.push(`situación ${SITS[k].k}: ${n} en pantalla`);
   }
-  ok(true, 'las 15 situaciones muestran todas sus frases');
+  ok(true, 'cada situación muestra solo sus frases y líneas publicadas');
   const broken = await p.evaluate(async () => {
     const tb = window.__tb, bad = [];
-    for (const e of tb.E) { tb.A.entry({ i: e.i }); const sh = document.querySelector('#ov'); if (!sh || !sh.textContent.includes(e.tx)) bad.push(e.i); }
+    for (const e of tb.E.filter(Boolean)) { tb.A.entry({ i: e.i }); const sh = document.querySelector('#ov'); if (!sh || !sh.textContent.includes(e.tx)) bad.push(e.i); }
     tb.A.close(); return bad;
   });
-  ok(!broken.length, 'todas las fichas abren ' + JSON.stringify(broken.slice(0, 5)));
+  ok(!broken.length, 'todas las fichas publicadas abren ' + JSON.stringify(broken.slice(0, 5)));
   await p.waitForTimeout(400);
   ok(await p.evaluate(() => [...document.images].every(i => i.complete && i.naturalWidth > 0)), 'sin imágenes rotas en la vista');
   await p.click('[data-a="tab"][data-k="sit"]'); await p.waitForTimeout(300);
   await p.screenshot({ path: join(ROOT, 'shots/f1_situaciones.png') });
-  await p.click('[data-a="sit"][data-s="1"]'); await p.waitForTimeout(300);
+  if (shown.length) { await p.click(`[data-a="sit"][data-s="${shown[0]}"]`); await p.waitForTimeout(300); }
   await p.screenshot({ path: join(ROOT, 'shots/f1_amigos.png') });
   await ctx.close();
 }

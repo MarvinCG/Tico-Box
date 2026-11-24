@@ -3,13 +3,14 @@
 No genera audio: la única voz de la app es la grabación del tutor.
 Uso:  cd tools && npm i && python3 prep.py
 """
-import json, os, shutil, sys
+import json, os, re, shutil, sys, unicodedata
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = ROOT + '/web'
 TW = ROOT + '/tools/node_modules/@twemoji/svg/'
 SRC = ROOT + '/tools/content.txt'
 REG = {'formal': 'F', 'neutral': 'N', 'informal': 'I', 'coloquial': 'C'}   # sin registro vulgar (decisión de Aaron, F1)
+ESTADOS = ('', 'ok', 'corrección', 'correccion', 'dudoso', 'quitar')
 UI_EMOJI = '📦 🇨🇷 🇵🇱 💬 📝'   # íconos fijos de la interfaz (situación sin ícono, frase sin emoji…)
 
 if not os.path.isdir(TW):
@@ -68,8 +69,9 @@ for n, ln in enumerate(open(SRC, encoding='utf-8').read().splitlines(), 1):
         errors.append(f'línea {n}: falta el texto tico')
     if reg.lower() not in REG:
         errors.append(f'línea {n}: registro inválido «{reg}» (usa: {", ".join(REG)})')
-    if st and st.lower() != 'dudoso':
-        errors.append(f'línea {n}: estado inválido «{st}» (vacío o «dudoso»)')
+    st = st.lower()
+    if st not in ESTADOS:
+        errors.append(f'línea {n}: estado inválido «{st}» (vacío, ok, corrección, dudoso o quitar)')
     i = len(entries)
     e = {'i': i, 's': len(sits) - 1, 'vk': f'e{i}', 'tx': tx, 'ne': ne, 'pl': pl, 'r': REG.get(reg.lower(), 'N')}
     if ej: e['ej'] = ej
@@ -77,7 +79,8 @@ for n, ln in enumerate(open(SRC, encoding='utf-8').read().splitlines(), 1):
     p = pic(em, f'línea {n}')
     if p: e['p'] = p
     if z: e['z'] = z
-    if st: e['du'] = 1
+    if st == 'dudoso': e['du'] = 1
+    e['st'] = st
     entries.append(e)
 
 # IDs estables: nunca se borran entradas. tools/ids.json guarda el texto tico de cada ID publicado.
@@ -92,12 +95,48 @@ if changed:
 if errors:
     sys.exit('Errores en content.txt:\n  ' + '\n  '.join(errors))
 
+# Solo se publica lo que Aaron marcó «ok». Los IDs no cambian: las entradas descartadas se quedan en content.txt.
+def fold(t):
+    t = unicodedata.normalize('NFD', t.lower())
+    return ''.join(c for c in t if unicodedata.category(c) != 'Mn')
+
+
+def patterns(tx):
+    # variantes «a / b», sin signos; terminación o/a flexible (hecho/hecha) y, para infinitivos, también sin el verbo
+    out = []
+    for v in tx.split('/'):
+        w = re.findall(r"[\w']+", fold(v))
+        if not w:
+            continue
+        cands = [w]
+        if len(w) > 1 and w[0] in ('el', 'la', 'los', 'las', 'un', 'una', 'unos', 'unas'):
+            cands.append(w[1:])   # «Una yapa» también cuenta como «yapa»
+        if len(w) > 2 and re.search(r'(ar|er|ir)(se)?$', w[0]):
+            cands.append(w[1:])   # «Ser muy pata» también cuenta como «muy pata»
+        word = lambda x: (re.escape(x[:-1]) + '[oa]' if len(x) > 3 and x[-1] in 'oa' else re.escape(x)) + '(?:s|es)?'   # hecho/hecha, birra/birras
+        for c in cands:
+            out.append(re.compile(r'\b' + r'\s+'.join(word(x) for x in c) + r'\b'))
+    return out
+
+
+active = [e for e in entries if e['st'] == 'ok']
+pats = [(e['i'], p) for e in active for p in patterns(e['tx'])]
+for s_ in sits:
+    for l in s_['dl']:
+        uses = sorted({i for i, p in pats if p.search(fold(l['tx']))})
+        if uses:
+            l['u'] = uses
+    s_['dl'] = [l for l in s_['dl'] if l.get('u')]
+for e in entries:
+    e.pop('st', None)
+used = {f for f in used if any(e.get('p') == f for e in active) or any(s_['ic'] == f for s_ in sits) or f in {tw_file(c) for c in UI_EMOJI.split()}}
+
 for f in sorted(used):
     shutil.copy(TW + f + '.svg', f'{OUT}/e/{f}.svg')
 
 js = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
 with open(OUT + '/data.js', 'w', encoding='utf-8') as fh:
     fh.write('/* Generado por tools/prep.py desde tools/content.txt. No editar a mano. */\n')
-    fh.write(f'window.SITS={js(sits)};\nwindow.ENTRIES={js(entries)};\n')
+    fh.write(f'window.SITS={js(sits)};\nwindow.ENTRIES={js(active)};\n')
 json.dump([e['tx'] for e in entries], open(IDS, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
-print(f'data.js: {len(sits)} situaciones, {len(entries)} entradas, {sum(len(s["dl"]) for s in sits)} líneas de diálogo · {len(used)} emojis')
+print(f'content.txt: {len(entries)} entradas · publicadas («ok»): {len(active)} · líneas de diálogo publicadas: {sum(len(s["dl"]) for s in sits)} · {len(used)} emojis')
