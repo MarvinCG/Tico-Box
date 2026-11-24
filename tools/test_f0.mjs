@@ -115,7 +115,7 @@ const txt = (p, s) => p.evaluate(s => [...document.querySelectorAll(s)].map(e =>
 }
 
 /* ---- 5. prueba monkey: clics al azar en teléfono, DeX, horizontal y polaco */
-const SKIP = /^(resetgo|export|install)$/;
+const SKIP = /^(resetgo|export|install|syncout|synccode|copylink)$/;
 async function monkey(tag, vp, n, lang) {
   const { ctx, p } = await device('monkey-' + tag, vp, { fixture: true });
   await p.click(`[data-a="lang"][data-v="${lang}"]`);

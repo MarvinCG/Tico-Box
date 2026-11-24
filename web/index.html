@@ -14,7 +14,7 @@
 <meta name="apple-mobile-web-app-title" content="Tico Box">
 <link rel="stylesheet" href="style.css">
 </head><body><div id="app"></div>
-<script src="data.js"></script><script src="app.js"></script>
+<script src="data.js"></script><script src="sync.js"></script><script src="app.js"></script>
 <script>
 if ('serviceWorker' in navigator && (location.protocol === 'https:' || location.hostname === 'localhost')) {
   window.addEventListener('load', function () { navigator.serviceWorker.register('sw.js').catch(function () {}); });

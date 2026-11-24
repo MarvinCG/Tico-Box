@@ -30,11 +30,33 @@ Funciona sin internet después de abrirla una vez.
 
 El workflow no genera audio: solo estampa la versión de la caché sin conexión con el SHA del commit y publica la carpeta `web/`.
 
-### Sincronización (Fase 2)
+### Sincronización y enlace de la estudiante
 
-Los datos (progreso, frases del tutor, grabaciones y fotos) se guardarán en el repositorio **privado** `MarvinCG/tico-box-data` con la [API de contenidos de GitHub](https://docs.github.com/en/rest/repos/contents) y un token *fine-grained* con acceso solo a ese repositorio y permiso **Contents: Read and write** ([docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)).
+El progreso se guarda en el repositorio **privado** `MarvinCG/tico-box-data` con la [API de contenidos de GitHub](https://docs.github.com/en/rest/repos/contents), en `progress.json`.
 
-> ⚠️ El código de vinculación y el enlace del tutor llevarán el token. Solo se comparten entre nuestros dispositivos. Nunca se sube un token a este repositorio.
+1. Crea un token *fine-grained* ([docs](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)):
+   - **Repository access:** *Only select repositories* → `tico-box-data`
+   - **Permissions → Repository → Contents:** *Read and write*
+   - **Expiration:** la más larga que te permita
+2. En la app: **Progreso → Sincronización → Configurar**, deja `MarvinCG/tico-box-data`, pega el token y toca **Crear enlace para la estudiante**. Tu dispositivo **no** se conecta a su progreso.
+3. **Copiar enlace** y mándaselo. Ella lo abre una vez y su app queda conectada en *modo estudiante*: sin opciones de configuración, solo el estado de la sincronización.
+   - En Android, PC y DeX la app instalada comparte los datos del navegador.
+   - En iPad / iPhone la app instalada en la pantalla de inicio guarda sus datos aparte: allí debe pegar el mismo enlace en **Progreso → Sincronización → Configurar**.
+4. Para conectar otro dispositivo propio: **Conectar este dispositivo** (con el token o pegando un enlace/código).
+
+La app sincroniza al abrir, al cambiar de app, cada 4 minutos, unos segundos después de cada cambio y con el botón ⟳ de arriba.
+
+**Reglas de fusión** (`web/sync.js`, función `merge`):
+
+| Dato | Regla |
+|---|---|
+| Tarjetas (`cards`: «La sé») | por frase, gana el cambio más nuevo |
+| Registro (`logs`: fichas vistas por día) | uno por dispositivo |
+| Ajustes sincronizados | gana el último que escribió (el idioma de la interfaz es de cada dispositivo) |
+| Ocultos y ediciones (`hid`, `ed`) | por clave, gana el último cambio |
+| Borrar el progreso (`resetAt`) | descarta las tarjetas anteriores en todos los dispositivos |
+
+> ⚠️ El enlace y el código llevan el token. Compártelos solo con la estudiante y con tus dispositivos. El código va en el `#` de la dirección (el navegador nunca lo envía al servidor) y la app lo borra de la barra de direcciones al leerlo. Si se filtra, revoca el token en GitHub y crea otro.
 
 ---
 
@@ -69,6 +91,7 @@ Con pantalla ancha o en horizontal, la navegación pasa a un riel lateral y el c
 ```
 web/              la app (HTML/CSS/JS sin frameworks)
   app.js          app de la estudiante · textos en T.es y T.pl (nada en inglés)
+  sync.js         sincronización con el repo privado y reglas de fusión
   data.js         generado por tools/prep.py — no editar a mano
   sw.js           caché sin conexión: red primero para la app, caché primero para emojis e íconos
   e/              emojis Twemoji locales (CC-BY 4.0) · icons/ íconos de la PWA
@@ -78,12 +101,13 @@ tools/
   icon.py         genera los íconos de la PWA (Pillow + fuente DejaVu)
   test_f0.mjs     pruebas con Playwright: carga, es/pl, sin conexión, sin voz sintética y prueba monkey
   test_f1.mjs     integridad del contenido, recorrido por todas las situaciones y fichas, sin contenido vulgar
+  test_f2.mjs     sincronización con GitHub simulado: enlace de la estudiante, 3 dispositivos, fusión, 409, sin conexión
 ```
 
 ```bash
 cd tools && npm i            # Twemoji y Playwright
 python3 prep.py              # regenerar web/data.js y web/e/
-npm test                     # pruebas F0 y F1 (levantan su propio servidor local)
+npm test                     # pruebas F0, F1 y F2 (levantan su propio servidor local)
 cd ../web && python3 -m http.server 8765   # probar en http://localhost:8765
 ```
 
