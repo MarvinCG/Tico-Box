@@ -47,7 +47,7 @@ La fuente es `tools/content.txt` (formato descrito al inicio del archivo). Cada 
 - Lo que no esté validado como uso costarricense va marcado «dudoso».
 - `tools/ids.json` guarda el texto tico de cada ID publicado: `prep.py` falla si alguna vez hay menos entradas que las publicadas y avisa de los IDs cuyo texto cambió.
 
-Contenido en `content.txt`: 11 situaciones y 285 entradas, con un diálogo por situación (391 IDs; 106 eliminados con sus situaciones: amigos, fútbol, el brete y trámites). No se incluye contenido vulgar.
+Contenido en `content.txt`: 11 situaciones y 246 entradas aprobadas por Aaron, con un diálogo por situación (391 IDs; 145 eliminados: 106 con las situaciones amigos, fútbol, el brete y trámites, y 39 marcadas «dudoso» en la revisión). No se incluye contenido vulgar.
 
 Una entrada eliminada deja la línea `~ eliminada (…)` en su lugar: su ID queda reservado y `prep.py` falla si se intenta reutilizar.
 

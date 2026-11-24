@@ -19,34 +19,34 @@
 # Las líneas de diálogo usan la clave de su situación y su posición dentro de ella.
 
 ## fam | Conocer a la familia tica | Poznajemy kostarykańską rodzinę | 👨‍👩‍👧‍👦 | Llegar a la casa, saludar a la suegra y a los tíos, comer y despedirse. En Costa Rica se ustedea a casi todo el mundo, también dentro de la familia. | Przyjazd do domu, powitanie teściowej i wujków, jedzenie i pożegnanie. W Kostaryce prawie do wszystkich mówi się „usted”, także w rodzinie.
-¡Upe! | ¡Hola! ¿Hay alguien en la casa? | Halo! Jest ktoś w domu? | informal | ¡Upe! ¿Está doña Rosa? | Se dice desde el portón para llamar a los de la casa, sobre todo fuera de la ciudad. | 🏡 | Rural y Valle Central |
-Buenas. | Buenos días / buenas tardes / buenas noches. | Dzień dobry / dobry wieczór. | neutral | Buenas, ¿cómo está? | El saludo más común: sirve a cualquier hora del día. | 👋 | |
-¡Pase adelante! | Pase, por favor. | Proszę wejść! | neutral | ¡Pase adelante, está en su casa! | Fórmula fija para invitar a entrar; «adelante» se usa aunque la puerta esté al lado. | 🚪 | |
-Está en su casa. | Siéntase como en casa. | Proszę się czuć jak u siebie. | neutral | Siéntese, está en su casa. | | 🛋️ | |
-¿Cómo me le va? | ¿Cómo le va? | Jak się Panu/Pani wiedzie? | informal | ¡Don Carlos! ¿Cómo me le va? | El «me» es afectivo (dativo ético): muestra cariño, no cambia el sentido. | 🙂 | |
-Aquí, en la lucha. | Bien, trabajando como siempre. | Jakoś leci, walczymy. | informal | —¿Cómo está? —Aquí, en la lucha. | Respuesta típica y modesta a «¿cómo está?». | 💪 | |
-Bien, gracias a Dios. | Bien, gracias. | Dobrze, dzięki Bogu. | neutral | —¿Cómo sigue su mamá? —Bien, gracias a Dios. | Muy frecuente aunque la persona no sea religiosa. | 🙏 | |
-Mucho gusto. | Encantado / encantada. | Miło mi. | neutral | Mucho gusto, soy la novia de Andrés. | | 🤝 | |
-Con mucho gusto. | De nada. | Nie ma za co. / Z przyjemnością. | neutral | —Gracias por el café. —Con mucho gusto. | Es LA respuesta tica a «gracias». «De nada» se entiende, pero suena menos cálido. | 😊 | |
-Mi suegra / mi suegro | La madre / el padre de mi pareja | Moja teściowa / mój teść | neutral | Mi suegra hace el mejor arroz con pollo. | En Costa Rica se dice «suegra» también entre novios, sin estar casados. | 👵 | |
-Doña Rosa / don Carlos | La señora Rosa / el señor Carlos | Pani Rosa / pan Carlos | neutral | Doña Rosa, ¿le ayudo a lavar los platos? | «Don» y «doña» con el nombre de pila: respeto y cercanía a la vez. Muy común con los suegros. | 👴 | |
-¿Ya comió? | ¿Ya comiste? / ¿Ya has comido? | Już jadłaś? | neutral | Mi amor, ¿ya comió? Hay pinto en la cocina. | Pregunta de cariño constante en las familias. Fíjese en el ustedeo, aunque sea entre novios. | 🍽️ | |
-Sírvase. | Sírvase, por favor. / Coma. | Proszę się częstować. | neutral | Sírvase, que hay bastante. | | 🍲 | |
-¿Me regala un poquito más? | ¿Me da un poco más, por favor? | Czy mogę prosić o jeszcze trochę? | neutral | Qué rico está esto, ¿me regala un poquito más? | «Regalar» = pedir con cortesía; no significa que sea gratis. | 🥄 | |
-Qué rico, ¡muchas gracias! | Está delicioso, muchas gracias. | Pyszne, bardzo dziękuję! | neutral | Doña Rosa, qué rico le quedó. | Elogiar la comida es casi obligatorio en una visita. | 😋 | |
-Mi amor / mi vida | Cariño | Kochanie | informal | Mi amor, ¿usted me pasa la sal? | Se usa con la pareja y también con hijos, nietos y hasta con desconocidos (vendedoras, señoras mayores). | ❤️ | |
-Mi chiquito / mi chiquita | Cariño (a un niño o a la pareja) | Mój maluszek / moja maleńka | informal | Venga, mi chiquita, a comer. | Diminutivo cariñoso, no tiene que ver con la estatura. | 🧒 | |
-Chinear | Mimar, consentir | Rozpieszczać | coloquial | Mi abuela me chinea demasiado. | Muy tico. También «estar chineado» = estar mimado. | 🤗 | |
-Carajillo / carajilla | Niño / niña | Dzieciak | coloquial | Ese carajillo no se está quieto. | Puede sonar algo brusco; en familia es normal. | 👦 | |
-Güila | Niño, niña | Dzieciak, brzdąc | coloquial | Cuando yo era güila, jugábamos en la calle. | También «los güilas» = los hijos. | 🧒 | |
-Diay | Pues / bueno / ¿y entonces? | No / no to / i co? | informal | Diay, ¿qué hacemos? | Muletilla tica por excelencia; viene de «de ahí». Cambia de sentido según la entonación. | 🤷 | |
-Ahorita | Dentro de un rato (o hace un rato) | Zaraz / za chwilę (albo przed chwilą) | neutral | Ahorita le ayudo. | Ojo: «ahorita» no quiere decir «ya mismo». Puede ser en cinco minutos o en una hora. También «ahorita vino» = vino hace un rato. | ⏳ | |
-Un toque | Un momento / un poco | Chwilkę / trochę | coloquial | Espéreme un toque. | También «en un toque» = muy rápido. | ⏱️ | |
-Ya me voy yendo. | Ya me tengo que ir. | Będę się już zbierać. | neutral | Bueno, ya me voy yendo, gracias por todo. | La despedida tica es larga: se anuncia varias veces antes de salir de verdad. | 🚶 | |
-Que Dios me lo acompañe. | Que le vaya bien. | Niech Bóg prowadzi. / Szczęśliwej drogi. | formal | —Adiós, doña Rosa. —Que Dios me la acompañe, mi amor. | Despedida típica de personas mayores; el «me lo/la» es afectivo y concuerda con quien se va. | 🙏 | |
-Vaya con Dios. | Que le vaya bien. | Z Bogiem. | formal | Gracias por venir, vaya con Dios. | | 🙌 | |
-Por dicha | Por suerte, afortunadamente | Na szczęście | neutral | Por dicha llegaron antes del aguacero. | Muy frecuente. «¡Qué dicha!» = ¡qué bien!, ¡qué suerte! | 🍀 | |
-¡Qué dicha! | ¡Qué bien! / ¡Qué suerte! | Jak dobrze! / Co za szczęście! | neutral | —Me dieron el trabajo. —¡Qué dicha! | | 🎉 | |
+¡Upe! | ¡Hola! ¿Hay alguien en la casa? | Halo! Jest ktoś w domu? | informal | ¡Upe! ¿Está doña Rosa? | Se dice desde el portón para llamar a los de la casa, sobre todo fuera de la ciudad. | 🏡 | Rural y Valle Central | ok
+Buenas. | Buenos días / buenas tardes / buenas noches. | Dzień dobry / dobry wieczór. | neutral | Buenas, ¿cómo está? | El saludo más común: sirve a cualquier hora del día. | 👋 |  | ok
+¡Pase adelante! | Pase, por favor. | Proszę wejść! | neutral | ¡Pase adelante, está en su casa! | Fórmula fija para invitar a entrar; «adelante» se usa aunque la puerta esté al lado. | 🚪 |  | ok
+Está en su casa. | Siéntase como en casa. | Proszę się czuć jak u siebie. | neutral | Siéntese, está en su casa. |  | 🛋️ |  | ok
+¿Cómo me le va? | ¿Cómo le va? | Jak się Panu/Pani wiedzie? | informal | ¡Don Carlos! ¿Cómo me le va? | El «me» es afectivo (dativo ético): muestra cariño, no cambia el sentido. | 🙂 |  | ok
+Aquí, en la lucha. | Bien, trabajando como siempre. | Jakoś leci, walczymy. | informal | —¿Cómo está? —Aquí, en la lucha. | Respuesta típica y modesta a «¿cómo está?». | 💪 |  | ok
+Bien, gracias a Dios. | Bien, gracias. | Dobrze, dzięki Bogu. | neutral | —¿Cómo sigue su mamá? —Bien, gracias a Dios. | Muy frecuente aunque la persona no sea religiosa. | 🙏 |  | ok
+Mucho gusto. | Encantado / encantada. | Miło mi. | neutral | Mucho gusto, soy la novia de Andrés. |  | 🤝 |  | ok
+Con mucho gusto. | De nada. | Nie ma za co. / Z przyjemnością. | neutral | —Gracias por el café. —Con mucho gusto. | Es LA respuesta tica a «gracias». «De nada» se entiende, pero suena menos cálido. | 😊 |  | ok
+Mi suegra / mi suegro | La madre / el padre de mi pareja | Moja teściowa / mój teść | neutral | Mi suegra hace el mejor arroz con pollo. | En Costa Rica se dice «suegra» también entre novios, sin estar casados. | 👵 |  | ok
+Doña Rosa / don Carlos | La señora Rosa / el señor Carlos | Pani Rosa / pan Carlos | neutral | Doña Rosa, ¿le ayudo a lavar los platos? | «Don» y «doña» con el nombre de pila: respeto y cercanía a la vez. Muy común con los suegros. | 👴 |  | ok
+¿Ya comió? | ¿Ya comiste? / ¿Ya has comido? | Już jadłaś? | neutral | Mi amor, ¿ya comió? Hay pinto en la cocina. | Pregunta de cariño constante en las familias. Fíjese en el ustedeo, aunque sea entre novios. | 🍽️ |  | ok
+Sírvase. | Sírvase, por favor. / Coma. | Proszę się częstować. | neutral | Sírvase, que hay bastante. |  | 🍲 |  | ok
+¿Me regala un poquito más? | ¿Me da un poco más, por favor? | Czy mogę prosić o jeszcze trochę? | neutral | Qué rico está esto, ¿me regala un poquito más? | «Regalar» = pedir con cortesía; no significa que sea gratis. | 🥄 |  | ok
+Qué rico, ¡muchas gracias! | Está delicioso, muchas gracias. | Pyszne, bardzo dziękuję! | neutral | Doña Rosa, qué rico le quedó. | Elogiar la comida es casi obligatorio en una visita. | 😋 |  | ok
+Mi amor / mi vida | Cariño | Kochanie | informal | Mi amor, ¿usted me pasa la sal? | Se usa con la pareja y también con hijos, nietos y hasta con desconocidos (vendedoras, señoras mayores). | ❤️ |  | ok
+Mi chiquito / mi chiquita | Cariño (a un niño o a la pareja) | Mój maluszek / moja maleńka | informal | Venga, mi chiquita, a comer. | Diminutivo cariñoso, no tiene que ver con la estatura. | 🧒 |  | ok
+Chinear | Mimar, consentir | Rozpieszczać | coloquial | Mi abuela me chinea demasiado. | Muy tico. También «estar chineado» = estar mimado. | 🤗 |  | ok
+Carajillo / carajilla | Niño / niña | Dzieciak | coloquial | Ese carajillo no se está quieto. | Puede sonar algo brusco; en familia es normal. | 👦 |  | ok
+Güila | Niño, niña | Dzieciak, brzdąc | coloquial | Cuando yo era güila, jugábamos en la calle. | También «los güilas» = los hijos. | 🧒 |  | ok
+Diay | Pues / bueno / ¿y entonces? | No / no to / i co? | informal | Diay, ¿qué hacemos? | Muletilla tica por excelencia; viene de «de ahí». Cambia de sentido según la entonación. | 🤷 |  | ok
+Ahorita | Dentro de un rato (o hace un rato) | Zaraz / za chwilę (albo przed chwilą) | neutral | Ahorita le ayudo. | Ojo: «ahorita» no quiere decir «ya mismo». Puede ser en cinco minutos o en una hora. También «ahorita vino» = vino hace un rato. | ⏳ |  | ok
+Un toque | Un momento / un poco | Chwilkę / trochę | coloquial | Espéreme un toque. | También «en un toque» = muy rápido. | ⏱️ |  | ok
+Ya me voy yendo. | Ya me tengo que ir. | Będę się już zbierać. | neutral | Bueno, ya me voy yendo, gracias por todo. | La despedida tica es larga: se anuncia varias veces antes de salir de verdad. | 🚶 |  | ok
+Que Dios me lo acompañe. | Que le vaya bien. | Niech Bóg prowadzi. / Szczęśliwej drogi. | formal | —Adiós, doña Rosa. —Que Dios me la acompañe, mi amor. | Despedida típica de personas mayores; el «me lo/la» es afectivo y concuerda con quien se va. | 🙏 |  | ok
+Vaya con Dios. | Que le vaya bien. | Z Bogiem. | formal | Gracias por venir, vaya con Dios. |  | 🙌 |  | ok
+Por dicha | Por suerte, afortunadamente | Na szczęście | neutral | Por dicha llegaron antes del aguacero. | Muy frecuente. «¡Qué dicha!» = ¡qué bien!, ¡qué suerte! | 🍀 |  | ok
+¡Qué dicha! | ¡Qué bien! / ¡Qué suerte! | Jak dobrze! / Co za szczęście! | neutral | —Me dieron el trabajo. —¡Qué dicha! |  | 🎉 |  | ok
 > Doña Rosa | ¡Upe! ¡Pase adelante, mi amor, está en su casa! | ¡Hola! Pase, por favor, siéntase como en casa. | Halo! Proszę wejść, kochanie, czuj się jak u siebie!
 > Yo | Buenas, doña Rosa. Mucho gusto. | Buenas tardes, señora Rosa. Encantada. | Dzień dobry, pani Roso. Miło mi.
 > Doña Rosa | El gusto es mío. ¿Ya comió? Hay arroz con pollo. | El gusto es mío. ¿Ya comiste? Hay arroz con pollo. | Mnie również. Jadłaś już? Jest ryż z kurczakiem.
@@ -88,30 +88,30 @@ Por dicha | Por suerte, afortunadamente | Na szczęście | neutral | Por dicha l
 ~ eliminada (ID 57, situación «ami»)
 
 ## trat | Usted, vos y tú | Usted, vos i tú | 🗣️ | Cómo tratar a la gente en Costa Rica: el ustedeo general, el voseo del Valle Central y por qué el «tú» suena extranjero. | Jak zwracać się do ludzi w Kostaryce: powszechne „usted”, voseo z Doliny Centralnej i dlaczego „tú” brzmi obco.
-¿Cómo está usted? | ¿Cómo estás? | Jak się masz? | neutral | Hola, mi amor, ¿cómo está usted? | El «usted» tico no siempre es distancia: se usa con la pareja, los hijos, los amigos y las mascotas. Para una hablante de polaco: no equivale al «Pan/Pani». | 🙂 | |
-Mi amor, ¿usted quiere café? | Cariño, ¿quieres café? | Kochanie, chcesz kawy? | neutral | Mi amor, ¿usted quiere café o fresco? | Ustedeo entre pareja: normalísimo en Costa Rica. | ☕ | |
-¡Venga acá! | ¡Ven aquí! | Chodź tu! | neutral | ¡Venga acá, Firulais! | Hasta al perro se le habla de usted. | 🐕 | |
-Vos | Tú | Ty | informal | Vos sos mi mejor amiga. | Voseo de confianza, sobre todo entre amigos jóvenes del Valle Central. Con desconocidos suena irrespetuoso. | 🫵 | Valle Central |
-Vos sos | Tú eres | Ty jesteś | informal | Vos sos una carga para esto. | Ser → «sos», no «eres». | ✨ | Valle Central |
-¿Qué querés? | ¿Qué quieres? | Czego chcesz? | informal | Mae, ¿qué querés comer? | Presente del voseo: acento en la última sílaba (querés, tenés, podés). | 🤔 | Valle Central |
-¿Tenés tiempo? | ¿Tienes tiempo? | Masz czas? | informal | ¿Tenés tiempo mañana? | Sin diptongo: tenés, no «tienés». | ⏰ | Valle Central |
-¿Podés venir? | ¿Puedes venir? | Możesz przyjść? | informal | ¿Podés venir a las ocho? | | 📅 | Valle Central |
-¡Vení! | ¡Ven! | Chodź! | informal | Vení, te enseño algo. | Imperativo del voseo: quita la -r del infinitivo y acentúa (vení, decí, mirá, contá). | 👉 | Valle Central |
-¡Mirá! | ¡Mira! | Patrz! | informal | Mirá qué bonito el atardecer. | | 👀 | Valle Central |
-Decime | Dime | Powiedz mi | informal | Decime la verdad. | | 🗨️ | Valle Central |
-Contame | Cuéntame | Opowiedz mi | informal | Contame, ¿cómo te fue? | Con voseo el pronombre átono es «te»: «te llamo», no «vos llamo». | 📖 | Valle Central |
-¿Vos sabés? | ¿Tú sabes? | Wiesz? | informal | ¿Vos sabés dónde queda? | | 🧠 | Valle Central |
-Usted / vos / tú | (tres tratamientos) | Usted / vos / tú | neutral | Usted con todos; vos con amigos de confianza; tú casi nunca. | Muchos ticos sienten el «tú» como extranjero o afectado. Algunos lo usan para coquetear o imitando la tele. Mejor quedarse con «usted». | 🗣️ | |
-¿Me hace un favor? | ¿Me haces un favor? | Zrobisz mi przysługę? | neutral | Mae, ¿me hace un favor? | Con amigos también va «usted». | 🙏 | |
-¿Usted es de por aquí? | ¿Eres de aquí? | Jesteś stąd? | neutral | Disculpe, ¿usted es de por aquí? | | 📍 | |
-Mamá, ¿usted dónde está? | Mamá, ¿dónde estás? | Mamo, gdzie jesteś? | neutral | Mamá, ¿usted dónde está? Ya llegué. | A los padres se les ustedea siempre. | 📞 | |
-Ustedes | Vosotros / ustedes | Wy / Państwo | neutral | ¿Ustedes vienen a la fiesta? | En Costa Rica no se usa «vosotros» ni en confianza. | 👥 | |
-Tutear | Tratar de tú | Mówić na „ty” | neutral | En Costa Rica casi nadie tutea. | El «tú» es lo normal en muchos países, pero no aquí. Para la estudiante: en Polonia «ty» es confianza; en Costa Rica la confianza va con «usted» o «vos». | 🔄 | |
-Vosear | Tratar de vos | Mówić na „vos” | neutral | Mis amigos me vosean, pero mi novio me ustedea. | | 🗨️ | Valle Central |
-¿Usted me entiende? | ¿Me entiendes? | Rozumiesz mnie? | neutral | ¿Usted me entiende cuando hablo rápido? | | 👂 | |
-Siéntese, por favor. | Siéntate, por favor. | Usiądź, proszę. | neutral | Siéntese, mi amor, ya le sirvo. | | 🪑 | |
-No sea malo, ayúdeme. | Por favor, ayúdame. | Bądź tak dobry, pomóż mi. | neutral | No sea malo, ¿me presta el cargador? | «No sea malo / mala» = fórmula de ruego amable, sin reproche. | 🥺 | |
-¡Qué tuanis estás! | ¡Qué guapa estás! | Świetnie wyglądasz! | informal | —¡Qué tuanis estás! —Mae, ¿y ese «tú»? | Dicho en «tú» por un tico suele sonar a coqueteo o a broma. | 😉 |  | quitar
+¿Cómo está usted? | ¿Cómo estás? | Jak się masz? | neutral | Hola, mi amor, ¿cómo está usted? | El «usted» tico no siempre es distancia: se usa con la pareja, los hijos, los amigos y las mascotas. Para una hablante de polaco: no equivale al «Pan/Pani». | 🙂 |  | ok
+Mi amor, ¿usted quiere café? | Cariño, ¿quieres café? | Kochanie, chcesz kawy? | neutral | Mi amor, ¿usted quiere café o fresco? | Ustedeo entre pareja: normalísimo en Costa Rica. | ☕ |  | ok
+¡Venga acá! | ¡Ven aquí! | Chodź tu! | neutral | ¡Venga acá, Firulais! | Hasta al perro se le habla de usted. | 🐕 |  | ok
+~ eliminada (ID 61, situación «trat», marcada «dudoso» en la revisión)
+~ eliminada (ID 62, situación «trat», marcada «dudoso» en la revisión)
+¿Qué querés? | ¿Qué quieres? | Czego chcesz? | informal | Mae, ¿qué querés comer? | Presente del voseo: acento en la última sílaba (querés, tenés, podés). | 🤔 | Valle Central | ok
+¿Tenés tiempo? | ¿Tienes tiempo? | Masz czas? | informal | ¿Tenés tiempo mañana? | Sin diptongo: tenés, no «tienés». | ⏰ | Valle Central | ok
+¿Podés venir? | ¿Puedes venir? | Możesz przyjść? | informal | ¿Podés venir a las ocho? |  | 📅 | Valle Central | ok
+¡Vení! | ¡Ven! | Chodź! | informal | Vení, te enseño algo. | Imperativo del voseo: quita la -r del infinitivo y acentúa (vení, decí, mirá, contá). | 👉 | Valle Central | ok
+¡Mirá! | ¡Mira! | Patrz! | informal | Mirá qué bonito el atardecer. |  | 👀 | Valle Central | ok
+Decime | Dime | Powiedz mi | informal | Decime la verdad. |  | 🗨️ | Valle Central | ok
+Contame | Cuéntame | Opowiedz mi | informal | Contame, ¿cómo te fue? | Con voseo el pronombre átono es «te»: «te llamo», no «vos llamo». | 📖 | Valle Central | ok
+¿Vos sabés? | ¿Tú sabes? | Wiesz? | informal | ¿Vos sabés dónde queda? |  | 🧠 | Valle Central | ok
+Usted / vos / tú | (tres tratamientos) | Usted / vos / tú | neutral | Usted con todos; vos con amigos de confianza; tú casi nunca. | Muchos ticos sienten el «tú» como extranjero o afectado. Algunos lo usan para coquetear o imitando la tele. Mejor quedarse con «usted». | 🗣️ |  | ok
+¿Me hace un favor? | ¿Me haces un favor? | Zrobisz mi przysługę? | neutral | Mae, ¿me hace un favor? | Con amigos también va «usted». | 🙏 |  | ok
+¿Usted es de por aquí? | ¿Eres de aquí? | Jesteś stąd? | neutral | Disculpe, ¿usted es de por aquí? |  | 📍 |  | ok
+~ eliminada (ID 74, situación «trat», marcada «dudoso» en la revisión)
+Ustedes | Vosotros / ustedes | Wy / Państwo | neutral | ¿Ustedes vienen a la fiesta? | En Costa Rica no se usa «vosotros» ni en confianza. | 👥 |  | ok
+~ eliminada (ID 76, situación «trat», marcada «dudoso» en la revisión)
+~ eliminada (ID 77, situación «trat», marcada «dudoso» en la revisión)
+¿Usted me entiende? | ¿Me entiendes? | Rozumiesz mnie? | neutral | ¿Usted me entiende cuando hablo rápido? |  | 👂 |  | ok
+Siéntese, por favor. | Siéntate, por favor. | Usiądź, proszę. | neutral | Siéntese, mi amor, ya le sirvo. |  | 🪑 |  | ok
+No sea malo, ayúdeme. | Por favor, ayúdame. | Bądź tak dobry, pomóż mi. | neutral | No sea malo, ¿me presta el cargador? | «No sea malo / mala» = fórmula de ruego amable, sin reproche. | 🥺 |  | ok
+~ eliminada (ID 81, situación «trat», marcada «dudoso» en la revisión)
 > Andrés | Mi amor, ¿usted ya está lista? | Cariño, ¿ya estás lista? | Kochanie, jesteś już gotowa?
 > Yo | Casi. ¿Por qué usted me habla de usted si somos novios? | Casi. ¿Por qué me tratas de usted si somos novios? | Prawie. Czemu mówisz do mnie „usted”, skoro jesteśmy parą?
 > Andrés | Diay, aquí es así. Hasta al perro le digo usted. | Bueno, aquí es así. Hasta al perro lo trato de usted. | No, tutaj tak jest. Nawet do psa mówię „usted”.
@@ -122,33 +122,33 @@ No sea malo, ayúdeme. | Por favor, ayúdame. | Bądź tak dobry, pomóż mi. | 
 > Andrés | Eso suena a telenovela. Quédese con el usted. | Eso suena a telenovela. Quédate con el usted. | To brzmi jak z telenoweli. Zostań przy „usted”.
 
 ## soda | En la soda | W sodzie (tanim barze) | 🍛 | La soda es el restaurante sencillo de comida tica. Pedir el casado, el gallo pinto y el fresco, y pagar. | Soda to prosta restauracja z kostarykańskim jedzeniem. Zamawiamy casado, gallo pinto i świeży napój, potem płacimy.
-La soda | Restaurante pequeño y barato de comida casera | Tani bar z domowym jedzeniem | neutral | Almorzamos en la soda de la esquina. | No tiene nada que ver con un refresco: es un lugar. | 🏠 | |
-Un casado | Plato del día: arroz, frijoles, ensalada, plátano y carne | Zestaw obiadowy: ryż, fasola, sałatka, banan i mięso | neutral | Un casado con pollo, por favor. | El almuerzo tico por excelencia. Se elige la carne: pollo, res, cerdo o pescado. | 🍛 | |
-Gallo pinto | Arroz con frijoles mezclados | Ryż z fasolą (smażony razem) | neutral | De desayuno, gallo pinto con huevo y natilla. | Desayuno típico. También solo «pinto». | 🍚 | |
-Natilla | Crema agria | Kwaśna śmietana | neutral | ¿El pinto viene con natilla? | No es el postre español: es crema agria salada. | 🥛 | |
-Salsa Lizano | Salsa de verduras típica de Costa Rica | Kostarykański sos warzywny Lizano | neutral | Póngale Lizano al pinto. | Está en todas las mesas. Muchos ticos en el extranjero la extrañan. | 🍶 | |
-Un fresco | Un refresco natural, jugo | Świeży napój owocowy | neutral | ¿De qué tiene el fresco hoy? | Hecho con fruta y agua o leche. «Fresco de cas», «de mora», «de tamarindo». | 🥤 | |
-Fresco en agua o en leche | Jugo con agua o con leche | Sok na wodzie czy na mleku | neutral | Un fresco de mora en leche, por favor. | La pregunta típica del salonero al pedir un fresco. | 🍓 | |
-Cas | Fruta ácida tropical (guayaba ácida) | Cas — kwaśny owoc tropikalny | neutral | El fresco de cas es mi favorito. | Fruta muy tica; casi no se conoce fuera. | 🍈 | |
-Chifrijo | Plato de chicharrón, frijoles, arroz y pico de gallo | Danie z chrupiącej wieprzowiny, fasoli, ryżu i salsy | neutral | Una birra y un chifrijo. | «Chicharrón» + «frijoles». Boca clásica de bar. | 🍲 | |
-Chicharrón | Trozos de cerdo frito | Smażone kawałki wieprzowiny | neutral | Los domingos hay chicharrón en la soda. | | 🥓 | |
-Olla de carne | Sopa de res con verduras | Zupa wołowa z warzywami | neutral | Los sábados hay olla de carne. | Plato casero de fin de semana. | 🥣 | |
-Arroz con pollo | Arroz con pollo | Ryż z kurczakiem | neutral | El arroz con pollo de las fiestas. | Plato de cumpleaños y celebraciones. | 🍗 | |
-Picadillo | Guiso de verdura picada | Siekane duszone warzywa | neutral | Un gallo de picadillo de papa. | Se hace de papa, chayote, arracache, vainica… | 🥔 | |
-Un gallo | Una tortilla con relleno | Tortilla z nadzieniem | neutral | Me regala dos gallos de picadillo. | No confundir con el animal ni con el «gallo pinto». | 🌮 | |
-Café chorreado | Café colado en chorreador | Kawa parzona przez materiałowy filtr | neutral | Aquí el café es chorreado, como en la casa. | El chorreador es un soporte de madera con una bolsita de tela. | ☕ | |
-Agua dulce | Bebida de tapa de dulce (panela) con agua o leche | Napój z nierafinowanego cukru trzcinowego | neutral | En las mañanas frías, un agua dulce. | Se toma caliente. | 🍵 | |
-Tapa de dulce | Panela, azúcar de caña sin refinar | Nierafinowany cukier trzcinowy w bloku | neutral | El agua dulce se hace con tapa de dulce. | | 🟫 | |
-¿Me regala la cuenta? | ¿Me trae la cuenta, por favor? | Poproszę rachunek. | neutral | Disculpe, ¿me regala la cuenta? | | 🧾 | |
-Salonero / salonera | Camarero / camarera | Kelner / kelnerka | neutral | Salonero, ¿nos trae otra ronda? | | 🧑‍🍳 | |
-¿Qué se va a servir? | ¿Qué va a tomar? / ¿Qué desea? | Co podać? | neutral | Buenas, ¿qué se va a servir? | Pregunta típica del salonero. | 📝 | |
-Para llevar | Para llevar | Na wynos | neutral | Un casado para llevar, por favor. | | 🥡 | |
-Para comer aquí | Para tomar aquí | Na miejscu | neutral | ¿Para comer aquí o para llevar? | | 🍽️ | |
-El diez por ciento | La propina de servicio incluida | Dziesięcioprocentowa opłata za obsługę | neutral | La cuenta ya trae el diez por ciento. | En restaurantes el servicio (10 %) viene incluido por ley. En una soda sencilla a veces no. | 💵 | |
-Jama | Comida | Żarcie | coloquial | Mae, ¿qué hay de jama? | | 🍔 | |
-Jamar | Comer | Wsuwać / jeść | coloquial | Vamos a jamar, que tengo hambre. | | 😋 | |
-Estar lleno / quedar lleno | Estar satisfecho | Być najedzonym | neutral | No, gracias, ya quedé lleno. | | 🫃 | |
-¡Qué rico! | ¡Qué delicioso! | Ale pyszne! | neutral | ¡Qué rico este pinto! | «Rico» se usa para comida, clima y situaciones agradables. | 😋 | |
+La soda | Restaurante pequeño y barato de comida casera | Tani bar z domowym jedzeniem | neutral | Almorzamos en la soda de la esquina. | No tiene nada que ver con un refresco: es un lugar. | 🏠 |  | ok
+Un casado | Plato del día: arroz, frijoles, ensalada, plátano y carne | Zestaw obiadowy: ryż, fasola, sałatka, banan i mięso | neutral | Un casado con pollo, por favor. | El almuerzo tico por excelencia. Se elige la carne: pollo, res, cerdo o pescado. | 🍛 |  | ok
+Gallo pinto | Arroz con frijoles mezclados | Ryż z fasolą (smażony razem) | neutral | De desayuno, gallo pinto con huevo y natilla. | Desayuno típico. También solo «pinto». | 🍚 |  | ok
+Natilla | Crema agria | Kwaśna śmietana | neutral | ¿El pinto viene con natilla? | No es el postre español: es crema agria salada. | 🥛 |  | ok
+Salsa Lizano | Salsa de verduras típica de Costa Rica | Kostarykański sos warzywny Lizano | neutral | Póngale Lizano al pinto. | Está en todas las mesas. Muchos ticos en el extranjero la extrañan. | 🍶 |  | ok
+Un fresco | Un refresco natural, jugo | Świeży napój owocowy | neutral | ¿De qué tiene el fresco hoy? | Hecho con fruta y agua o leche. «Fresco de cas», «de mora», «de tamarindo». | 🥤 |  | ok
+Fresco en agua o en leche | Jugo con agua o con leche | Sok na wodzie czy na mleku | neutral | Un fresco de mora en leche, por favor. | La pregunta típica del salonero al pedir un fresco. | 🍓 |  | ok
+Cas | Fruta ácida tropical (guayaba ácida) | Cas — kwaśny owoc tropikalny | neutral | El fresco de cas es mi favorito. | Fruta muy tica; casi no se conoce fuera. | 🍈 |  | ok
+Chifrijo | Plato de chicharrón, frijoles, arroz y pico de gallo | Danie z chrupiącej wieprzowiny, fasoli, ryżu i salsy | neutral | Una birra y un chifrijo. | «Chicharrón» + «frijoles». Boca clásica de bar. | 🍲 |  | ok
+Chicharrón | Trozos de cerdo frito | Smażone kawałki wieprzowiny | neutral | Los domingos hay chicharrón en la soda. |  | 🥓 |  | ok
+Olla de carne | Sopa de res con verduras | Zupa wołowa z warzywami | neutral | Los sábados hay olla de carne. | Plato casero de fin de semana. | 🥣 |  | ok
+Arroz con pollo | Arroz con pollo | Ryż z kurczakiem | neutral | El arroz con pollo de las fiestas. | Plato de cumpleaños y celebraciones. | 🍗 |  | ok
+Picadillo | Guiso de verdura picada | Siekane duszone warzywa | neutral | Un gallo de picadillo de papa. | Se hace de papa, chayote, arracache, vainica… | 🥔 |  | ok
+Un gallo | Una tortilla con relleno | Tortilla z nadzieniem | neutral | Me regala dos gallos de picadillo. | No confundir con el animal ni con el «gallo pinto». | 🌮 |  | ok
+Café chorreado | Café colado en chorreador | Kawa parzona przez materiałowy filtr | neutral | Aquí el café es chorreado, como en la casa. | El chorreador es un soporte de madera con una bolsita de tela. | ☕ |  | ok
+Agua dulce | Bebida de tapa de dulce (panela) con agua o leche | Napój z nierafinowanego cukru trzcinowego | neutral | En las mañanas frías, un agua dulce. | Se toma caliente. | 🍵 |  | ok
+Tapa de dulce | Panela, azúcar de caña sin refinar | Nierafinowany cukier trzcinowy w bloku | neutral | El agua dulce se hace con tapa de dulce. |  | 🟫 |  | ok
+¿Me regala la cuenta? | ¿Me trae la cuenta, por favor? | Poproszę rachunek. | neutral | Disculpe, ¿me regala la cuenta? |  | 🧾 |  | ok
+~ eliminada (ID 100, situación «soda», marcada «dudoso» en la revisión)
+¿Qué se va a servir? | ¿Qué va a tomar? / ¿Qué desea? | Co podać? | neutral | Buenas, ¿qué se va a servir? | Pregunta típica del salonero. | 📝 |  | ok
+Para llevar | Para llevar | Na wynos | neutral | Un casado para llevar, por favor. |  | 🥡 |  | ok
+Para comer aquí | Para tomar aquí | Na miejscu | neutral | ¿Para comer aquí o para llevar? |  | 🍽️ |  | ok
+~ eliminada (ID 104, situación «soda», marcada «dudoso» en la revisión)
+~ eliminada (ID 105, situación «soda», marcada «dudoso» en la revisión)
+~ eliminada (ID 106, situación «soda», marcada «dudoso» en la revisión)
+Estar lleno / quedar lleno | Estar satisfecho | Być najedzonym | neutral | No, gracias, ya quedé lleno. |  | 🫃 |  | ok
+¡Qué rico! | ¡Qué delicioso! | Ale pyszne! | neutral | ¡Qué rico este pinto! | «Rico» se usa para comida, clima y situaciones agradables. | 😋 |  | ok
 > Salonera | Buenas, mi amor, ¿qué se va a servir? | Buenas tardes, ¿qué va a tomar? | Dzień dobry, kochana, co podać?
 > Yo | Buenas. ¿Me regala un casado con pescado? | Buenas tardes. ¿Me trae un plato del día con pescado? | Dzień dobry. Poproszę casado z rybą.
 > Salonera | Con mucho gusto. ¿Y de tomar? Hay fresco de cas y de mora. | Claro. ¿Y para tomar? Hay jugo de cas y de mora. | Oczywiście. A do picia? Jest napój z cas i z jeżyn.
@@ -159,32 +159,32 @@ Estar lleno / quedar lleno | Estar satisfecho | Być najedzonym | neutral | No, 
 > Yo | Nada más. ¡Qué rico huele todo! | Nada más. ¡Qué bien huele todo! | Nic więcej. Wszystko pięknie pachnie!
 
 ## pulpe | Pulpería y súper | Sklepik i supermarket | 🏪 | La pulpería es la tienda del barrio. Pedir, preguntar precios, pagar con efectivo, tarjeta o Sinpe. | Pulpería to osiedlowy sklepik. Prosimy o produkty, pytamy o ceny, płacimy gotówką, kartą lub przez Sinpe.
-La pulpería / la pulpe | Tienda de barrio, colmado | Osiedlowy sklepik | neutral | Voy a la pulpe por pan. | Una institución: venden de todo y el pulpero conoce a todo el barrio. | 🏪 | |
-El pulpero / la pulpera | El dueño de la tienda | Właściciel sklepiku | neutral | El pulpero me guarda el periódico. | | 🧔 | |
-¿Me regala…? | ¿Me da…?, por favor | Poproszę… | neutral | ¿Me regala un litro de leche? | La forma más tica de pedir. No es pedir gratis: se paga igual. | 🛒 | |
-¿Me da…? | ¿Me da…? | Poproszę… / Czy mogę prosić…? | neutral | ¿Me da dos bolillos? | También muy común. | 🥖 | |
-¿Tiene…? | ¿Tiene…? / ¿Hay…? | Czy jest…? / Czy ma Pan…? | neutral | ¿Tiene tortillas? | | ❓ | |
-¿Cuánto es? | ¿Cuánto le debo? | Ile płacę? | neutral | ¿Cuánto es todo? | | 💰 | |
-Un rojo | Un billete de mil colones | Banknot tysiąc colones | coloquial | Eso vale un rojo. | Por el color del billete de mil. | 💴 | |
-Una teja | Cien colones | Sto colones | coloquial | Présteme una teja para el bus. | | 🪙 | |
-Un cinco | Una moneda, un céntimo | Grosz | coloquial | No tengo ni un cinco. | «No tener ni un cinco» = estar sin plata. | 🪙 | |
-Harina | Dinero | Kasa / forsa | coloquial | No tengo harina para salir este finde. | | 💸 | |
-Plata | Dinero | Pieniądze | neutral | ¿Me alcanza la plata? | | 💵 | |
-Fiar | Vender a crédito | Sprzedawać na kreskę | neutral | ¿Me fía hasta el viernes? | En la pulpería del barrio todavía se fía a los vecinos conocidos. | 📒 | |
-¿Me hace un Sinpe? / Le hago un Sinpe. | Le transfiero por el celular | Zrobię Panu przelew Sinpe. | neutral | No ando efectivo, ¿le hago un Sinpe? | Sinpe Móvil: transferencia inmediata con el número de celular. Casi todo el mundo lo usa. | 📱 | |
-¿Pasa tarjeta? | ¿Aceptan tarjeta? | Można płacić kartą? | neutral | Disculpe, ¿pasa tarjeta? | | 💳 | |
-El datáfono | El terminal de pago con tarjeta | Terminal płatniczy | neutral | El datáfono no está sirviendo. | | 🏧 | |
-No sirve | No funciona | Nie działa | neutral | El cajero no sirve. | «Servir» = funcionar. | 🚫 | |
-¿Tiene cambio? | ¿Tiene sueltos? | Ma Pan drobne? | neutral | Solo tengo un billete de diez, ¿tiene cambio? | | 🔄 | |
-Un confite | Un caramelo, una golosina | Cukierek | neutral | Le compré un confite al güila. | | 🍬 | |
-El diario | La compra de la semana o del mes | Zakupy spożywcze na tydzień lub miesiąc | neutral | Hoy hacemos el diario en el súper. | «Hacer el diario» = comprar lo de la casa. | 🧺 | |
-El súper | El supermercado | Supermarket | neutral | El súper cierra a las nueve. | | 🛍️ | |
-Una bolsa | Una bolsa | Torba / reklamówka | neutral | ¿Ocupa bolsa? | | 🛍️ | |
-Ocupar | Necesitar | Potrzebować | neutral | Ocupo dos kilos de arroz. | Uso muy tico: «ocupar» = necesitar. Sorprende a otros hispanohablantes. | 📝 | |
-Ahí le encargo. | Se lo dejo encomendado / me lo guarda. | Proszę mi to odłożyć. | neutral | Ahí le encargo el pan para mañana. | | 🥐 | |
-Un queque | Un pastel, un bizcocho | Ciasto | neutral | Compré un queque para el cumpleaños. | Del inglés «cake». | 🎂 | |
-Repostería | Pan dulce, bollería | Słodkie wypieki | neutral | ¿Hay repostería fresca? | | 🥐 | |
-¿Algo más? —Nada más, gracias. | ¿Algo más? —No, eso es todo. | Coś jeszcze? —Nic, dziękuję. | neutral | —¿Algo más? —Nada más, gracias. | | ✅ | |
+La pulpería / la pulpe | Tienda de barrio, colmado | Osiedlowy sklepik | neutral | Voy a la pulpe por pan. | Una institución: venden de todo y el pulpero conoce a todo el barrio. | 🏪 |  | ok
+~ eliminada (ID 110, situación «pulpe», marcada «dudoso» en la revisión)
+¿Me regala…? | ¿Me da…?, por favor | Poproszę… | neutral | ¿Me regala un litro de leche? | La forma más tica de pedir. No es pedir gratis: se paga igual. | 🛒 |  | ok
+¿Me da…? | ¿Me da…? | Poproszę… / Czy mogę prosić…? | neutral | ¿Me da dos bolillos? | También muy común. | 🥖 |  | ok
+¿Tiene…? | ¿Tiene…? / ¿Hay…? | Czy jest…? / Czy ma Pan…? | neutral | ¿Tiene tortillas? |  | ❓ |  | ok
+¿Cuánto es? | ¿Cuánto le debo? | Ile płacę? | neutral | ¿Cuánto es todo? |  | 💰 |  | ok
+Un rojo | Un billete de mil colones | Banknot tysiąc colones | coloquial | Eso vale un rojo. | Por el color del billete de mil. | 💴 |  | ok
+Una teja | Cien colones | Sto colones | coloquial | Présteme una teja para el bus. |  | 🪙 |  | ok
+~ eliminada (ID 117, situación «pulpe», marcada «dudoso» en la revisión)
+Harina | Dinero | Kasa / forsa | coloquial | No tengo harina para salir este finde. |  | 💸 |  | ok
+Plata | Dinero | Pieniądze | neutral | ¿Me alcanza la plata? |  | 💵 |  | ok
+Fiar | Vender a crédito | Sprzedawać na kreskę | neutral | ¿Me fía hasta el viernes? | En la pulpería del barrio todavía se fía a los vecinos conocidos. | 📒 |  | ok
+¿Me hace un Sinpe? / Le hago un Sinpe. | Le transfiero por el celular | Zrobię Panu przelew Sinpe. | neutral | No ando efectivo, ¿le hago un Sinpe? | Sinpe Móvil: transferencia inmediata con el número de celular. Casi todo el mundo lo usa. | 📱 |  | ok
+~ eliminada (ID 122, situación «pulpe», marcada «dudoso» en la revisión)
+El datáfono | El terminal de pago con tarjeta | Terminal płatniczy | neutral | El datáfono no está sirviendo. |  | 🏧 |  | ok
+No sirve | No funciona | Nie działa | neutral | El cajero no sirve. | «Servir» = funcionar. | 🚫 |  | ok
+¿Tiene cambio? | ¿Tiene sueltos? | Ma Pan drobne? | neutral | Solo tengo un billete de diez, ¿tiene cambio? |  | 🔄 |  | ok
+Un confite | Un caramelo, una golosina | Cukierek | neutral | Le compré un confite al güila. |  | 🍬 |  | ok
+El diario | La compra de la semana o del mes | Zakupy spożywcze na tydzień lub miesiąc | neutral | Hoy hacemos el diario en el súper. | «Hacer el diario» = comprar lo de la casa. | 🧺 |  | ok
+El súper | El supermercado | Supermarket | neutral | El súper cierra a las nueve. |  | 🛍️ |  | ok
+Una bolsa | Una bolsa | Torba / reklamówka | neutral | ¿Ocupa bolsa? |  | 🛍️ |  | ok
+Ocupar | Necesitar | Potrzebować | neutral | Ocupo dos kilos de arroz. | Uso muy tico: «ocupar» = necesitar. Sorprende a otros hispanohablantes. | 📝 |  | ok
+Ahí le encargo. | Se lo dejo encomendado / me lo guarda. | Proszę mi to odłożyć. | neutral | Ahí le encargo el pan para mañana. |  | 🥐 |  | ok
+Un queque | Un pastel, un bizcocho | Ciasto | neutral | Compré un queque para el cumpleaños. | Del inglés «cake». | 🎂 |  | ok
+Repostería | Pan dulce, bollería | Słodkie wypieki | neutral | ¿Hay repostería fresca? |  | 🥐 |  | ok
+¿Algo más? —Nada más, gracias. | ¿Algo más? —No, eso es todo. | Coś jeszcze? —Nic, dziękuję. | neutral | —¿Algo más? —Nada más, gracias. |  | ✅ |  | ok
 > Pulpero | ¡Buenas! ¿Qué ocupa? | ¡Buenas! ¿Qué necesita? | Dzień dobry! Co podać?
 > Yo | Buenas. ¿Me regala un litro de leche y dos bolillos? | Buenas. ¿Me da un litro de leche y dos panes? | Dzień dobry. Poproszę litr mleka i dwie bułki.
 > Pulpero | Con mucho gusto. ¿Algo más? | Claro. ¿Algo más? | Proszę bardzo. Coś jeszcze?
@@ -195,32 +195,32 @@ Repostería | Pan dulce, bollería | Słodkie wypieki | neutral | ¿Hay reposter
 > Yo | Listo, ya se lo mandé. ¡Pura vida! | Listo, ya se lo envié. ¡Gracias! | Gotowe, już wysłałam. Dzięki!
 
 ## bus | Bus y direcciones | Autobus i wskazówki dojazdu | 🚌 | En Costa Rica las direcciones no usan números: se dan desde puntos de referencia, en metros y por los puntos cardinales. | W Kostaryce adresy nie mają numerów: podaje się je od punktów orientacyjnych, w metrach i według stron świata.
-200 metros al sur de la iglesia | Dos cuadras al sur de la iglesia | 200 metrów na południe od kościoła | neutral | Vivo 200 metros al sur de la iglesia, casa verde. | En la ciudad, «100 metros» = una cuadra, aunque no mida exactamente cien. | ⛪ | |
-100 varas al este | Una cuadra al este | Jedna przecznica na wschód | neutral | Del parque, 100 varas al este. | «Vara» es una medida antigua; hoy se usa como sinónimo de cuadra, sobre todo en zonas rurales y con gente mayor. | 🧭 | |
-Del antiguo higuerón, 100 al este | Una cuadra al este de donde estaba el higuerón | Jedna przecznica na wschód od miejsca, gdzie rosło stare drzewo figowe | neutral | Del antiguo higuerón de San Pedro, 100 al este. | Las referencias pueden ser cosas que ya no existen. Ejemplo real de San Pedro. | 🌳 | Valle Central |
-Al norte / al sur / al este / al oeste | Hacia el norte / sur / este / oeste | Na północ / południe / wschód / zachód | neutral | De la escuela, 300 al norte. | Los ticos se orientan con los puntos cardinales aunque no vean el sol. | 🧭 | |
-Contiguo a | Al lado de | Obok | formal | Contiguo a la farmacia. | | ➡️ | |
-Diagonal a | En la esquina opuesta a | Po przekątnej od / naprzeciwko na rogu | neutral | Diagonal al Banco Nacional. | | ↗️ | |
-Costado norte del parque | Lado norte del parque | Północna strona parku | neutral | Nos vemos en el costado norte del parque. | | 🏞️ | |
-Casa esquinera, portón negro | Casa de la esquina con portón negro | Dom na rogu, czarna brama | neutral | Es la casa esquinera de portón negro. | Las direcciones suelen terminar describiendo la casa. | 🏠 | |
-Está a la vuelta. | Está a la vuelta de la esquina. | To zaraz za rogiem. | neutral | La pulpe está a la vuelta. | | ↪️ | |
-La parada | La parada del autobús | Przystanek | neutral | ¿Dónde está la parada del bus a Heredia? | | 🚏 | |
-El bus | El autobús | Autobus | neutral | El bus pasa cada quince minutos. | | 🚌 | |
-El busero | El conductor del autobús | Kierowca autobusu | coloquial | El busero no me quiso dar vuelto. | | 🧑‍✈️ | |
-¿Este bus pasa por…? | ¿Este autobús pasa por…? | Czy ten autobus jedzie przez…? | neutral | Disculpe, ¿este bus pasa por el Mall San Pedro? | | ❓ | |
-¿Me deja en la esquina? | ¿Me puede dejar en la esquina? | Wysadzi mnie Pan na rogu? | neutral | Señor, ¿me deja en la esquina, por favor? | | 🛑 | |
-¡Parada! | ¡Me bajo aquí! | Przystanek, wysiadam! | coloquial | ¡Parada, por favor! | Se grita (o se toca el timbre) para que el bus pare. | 🔔 | |
-El vuelto | El cambio (dinero) | Reszta | neutral | Me dio mal el vuelto. | | 🪙 | |
-Chepe | San José, la capital | San José (stolica) | coloquial | Mañana bajo a Chepe. | «Bajar a Chepe» si uno vive en los alrededores. | 🏙️ | |
-La presa | El atasco, el tráfico | Korek | neutral | Había una presa horrible en la Circunvalación. | | 🚗 | |
-Un taxi rojo | Un taxi oficial | Oficjalna taksówka | neutral | Mejor tome un taxi rojo. | Los taxis oficiales son rojos con un triángulo amarillo. | 🚕 | |
-Un pirata | Un taxi informal, sin licencia | Nielegalna taksówka | coloquial | Hay piratas afuera del hospital. | | 🚘 | |
-A pata | A pie | Pieszo | coloquial | Me fui a pata hasta la casa. | | 🚶 | |
-La cleta | La bicicleta | Rower | coloquial | Voy en cleta al brete. | | 🚲 | |
-¿Queda lejos? | ¿Está lejos? | Czy to daleko? | neutral | ¿Queda lejos de aquí? | «Quedar» = estar situado. | 📏 | |
-Aquí nada más | Muy cerca | Tuż obok | neutral | Es aquí nada más, a dos cuadras. | Ojo: puede ser optimista. | 📍 | |
-Rotonda | Glorieta | Rondo | neutral | En la rotonda de la Hispanidad, a la derecha. | | 🔄 | |
-Mándeme la ubicación | Envíame la ubicación | Wyślij mi lokalizację | neutral | Mándeme la ubicación por WhatsApp. | Hoy se combina con Waze, pero la dirección a la tica sigue viva. | 📲 | |
+200 metros al sur de la iglesia | Dos cuadras al sur de la iglesia | 200 metrów na południe od kościoła | neutral | Vivo 200 metros al sur de la iglesia, casa verde. | En la ciudad, «100 metros» = una cuadra, aunque no mida exactamente cien. | ⛪ |  | ok
+~ eliminada (ID 136, situación «bus», marcada «dudoso» en la revisión)
+~ eliminada (ID 137, situación «bus», marcada «dudoso» en la revisión)
+Al norte / al sur / al este / al oeste | Hacia el norte / sur / este / oeste | Na północ / południe / wschód / zachód | neutral | De la escuela, 300 al norte. | Los ticos se orientan con los puntos cardinales aunque no vean el sol. | 🧭 |  | ok
+Contiguo a | Al lado de | Obok | formal | Contiguo a la farmacia. |  | ➡️ |  | ok
+Diagonal a | En la esquina opuesta a | Po przekątnej od / naprzeciwko na rogu | neutral | Diagonal al Banco Nacional. |  | ↗️ |  | ok
+Costado norte del parque | Lado norte del parque | Północna strona parku | neutral | Nos vemos en el costado norte del parque. |  | 🏞️ |  | ok
+Casa esquinera, portón negro | Casa de la esquina con portón negro | Dom na rogu, czarna brama | neutral | Es la casa esquinera de portón negro. | Las direcciones suelen terminar describiendo la casa. | 🏠 |  | ok
+Está a la vuelta. | Está a la vuelta de la esquina. | To zaraz za rogiem. | neutral | La pulpe está a la vuelta. |  | ↪️ |  | ok
+La parada | La parada del autobús | Przystanek | neutral | ¿Dónde está la parada del bus a Heredia? |  | 🚏 |  | ok
+El bus | El autobús | Autobus | neutral | El bus pasa cada quince minutos. |  | 🚌 |  | ok
+El busero | El conductor del autobús | Kierowca autobusu | coloquial | El busero no me quiso dar vuelto. |  | 🧑‍✈️ |  | ok
+¿Este bus pasa por…? | ¿Este autobús pasa por…? | Czy ten autobus jedzie przez…? | neutral | Disculpe, ¿este bus pasa por el Mall San Pedro? |  | ❓ |  | ok
+¿Me deja en la esquina? | ¿Me puede dejar en la esquina? | Wysadzi mnie Pan na rogu? | neutral | Señor, ¿me deja en la esquina, por favor? |  | 🛑 |  | ok
+¡Parada! | ¡Me bajo aquí! | Przystanek, wysiadam! | coloquial | ¡Parada, por favor! | Se grita (o se toca el timbre) para que el bus pare. | 🔔 |  | ok
+El vuelto | El cambio (dinero) | Reszta | neutral | Me dio mal el vuelto. |  | 🪙 |  | ok
+Chepe | San José, la capital | San José (stolica) | coloquial | Mañana bajo a Chepe. | «Bajar a Chepe» si uno vive en los alrededores. | 🏙️ |  | ok
+La presa | El atasco, el tráfico | Korek | neutral | Había una presa horrible en la Circunvalación. |  | 🚗 |  | ok
+Un taxi rojo | Un taxi oficial | Oficjalna taksówka | neutral | Mejor tome un taxi rojo. | Los taxis oficiales son rojos con un triángulo amarillo. | 🚕 |  | ok
+Un pirata | Un taxi informal, sin licencia | Nielegalna taksówka | coloquial | Hay piratas afuera del hospital. |  | 🚘 |  | ok
+A pata | A pie | Pieszo | coloquial | Me fui a pata hasta la casa. |  | 🚶 |  | ok
+La cleta | La bicicleta | Rower | coloquial | Voy en cleta al brete. |  | 🚲 |  | ok
+¿Queda lejos? | ¿Está lejos? | Czy to daleko? | neutral | ¿Queda lejos de aquí? | «Quedar» = estar situado. | 📏 |  | ok
+Aquí nada más | Muy cerca | Tuż obok | neutral | Es aquí nada más, a dos cuadras. | Ojo: puede ser optimista. | 📍 |  | ok
+Rotonda | Glorieta | Rondo | neutral | En la rotonda de la Hispanidad, a la derecha. |  | 🔄 |  | ok
+Mándeme la ubicación | Envíame la ubicación | Wyślij mi lokalizację | neutral | Mándeme la ubicación por WhatsApp. | Hoy se combina con Waze, pero la dirección a la tica sigue viva. | 📲 |  | ok
 > Yo | Disculpe, ¿este bus pasa por la iglesia de San Pedro? | Perdone, ¿este autobús pasa por la iglesia de San Pedro? | Przepraszam, czy ten autobus jedzie koło kościoła w San Pedro?
 > Busero | Sí, señora, suba. Son cuatrocientos. | Sí, señora, suba. Son cuatrocientos colones. | Tak, proszę wsiadać. Czterysta colones.
 > Yo | Tengo un rojo, ¿tiene cambio? | Tengo un billete de mil, ¿tiene cambio? | Mam tysiąc, ma Pan wydać?
@@ -231,31 +231,31 @@ Mándeme la ubicación | Envíame la ubicación | Wyślij mi lokalizację | neut
 > Busero | Con mucho gusto, vaya con Dios. | De nada, que le vaya bien. | Nie ma za co, z Bogiem.
 
 ## feria | Feria del agricultor | Targ rolniczy | 🥬 | La feria del agricultor es el mercado semanal al aire libre. Frutas, verduras, regateo suave y mucha conversación. | Feria del agricultor to cotygodniowy targ pod gołym niebem. Owoce, warzywa, delikatne targowanie i dużo rozmów.
-La feria | El mercado de productores | Targ | neutral | Los sábados vamos a la feria temprano. | Cada pueblo tiene su día de feria, casi siempre viernes, sábado o domingo. | 🧺 | |
-¡Pruebe sin compromiso! | ¡Pruebe, no tiene que comprar! | Proszę spróbować, bez zobowiązań! | neutral | ¡Pruebe la piña, sin compromiso! | | 🍍 | |
-¿A cómo el kilo? / ¿A cómo está? | ¿Cuánto cuesta el kilo? | Po ile kilogram? | neutral | ¿A cómo está el kilo de tomate? | | ⚖️ | |
-Un tanto | Un montoncito (medida informal) | Kupka / porcja | neutral | Deme un tanto de limones. | En la feria algunos productos se venden por «tanto», no por peso. | 🍋 | |
-Un rollo de culantro | Un manojo de cilantro | Pęczek kolendry | neutral | ¿Me regala un rollo de culantro? | En Costa Rica «culantro» = cilantro. | 🌿 | |
-Chile dulce | Pimiento | Papryka | neutral | Dos chiles dulces para el arroz. | «Chile» solo, sin «dulce», es el picante. | 🫑 | |
-Vainica | Judía verde | Fasolka szparagowa | neutral | Medio kilo de vainica, por favor. | | 🫛 | |
-Chayote | Chayote (calabacita verde) | Chayote (kolczoch jadalny) | neutral | El picadillo de chayote es buenísimo. | | 🥒 | |
-Elote | Mazorca de maíz tierno | Kolba kukurydzy | neutral | Elotes asados en la feria. | | 🌽 | |
-Banano / plátano | Plátano de postre / plátano macho | Banan / banan warzywny (platan) | neutral | Plátano maduro para el casado. | Ojo: «banano» se come crudo; «plátano» es el que se cocina. | 🍌 | |
-Pipa | Coco verde para beber | Zielony kokos do picia | neutral | Una pipa bien fría, por favor. | | 🥥 | |
-Guanábana | Guanábana | Flaszowiec (guanábana) | neutral | Fresco de guanábana en leche. | | 🍈 | |
-Mamones | Mamones (fruta de cáscara roja con pelos) | Rambutan | neutral | Una bolsa de mamones chinos. | «Mamón chino» = rambután. | 🍒 | |
-Está barato / está caro | Está barato / caro | Tanie / drogie | neutral | Diay, está caro el aguacate esta semana. | | 💲 | |
-¿Me hace un descuentico? | ¿Me hace una rebaja? | Da Pan małą zniżkę? | neutral | Si le llevo dos, ¿me hace un descuentico? | El regateo en la feria es suave y con diminutivo. | 🤏 | |
-Se lo dejo en… | Se lo vendo por… | Oddam za… | neutral | Se lo dejo en dos rojos. | | 🤝 | |
-Bien maduro / tiernito | Muy maduro / poco maduro | Bardzo dojrzały / jeszcze niedojrzały | neutral | ¿Lo quiere para hoy o tiernito? | | 🥭 | |
-De temporada | De estación | Sezonowy | neutral | El mango ya está de temporada. | | 📅 | |
-Una yapa | Un poquito de regalo extra | Gratis dorzucone przez sprzedawcę | neutral | Le eché unos limones de yapa. | | 🎁 | | dudoso
-Casero / casera | Cliente habitual (y el vendedor de confianza) | Stały klient / stały sprzedawca | neutral | ¡Casera! ¿Qué le doy hoy? | | 🧑‍🌾 | | dudoso
-Orgánico | Ecológico | Ekologiczny | neutral | Ese puesto vende todo orgánico. | | 🌱 | |
-Bien tempranito | Muy temprano | Bardzo wcześnie | neutral | Hay que ir bien tempranito, si no, se acaba todo. | Diminutivo «-ito» aplicado a un adverbio: muy tico. | 🌅 | |
-Lléveselo, mi amor | Llévelo, cariño | Proszę brać, kochana | informal | Lléveselo, mi amor, está bien bonito. | Los vendedores usan «mi amor», «mi reina», «mi vida» con todo el mundo. | 💛 | |
-Mi reina | Cariño (a una mujer) | Królowo / kochana | informal | ¿Qué le doy, mi reina? | | 👑 | |
-Vieras qué rico | No te imaginas lo rico que está | Nie uwierzysz, jakie pyszne | informal | Vieras qué rico el mango de hoy. | «Vieras» (de «ver») se usa para enfatizar: «vieras qué bonito», «vieras qué cansado estoy». | 🤤 | |
+La feria | El mercado de productores | Targ | neutral | Los sábados vamos a la feria temprano. | Cada pueblo tiene su día de feria, casi siempre viernes, sábado o domingo. | 🧺 |  | ok
+¡Pruebe sin compromiso! | ¡Pruebe, no tiene que comprar! | Proszę spróbować, bez zobowiązań! | neutral | ¡Pruebe la piña, sin compromiso! |  | 🍍 |  | ok
+¿A cómo el kilo? / ¿A cómo está? | ¿Cuánto cuesta el kilo? | Po ile kilogram? | neutral | ¿A cómo está el kilo de tomate? |  | ⚖️ |  | ok
+Un tanto | Un montoncito (medida informal) | Kupka / porcja | neutral | Deme un tanto de limones. | En la feria algunos productos se venden por «tanto», no por peso. | 🍋 |  | ok
+Un rollo de culantro | Un manojo de cilantro | Pęczek kolendry | neutral | ¿Me regala un rollo de culantro? | En Costa Rica «culantro» = cilantro. | 🌿 |  | ok
+Chile dulce | Pimiento | Papryka | neutral | Dos chiles dulces para el arroz. | «Chile» solo, sin «dulce», es el picante. | 🫑 |  | ok
+Vainica | Judía verde | Fasolka szparagowa | neutral | Medio kilo de vainica, por favor. |  | 🫛 |  | ok
+Chayote | Chayote (calabacita verde) | Chayote (kolczoch jadalny) | neutral | El picadillo de chayote es buenísimo. |  | 🥒 |  | ok
+Elote | Mazorca de maíz tierno | Kolba kukurydzy | neutral | Elotes asados en la feria. |  | 🌽 |  | ok
+Banano / plátano | Plátano de postre / plátano macho | Banan / banan warzywny (platan) | neutral | Plátano maduro para el casado. | Ojo: «banano» se come crudo; «plátano» es el que se cocina. | 🍌 |  | ok
+Pipa | Coco verde para beber | Zielony kokos do picia | neutral | Una pipa bien fría, por favor. |  | 🥥 |  | ok
+Guanábana | Guanábana | Flaszowiec (guanábana) | neutral | Fresco de guanábana en leche. |  | 🍈 |  | ok
+Mamones | Mamones (fruta de cáscara roja con pelos) | Rambutan | neutral | Una bolsa de mamones chinos. | «Mamón chino» = rambután. | 🍒 |  | ok
+Está barato / está caro | Está barato / caro | Tanie / drogie | neutral | Diay, está caro el aguacate esta semana. |  | 💲 |  | ok
+¿Me hace un descuentico? | ¿Me hace una rebaja? | Da Pan małą zniżkę? | neutral | Si le llevo dos, ¿me hace un descuentico? | El regateo en la feria es suave y con diminutivo. | 🤏 |  | ok
+Se lo dejo en… | Se lo vendo por… | Oddam za… | neutral | Se lo dejo en dos rojos. |  | 🤝 |  | ok
+Bien maduro / tiernito | Muy maduro / poco maduro | Bardzo dojrzały / jeszcze niedojrzały | neutral | ¿Lo quiere para hoy o tiernito? |  | 🥭 |  | ok
+De temporada | De estación | Sezonowy | neutral | El mango ya está de temporada. |  | 📅 |  | ok
+~ eliminada (ID 179, situación «feria», marcada «dudoso» en la revisión)
+~ eliminada (ID 180, situación «feria», marcada «dudoso» en la revisión)
+Orgánico | Ecológico | Ekologiczny | neutral | Ese puesto vende todo orgánico. |  | 🌱 |  | ok
+Bien tempranito | Muy temprano | Bardzo wcześnie | neutral | Hay que ir bien tempranito, si no, se acaba todo. | Diminutivo «-ito» aplicado a un adverbio: muy tico. | 🌅 |  | ok
+~ eliminada (ID 183, situación «feria», marcada «dudoso» en la revisión)
+~ eliminada (ID 184, situación «feria», marcada «dudoso» en la revisión)
+Vieras qué rico | No te imaginas lo rico que está | Nie uwierzysz, jakie pyszne | informal | Vieras qué rico el mango de hoy. | «Vieras» (de «ver») se usa para enfatizar: «vieras qué bonito», «vieras qué cansado estoy». | 🤤 |  | ok
 > Vendedor | ¡Pruebe sin compromiso, mi reina! La piña está bien dulce. | ¡Pruebe, no tiene que comprar! La piña está muy dulce. | Proszę spróbować, królowo! Ananas jest bardzo słodki.
 > Yo | Mmm, vieras qué rica. ¿A cómo la piña? | Mmm, está riquísima. ¿Cuánto cuesta la piña? | Mmm, przepyszny. Po ile ananas?
 > Vendedor | Mil quinientos, pero si lleva dos se las dejo en dos rojos y medio. | Mil quinientos, pero si lleva dos se las vendo por dos mil quinientos. | Tysiąc pięćset, ale jak weźmie Pani dwa, oddam za dwa i pół tysiąca.
@@ -344,31 +344,31 @@ Vieras qué rico | No te imaginas lo rico que está | Nie uwierzysz, jakie pyszn
 ~ eliminada (ID 261, situación «tram»)
 
 ## playa | Playa y naturaleza | Plaża i przyroda | 🏖️ | Ir a la playa, entender el clima («verano» e «invierno»), los animales y las expresiones de paseo. | Wyjazd na plażę, zrozumienie klimatu („lato” i „zima”), zwierzęta i wyrażenia wycieczkowe.
-El verano | La estación seca (diciembre a abril) | Pora sucha (od grudnia do kwietnia) | neutral | En verano vamos a Guanacaste. | Nada que ver con los meses del verano europeo. | ☀️ | |
-El invierno | La estación lluviosa (mayo a noviembre) | Pora deszczowa (od maja do listopada) | neutral | En invierno llueve todas las tardes. | Aunque haga calor, si llueve es «invierno». | 🌧️ | |
-Un palo de agua | Un aguacero fuerte | Ulewa | coloquial | Cayó un palo de agua y nos empapamos. | | ⛈️ | |
-Un aguacero | Lluvia fuerte | Ulewa | neutral | Se vino un aguacero a las dos. | | 🌧️ | |
-El veranillo de San Juan | Pausa seca dentro de la época lluviosa | Krótka przerwa w porze deszczowej | neutral | En julio cae el veranillo de San Juan. | | 🌤️ | |
-Pasear | Ir de excursión, de viaje | Jechać na wycieczkę | neutral | El finde nos vamos a pasear a la playa. | «Pasear» = salir de viaje, no solo caminar. | 🚗 | |
-Un paseo / una gira | Una excursión | Wycieczka | neutral | La gira del cole fue al volcán Poás. | | 🌋 | |
-Bajar a Puntarenas / al puerto | Ir a Puntarenas | Jechać do Puntarenas | neutral | El domingo bajamos al puerto. | El puerto del Pacífico más cercano al Valle Central. | ⚓ | Puntarenas |
-Un churchill | Granizado con helado, leche y sirope | Deser z kruszonego lodu, lodów i syropu | neutral | En Puntarenas hay que comerse un churchill. | Postre típico del Paseo de los Turistas. | 🍧 | Puntarenas |
-Rice and beans | Arroz con frijoles en leche de coco | Ryż z fasolą na mleku kokosowym | neutral | En Limón, rice and beans con pollo caribeño. | Plato afrocaribeño de Limón; se dice en inglés criollo. | 🥥 | Limón |
-Un trillo | Un sendero | Ścieżka / szlak | neutral | Sigamos el trillo hasta la catarata. | | 🥾 | |
-Una catarata | Una cascada | Wodospad | neutral | La catarata de La Fortuna es impresionante. | | 💦 | |
-Un perezoso | Un perezoso (animal) | Leniwiec | neutral | ¡Mirá, un perezoso en el árbol! | | 🦥 | |
-Un mono congo | Un mono aullador | Wyjec (małpa) | neutral | Los congos nos despertaron a las cinco. | Su grito suena como un rugido. | 🐒 | |
-Zancudos | Mosquitos | Komary | neutral | Póngase repelente, que hay muchos zancudos. | | 🦟 | |
-Bloqueador | Protector solar | Krem z filtrem | neutral | ¿Trajo bloqueador? | | 🧴 | |
-Chancletas | Chanclas | Klapki japonki | neutral | Ando en chancletas todo el día. | | 🩴 | |
-Ir a echarse un chapuzón | Ir a darse un baño | Iść się popluskać | neutral | Vamos a echarnos un chapuzón antes del almuerzo. | | 🏊 | |
-La marea está alta / baja | La marea está alta / baja | Przypływ / odpływ | neutral | Con la marea baja se puede llegar a la isla. | | 🌊 | |
-Corriente de resaca | Corriente de retorno | Prąd wsteczny | neutral | Ojo con la corriente de resaca en esa playa. | Muy peligrosa en el Pacífico: nadar paralelo a la orilla. | ⚠️ | |
-Sabanero | Vaquero de Guanacaste | Kowboj z Guanacaste | neutral | Los sabaneros llegaron a caballo al tope. | | 🤠 | Guanacaste |
-¡Qué barrial! | ¡Cuánto barro! | Ale błoto! | neutral | Con este aguacero el camino es un barrial. | | 🟫 | |
-Estar empapado | Estar mojado por completo | Być przemoczonym | neutral | Llegué empapada por el palo de agua. | | 💧 | |
-El volcán | El volcán | Wulkan | neutral | El Arenal es el volcán más bonito. | | 🌋 | |
-Un tico de playa / un playero | Alguien que vive o pasa en la playa | Ktoś, kto żyje na plaży | coloquial | Mi primo es bien playero. | | 🏄 | | dudoso
+El verano | La estación seca (diciembre a abril) | Pora sucha (od grudnia do kwietnia) | neutral | En verano vamos a Guanacaste. | Nada que ver con los meses del verano europeo. | ☀️ |  | ok
+El invierno | La estación lluviosa (mayo a noviembre) | Pora deszczowa (od maja do listopada) | neutral | En invierno llueve todas las tardes. | Aunque haga calor, si llueve es «invierno». | 🌧️ |  | ok
+~ eliminada (ID 264, situación «playa», marcada «dudoso» en la revisión)
+Un aguacero | Lluvia fuerte | Ulewa | neutral | Se vino un aguacero a las dos. |  | 🌧️ |  | ok
+El veranillo de San Juan | Pausa seca dentro de la época lluviosa | Krótka przerwa w porze deszczowej | neutral | En julio cae el veranillo de San Juan. |  | 🌤️ |  | ok
+Pasear | Ir de excursión, de viaje | Jechać na wycieczkę | neutral | El finde nos vamos a pasear a la playa. | «Pasear» = salir de viaje, no solo caminar. | 🚗 |  | ok
+Un paseo / una gira | Una excursión | Wycieczka | neutral | La gira del cole fue al volcán Poás. |  | 🌋 |  | ok
+~ eliminada (ID 269, situación «playa», marcada «dudoso» en la revisión)
+Un churchill | Granizado con helado, leche y sirope | Deser z kruszonego lodu, lodów i syropu | neutral | En Puntarenas hay que comerse un churchill. | Postre típico del Paseo de los Turistas. | 🍧 | Puntarenas | ok
+Rice and beans | Arroz con frijoles en leche de coco | Ryż z fasolą na mleku kokosowym | neutral | En Limón, rice and beans con pollo caribeño. | Plato afrocaribeño de Limón; se dice en inglés criollo. | 🥥 | Limón | ok
+~ eliminada (ID 272, situación «playa», marcada «dudoso» en la revisión)
+Una catarata | Una cascada | Wodospad | neutral | La catarata de La Fortuna es impresionante. |  | 💦 |  | ok
+Un perezoso | Un perezoso (animal) | Leniwiec | neutral | ¡Mirá, un perezoso en el árbol! |  | 🦥 |  | ok
+~ eliminada (ID 275, situación «playa», marcada «dudoso» en la revisión)
+Zancudos | Mosquitos | Komary | neutral | Póngase repelente, que hay muchos zancudos. |  | 🦟 |  | ok
+Bloqueador | Protector solar | Krem z filtrem | neutral | ¿Trajo bloqueador? |  | 🧴 |  | ok
+Chancletas | Chanclas | Klapki japonki | neutral | Ando en chancletas todo el día. |  | 🩴 |  | ok
+Ir a echarse un chapuzón | Ir a darse un baño | Iść się popluskać | neutral | Vamos a echarnos un chapuzón antes del almuerzo. |  | 🏊 |  | ok
+La marea está alta / baja | La marea está alta / baja | Przypływ / odpływ | neutral | Con la marea baja se puede llegar a la isla. |  | 🌊 |  | ok
+Corriente de resaca | Corriente de retorno | Prąd wsteczny | neutral | Ojo con la corriente de resaca en esa playa. | Muy peligrosa en el Pacífico: nadar paralelo a la orilla. | ⚠️ |  | ok
+~ eliminada (ID 282, situación «playa», marcada «dudoso» en la revisión)
+¡Qué barrial! | ¡Cuánto barro! | Ale błoto! | neutral | Con este aguacero el camino es un barrial. |  | 🟫 |  | ok
+Estar empapado | Estar mojado por completo | Być przemoczonym | neutral | Llegué empapada por el palo de agua. |  | 💧 |  | ok
+El volcán | El volcán | Wulkan | neutral | El Arenal es el volcán más bonito. |  | 🌋 |  | ok
+~ eliminada (ID 286, situación «playa», marcada «dudoso» en la revisión)
 > Andrés | ¿Vamos a pasear el finde? Ya entró el verano. | ¿Nos vamos de viaje el fin de semana? Ya empezó la época seca. | Jedziemy gdzieś na weekend? Już zaczęła się pora sucha.
 > Yo | ¿Verano en diciembre? Para mí es invierno. | ¿Verano en diciembre? Para mí es invierno. | Lato w grudniu? Dla mnie to zima.
 > Andrés | Aquí verano es cuando no llueve. ¿Playa o volcán? | Aquí el verano es cuando no llueve. ¿Playa o volcán? | Tutaj lato jest wtedy, kiedy nie pada. Plaża czy wulkan?
@@ -378,30 +378,30 @@ Un tico de playa / un playero | Alguien que vive o pasa en la playa | Ktoś, kto
 > Andrés | Casi siempre, pero ojo con la corriente de resaca. ¡Pura vida! | Casi siempre, pero cuidado con la corriente de retorno. ¡Genial! | Zwykle tak, ale uważaj na prąd wsteczny. Super!
 
 ## navidad | Navidad y fiestas | Boże Narodzenie i święta | 🎄 | Tamales, el portal, el Niño Dios, el tope, la Romería y el 15 de setiembre: el calendario tico de fiestas. | Tamales, szopka, Dzieciątko, parada koni, pielgrzymka i 15 września: kostarykański kalendarz świąt.
-Los tamales | Tamales (masa de maíz rellena envuelta en hoja de plátano) | Tamales (ciasto kukurydziane z nadzieniem w liściu bananowca) | neutral | En diciembre se hacen tamales en todas las casas. | Se venden y se regalan «por piña» (dos tamales amarrados). | 🫔 | |
-Una piña de tamales | Dos tamales atados juntos | Para tamales związanych razem | neutral | Le llevé una piña de tamales a mi suegra. | | 🎁 | |
-La tamaleada | Reunión familiar para hacer tamales | Rodzinne robienie tamales | coloquial | El sábado es la tamaleada en casa de la abuela. | | 👨‍👩‍👧 | |
-El portal | El belén, el nacimiento | Szopka | neutral | Ya armamos el portal. | En Costa Rica se dice «portal», no «belén». | ⭐ | |
-El Niño Dios | El Niño Jesús (quien trae los regalos) | Dzieciątko Jezus (przynosi prezenty) | neutral | ¿Qué le trajo el Niño? | Tradicionalmente los regalos los trae el Niño Dios, no Santa ni los Reyes. | 👶 | |
-El rezo del Niño | Rezo para guardar el portal (enero o febrero) | Modlitwa na zakończenie okresu szopki | neutral | Nos invitaron al rezo del Niño en febrero. | Al final se comparten tamales, café y rompope. | 🕯️ | |
-El rompope | Bebida de huevo, leche y licor | Napój z jajek, mleka i alkoholu (ajerkoniak) | neutral | Un rompope bien frío, por favor. | | 🥛 | |
-Queque navideño | Pastel de frutas de Navidad | Świąteczne ciasto z bakaliami | neutral | Mi tía hace el queque navideño desde noviembre. | | 🎂 | |
-La pierna | Pierna de cerdo al horno | Pieczona szynka wieprzowa | neutral | El 24 cenamos pierna. | | 🍖 | |
-El tope | Desfile de caballos (26 de diciembre) | Parada konna 26 grudnia | neutral | Vamos al tope de San José. | | 🐎 | San José |
-El Festival de la Luz | Desfile nocturno navideño | Nocna świąteczna parada | neutral | El Festival de la Luz es en diciembre en Chepe. | | ✨ | San José |
-Las fiestas de Zapote | Feria de fin de año con toros a la tica | Noworoczny jarmark z „corridą po kostarykańsku” | neutral | En Zapote hay toros a la tica y chinamos. | «Toros a la tica»: no se mata al toro; los «improvisados» bajan al redondel. | 🎡 | San José |
-Un chinamo | Un puesto de comida o juegos de feria | Stragan jarmarczny | neutral | Comimos en un chinamo en Zapote. | | 🎪 | |
-La Romería | Peregrinación a Cartago (2 de agosto) | Pielgrzymka do Cartago (2 sierpnia) | neutral | Mi mamá va en la Romería todos los años. | Se camina hasta la basílica de la Virgen de los Ángeles. | 🚶 | Cartago |
-La Negrita | La Virgen de los Ángeles | Matka Boża Anielska (patronka Kostaryki) | neutral | Le hizo una promesa a la Negrita. | Patrona de Costa Rica. | 🙏 | |
-El 15 de setiembre | Día de la Independencia | Dzień Niepodległości | neutral | El 15 de setiembre los niños desfilan. | En Costa Rica se escribe y se dice «setiembre». | 🇨🇷 | |
-Los faroles | Linternas de la noche del 14 de setiembre | Lampiony | neutral | El 14 en la noche es el desfile de faroles. | | 🏮 | |
-Semana Santa | Semana Santa | Wielki Tydzień | neutral | En Semana Santa todo el mundo se va para la playa. | | ✝️ | |
-El 25 de julio | Anexión del Partido de Nicoya (fiesta de Guanacaste) | Święto przyłączenia Guanacaste | neutral | El 25 de julio en Guanacaste hay bailes y comida típica. | | 🤠 | Guanacaste |
-Que la pase bonito | Que lo pases bien | Udanych świąt / dobrze się baw | neutral | ¡Feliz Navidad! Que la pase bonito con su familia. | | 💝 | |
-Feliz Navidad y próspero año | Feliz Navidad y feliz Año Nuevo | Wesołych Świąt i szczęśliwego Nowego Roku | formal | Le deseo feliz Navidad y próspero año. | | 🎄 | |
-El aguinaldo de los güilas | Los regalos de los niños | Prezenty dla dzieci | coloquial | Con el aguinaldo compramos los regalos de los güilas. | | 🎁 | | dudoso
-Las vacaciones de medio año | Las vacaciones escolares de julio | Wakacje szkolne w lipcu | neutral | En vacaciones de medio año vamos a la playa. | El curso escolar va de febrero a diciembre. | 🏫 | |
-Pólvora | Fuegos artificiales, petardos | Fajerwerki | neutral | A las doce todo el barrio tiró pólvora. | | 🎆 | |
+Los tamales | Tamales (masa de maíz rellena envuelta en hoja de plátano) | Tamales (ciasto kukurydziane z nadzieniem w liściu bananowca) | neutral | En diciembre se hacen tamales en todas las casas. | Se venden y se regalan «por piña» (dos tamales amarrados). | 🫔 |  | ok
+Una piña de tamales | Dos tamales atados juntos | Para tamales związanych razem | neutral | Le llevé una piña de tamales a mi suegra. |  | 🎁 |  | ok
+La tamaleada | Reunión familiar para hacer tamales | Rodzinne robienie tamales | coloquial | El sábado es la tamaleada en casa de la abuela. |  | 👨‍👩‍👧 |  | ok
+El portal | El belén, el nacimiento | Szopka | neutral | Ya armamos el portal. | En Costa Rica se dice «portal», no «belén». | ⭐ |  | ok
+El Niño Dios | El Niño Jesús (quien trae los regalos) | Dzieciątko Jezus (przynosi prezenty) | neutral | ¿Qué le trajo el Niño? | Tradicionalmente los regalos los trae el Niño Dios, no Santa ni los Reyes. | 👶 |  | ok
+El rezo del Niño | Rezo para guardar el portal (enero o febrero) | Modlitwa na zakończenie okresu szopki | neutral | Nos invitaron al rezo del Niño en febrero. | Al final se comparten tamales, café y rompope. | 🕯️ |  | ok
+El rompope | Bebida de huevo, leche y licor | Napój z jajek, mleka i alkoholu (ajerkoniak) | neutral | Un rompope bien frío, por favor. |  | 🥛 |  | ok
+Queque navideño | Pastel de frutas de Navidad | Świąteczne ciasto z bakaliami | neutral | Mi tía hace el queque navideño desde noviembre. |  | 🎂 |  | ok
+La pierna | Pierna de cerdo al horno | Pieczona szynka wieprzowa | neutral | El 24 cenamos pierna. |  | 🍖 |  | ok
+El tope | Desfile de caballos (26 de diciembre) | Parada konna 26 grudnia | neutral | Vamos al tope de San José. |  | 🐎 | San José | ok
+El Festival de la Luz | Desfile nocturno navideño | Nocna świąteczna parada | neutral | El Festival de la Luz es en diciembre en Chepe. |  | ✨ | San José | ok
+Las fiestas de Zapote | Feria de fin de año con toros a la tica | Noworoczny jarmark z „corridą po kostarykańsku” | neutral | En Zapote hay toros a la tica y chinamos. | «Toros a la tica»: no se mata al toro; los «improvisados» bajan al redondel. | 🎡 | San José | ok
+Un chinamo | Un puesto de comida o juegos de feria | Stragan jarmarczny | neutral | Comimos en un chinamo en Zapote. |  | 🎪 |  | ok
+La Romería | Peregrinación a Cartago (2 de agosto) | Pielgrzymka do Cartago (2 sierpnia) | neutral | Mi mamá va en la Romería todos los años. | Se camina hasta la basílica de la Virgen de los Ángeles. | 🚶 | Cartago | ok
+La Negrita | La Virgen de los Ángeles | Matka Boża Anielska (patronka Kostaryki) | neutral | Le hizo una promesa a la Negrita. | Patrona de Costa Rica. | 🙏 |  | ok
+El 15 de setiembre | Día de la Independencia | Dzień Niepodległości | neutral | El 15 de setiembre los niños desfilan. | En Costa Rica se escribe y se dice «setiembre». | 🇨🇷 |  | ok
+Los faroles | Linternas de la noche del 14 de setiembre | Lampiony | neutral | El 14 en la noche es el desfile de faroles. |  | 🏮 |  | ok
+Semana Santa | Semana Santa | Wielki Tydzień | neutral | En Semana Santa todo el mundo se va para la playa. |  | ✝️ |  | ok
+El 25 de julio | Anexión del Partido de Nicoya (fiesta de Guanacaste) | Święto przyłączenia Guanacaste | neutral | El 25 de julio en Guanacaste hay bailes y comida típica. |  | 🤠 | Guanacaste | ok
+Que la pase bonito | Que lo pases bien | Udanych świąt / dobrze się baw | neutral | ¡Feliz Navidad! Que la pase bonito con su familia. |  | 💝 |  | ok
+Feliz Navidad y próspero año | Feliz Navidad y feliz Año Nuevo | Wesołych Świąt i szczęśliwego Nowego Roku | formal | Le deseo feliz Navidad y próspero año. |  | 🎄 |  | ok
+~ eliminada (ID 308, situación «navidad», marcada «dudoso» en la revisión)
+Las vacaciones de medio año | Las vacaciones escolares de julio | Wakacje szkolne w lipcu | neutral | En vacaciones de medio año vamos a la playa. | El curso escolar va de febrero a diciembre. | 🏫 |  | ok
+Pólvora | Fuegos artificiales, petardos | Fajerwerki | neutral | A las doce todo el barrio tiró pólvora. |  | 🎆 |  | ok
 > Doña Rosa | El sábado es la tamaleada. ¿Usted viene? | El sábado hacemos tamales. ¿Vienes? | W sobotę robimy tamales. Przyjdziesz?
 > Yo | ¡Claro! Nunca he hecho tamales. | ¡Claro! Nunca he hecho tamales. | Jasne! Nigdy nie robiłam tamales.
 > Doña Rosa | Fácil: usted amarra las piñas y Andrés arma el portal. | Fácil: tú atas los pares de tamales y Andrés arma el belén. | Łatwe: ty wiążesz tamales w pary, a Andrés stawia szopkę.
@@ -411,34 +411,34 @@ Pólvora | Fuegos artificiales, petardos | Fajerwerki | neutral | A las doce tod
 > Doña Rosa | ¡Qué chiva! Este año, tamales y rompope. ¡Que la pase bonito con nosotros! | ¡Qué bien! Este año, tamales y rompope. ¡Que lo pases bien con nosotros! | Super! W tym roku tamales i rompope. Baw się dobrze z nami!
 
 ## wa | WhatsApp y redes | WhatsApp i media społecznościowe | 📱 | Cómo escriben los ticos en WhatsApp: audios, abreviaturas, el grupo de la familia y las fórmulas para quedar o cancelar. | Jak Kostarykańczycy piszą na WhatsAppie: wiadomości głosowe, skróty, rodzinna grupa i formułki do umawiania się i odwoływania.
-¡Buenas! | ¡Hola! | Cześć! / Dzień dobry! | neutral | Buenas, disculpe la hora. | Muchos mensajes empiezan con «buenas», incluso entre amigos. | 👋 | |
-Disculpe la molestia | Perdone que le moleste | Przepraszam, że przeszkadzam | formal | Buenas, disculpe la molestia, ¿todavía tiene el apartamento? | Fórmula de cortesía muy usada al escribir a desconocidos. | 🙇 | |
-Un audio | Una nota de voz | Wiadomość głosowa | neutral | Le mandé un audio. | Los ticos mandan muchísimos audios, a veces de varios minutos. | 🎙️ | |
-Mandame un audio | Mándame una nota de voz | Wyślij mi głosówkę | informal | Mae, mandame un audio, que voy manejando. | Voseo: «mandame», no «mándame». | 🎧 | Valle Central |
-Va | Vale, de acuerdo | Okej / jasne | coloquial | —¿Nos vemos a las 7? —Va. | | 👍 | |
-Diay | Pues / bueno / ¿y entonces? | No / i co? | informal | Diay, ¿viene o no viene? | También aparece escrito «diay» en chats. | 🤷 | |
-Porfa | Por favor | Proszę | coloquial | Me pasa la dirección, porfa. | | 🙏 | |
-Tons | Entonces | To co / więc | coloquial | Tons qué, ¿vamos? | | ➡️ | |
-Jaja / jajaja | Risa escrita | Haha | coloquial | Jajaja, qué vacilón. | | 😂 | |
-Qué mae más… | Qué tipo más… | Ale z niego… | coloquial | Qué mae más vacilón. | | 🤣 | |
-El grupo de la familia | El chat familiar | Rodzinna grupa na czacie | neutral | En el grupo de la familia mandan cadenas todo el día. | | 👨‍👩‍👧‍👦 | |
-Una cadena | Un mensaje reenviado en cadena | Łańcuszek | neutral | Mi tía mandó otra cadena de buenos días. | | 🔗 | |
-Dejar en visto | Leer y no responder | Zostawić na „wyświetlono” | coloquial | Me dejó en visto otra vez. | | 👀 | |
-Mándeme la ubi | Envíeme la ubicación | Wyślij mi pinezkę | coloquial | Mándeme la ubi y llego. | | 📍 | |
-Ya voy llegando | Estoy a punto de llegar | Zaraz będę | neutral | Ya voy llegando, cinco minutos. | Como «ahorita», puede ser optimista. | 🚗 | |
-Se me complicó | Me surgió un imprevisto | Coś mi wypadło | neutral | Diay, se me complicó, ¿lo dejamos para mañana? | Forma suave y muy tica de cancelar. | 😬 | |
-Ahí vemos | Ya veremos (probablemente no) | Zobaczymy (raczej nie) | neutral | —¿Viene a la fiesta? —Ahí vemos. | Uno de los «no» disfrazados más comunes. | 🤔 | |
-Tal vez | Quizás (muchas veces = no) | Może (często = nie) | neutral | —¿El sábado? —Tal vez. | | 🤷 | |
-Primero Dios | Si Dios quiere | Jeśli Bóg da | neutral | Mañana nos vemos, primero Dios. | Se añade a cualquier plan futuro. | 🙏 | |
-Si Dios quiere | Si todo sale bien | Jeśli Bóg pozwoli | neutral | Si Dios quiere, el lunes empiezo. | | ☁️ | |
-Un sticker | Una pegatina de chat | Naklejka | neutral | Me respondió con un sticker. | | 🖼️ | |
-Mae, ¿qué hubo? | Tío, ¿qué tal? | Siema, co tam? | coloquial | Mae, ¿qué hubo? ¿Todo bien? | Se oye y se escribe «quiubo». | 👊 | |
-Upe | ¿Hay alguien? / Hola (en chat) | Halo? Jest tam kto? | coloquial | Upe, ¿alguien en el grupo? | Del saludo en el portón al saludo en el chat. | 🔔 | | dudoso
-Pura vida 👍 | Vale / gracias / todo bien | Okej / dzięki / wszystko gra | informal | —Le mandé el archivo. —Pura vida 👍 | Respuesta universal en el chat. | 🌴 | |
-Llamada perdida | Llamada no contestada | Nieodebrane połączenie | neutral | Le hice una perdida para que me llamara. | | 📞 | |
-Recargar el celular | Poner saldo al móvil | Doładować telefon | neutral | Ocupo recargar el celular, no tengo saldo. | «Celular» = móvil. | 🔋 | |
-El cel | El móvil | Komórka | coloquial | Se me murió el cel. | | 📱 | |
-Stalkear | Espiar los perfiles de alguien | Stalkować | coloquial | Estuve stalkeando al nuevo novio de María. | Anglicismo muy usado entre jóvenes. | 🕵️ | |
+¡Buenas! | ¡Hola! | Cześć! / Dzień dobry! | neutral | Buenas, disculpe la hora. | Muchos mensajes empiezan con «buenas», incluso entre amigos. | 👋 |  | ok
+Disculpe la molestia | Perdone que le moleste | Przepraszam, że przeszkadzam | formal | Buenas, disculpe la molestia, ¿todavía tiene el apartamento? | Fórmula de cortesía muy usada al escribir a desconocidos. | 🙇 |  | ok
+Un audio | Una nota de voz | Wiadomość głosowa | neutral | Le mandé un audio. | Los ticos mandan muchísimos audios, a veces de varios minutos. | 🎙️ |  | ok
+Mandame un audio | Mándame una nota de voz | Wyślij mi głosówkę | informal | Mae, mandame un audio, que voy manejando. | Voseo: «mandame», no «mándame». | 🎧 | Valle Central | ok
+Va | Vale, de acuerdo | Okej / jasne | coloquial | —¿Nos vemos a las 7? —Va. |  | 👍 |  | ok
+Diay | Pues / bueno / ¿y entonces? | No / i co? | informal | Diay, ¿viene o no viene? | También aparece escrito «diay» en chats. | 🤷 |  | ok
+Porfa | Por favor | Proszę | coloquial | Me pasa la dirección, porfa. |  | 🙏 |  | ok
+~ eliminada (ID 318, situación «wa», marcada «dudoso» en la revisión)
+Jaja / jajaja | Risa escrita | Haha | coloquial | Jajaja, qué vacilón. |  | 😂 |  | ok
+~ eliminada (ID 320, situación «wa», marcada «dudoso» en la revisión)
+El grupo de la familia | El chat familiar | Rodzinna grupa na czacie | neutral | En el grupo de la familia mandan cadenas todo el día. |  | 👨‍👩‍👧‍👦 |  | ok
+Una cadena | Un mensaje reenviado en cadena | Łańcuszek | neutral | Mi tía mandó otra cadena de buenos días. |  | 🔗 |  | ok
+Dejar en visto | Leer y no responder | Zostawić na „wyświetlono” | coloquial | Me dejó en visto otra vez. |  | 👀 |  | ok
+Mándeme la ubi | Envíeme la ubicación | Wyślij mi pinezkę | coloquial | Mándeme la ubi y llego. |  | 📍 |  | ok
+Ya voy llegando | Estoy a punto de llegar | Zaraz będę | neutral | Ya voy llegando, cinco minutos. | Como «ahorita», puede ser optimista. | 🚗 |  | ok
+Se me complicó | Me surgió un imprevisto | Coś mi wypadło | neutral | Diay, se me complicó, ¿lo dejamos para mañana? | Forma suave y muy tica de cancelar. | 😬 |  | ok
+Ahí vemos | Ya veremos (probablemente no) | Zobaczymy (raczej nie) | neutral | —¿Viene a la fiesta? —Ahí vemos. | Uno de los «no» disfrazados más comunes. | 🤔 |  | ok
+Tal vez | Quizás (muchas veces = no) | Może (często = nie) | neutral | —¿El sábado? —Tal vez. |  | 🤷 |  | ok
+Primero Dios | Si Dios quiere | Jeśli Bóg da | neutral | Mañana nos vemos, primero Dios. | Se añade a cualquier plan futuro. | 🙏 |  | ok
+Si Dios quiere | Si todo sale bien | Jeśli Bóg pozwoli | neutral | Si Dios quiere, el lunes empiezo. |  | ☁️ |  | ok
+Un sticker | Una pegatina de chat | Naklejka | neutral | Me respondió con un sticker. |  | 🖼️ |  | ok
+~ eliminada (ID 332, situación «wa», marcada «dudoso» en la revisión)
+~ eliminada (ID 333, situación «wa», marcada «dudoso» en la revisión)
+Pura vida 👍 | Vale / gracias / todo bien | Okej / dzięki / wszystko gra | informal | —Le mandé el archivo. —Pura vida 👍 | Respuesta universal en el chat. | 🌴 |  | ok
+Llamada perdida | Llamada no contestada | Nieodebrane połączenie | neutral | Le hice una perdida para que me llamara. |  | 📞 |  | ok
+Recargar el celular | Poner saldo al móvil | Doładować telefon | neutral | Ocupo recargar el celular, no tengo saldo. | «Celular» = móvil. | 🔋 |  | ok
+El cel | El móvil | Komórka | coloquial | Se me murió el cel. |  | 📱 |  | ok
+Stalkear | Espiar los perfiles de alguien | Stalkować | coloquial | Estuve stalkeando al nuevo novio de María. | Anglicismo muy usado entre jóvenes. | 🕵️ |  | ok
 > María | Buenas, mae, ¿qué hubo? ¿Siempre vamos al cine hoy? | Hola, tía, ¿qué tal? ¿Sigue en pie lo del cine hoy? | Cześć, stara, co tam? Idziemy dziś do kina?
 > Yo | Diay, se me complicó un toque. ¿Le mando un audio? | Bueno, me surgió algo. ¿Te mando una nota de voz? | No, coś mi wypadło. Wysłać ci głosówkę?
 > María | Va. Pero no me deje en visto otra vez, jaja. | Vale. Pero no me dejes sin responder otra vez, jaja. | Okej. Tylko znowu nie zostaw mnie bez odpowiedzi, haha.
@@ -448,31 +448,31 @@ Stalkear | Espiar los perfiles de alguien | Stalkować | coloquial | Estuve stal
 > María | Listo. ¡Pura vida! 👍 | Hecho. ¡Genial! 👍 | Gotowe. Super! 👍
 
 ## dichos | Dichos | Powiedzenia | 📜 | Dichos y expresiones que se oyen de verdad en Costa Rica, con su sentido y cuándo se usan. | Powiedzenia i wyrażenia, które naprawdę słychać w Kostaryce, z ich znaczeniem i kontekstem.
-Pura vida | Todo bien, la vida es buena | Wszystko gra, życie jest piękne | informal | —¿Qué tal el viaje? —Pura vida. | Más que un dicho: es la filosofía y la marca del país. | 🌴 | |
-Más tico que el gallo pinto | Muy costarricense | Bardziej kostarykański się nie da | coloquial | Ese mae es más tico que el gallo pinto. | | 🍚 | |
-El que nace pa' tamal, del cielo le caen las hojas | Uno no escapa a su destino | Kto ma być tamalem, temu liście spadną z nieba (nie uciekniesz od losu) | coloquial | Diay, otra vez le tocó; el que nace pa' tamal… | Muchas veces se dice solo la primera mitad. | 🍃 | |
-A cada chancho le llega su sábado | A cada uno le llega su castigo | Każdy w końcu dostanie za swoje | coloquial | Tanto joder a los demás… a cada chancho le llega su sábado. | Antes se mataba el cerdo el sábado para vender el domingo. | 🐖 | |
-Hay más tiempo que vida | No hay prisa | Nie ma pośpiechu | neutral | Tranquila, hay más tiempo que vida. | | ⏳ | |
-Matar la culebra | Perder el tiempo, holgazanear | Obijać się | coloquial | Ese mae se pasa matando la culebra en el brete. | | 🐍 | |
-Le patina el coco | Está loco | Ma nierówno pod sufitem | coloquial | A ese mae le patina el coco. | «Coco» = cabeza. | 🥥 | |
-La jupa | La cabeza | Łepetyna | coloquial | Me duele la jupa. | | 🧠 | |
-Jalarse una torta | Cometer un error grave | Narobić bigosu | coloquial | Me jalé una torta: le mandé el mensaje a la persona equivocada. | También puede significar dejar embarazada a alguien sin planearlo. | 🤦 | |
-¡Qué torta! | ¡Qué desastre! / ¡qué metida de pata! | Ale wtopa! | coloquial | Se me olvidó el cumpleaños de mi suegra. ¡Qué torta! | | 🎂 | |
-Estar en la calle | No saber nada de algo | Nie mieć o czymś pojęcia | coloquial | En matemáticas estoy en la calle. | También puede ser «estar sin dinero»; el contexto decide. | 🛣️ | |
-Quedarse como novia de pueblo | Quedarse esperando en vano | Zostać jak panna młoda przed ołtarzem | coloquial | Me quedé como novia de pueblo: vestida y alborotada. | Se completa con «vestida y alborotada». | 👰 | | dudoso
-Echarle el ojo a algo | Fijarse en algo con interés | Upatrzyć sobie coś | neutral | Le eché el ojo a esa casa. | | 👁️ | |
-Detrás del palo | Sin enterarse de nada | Nie mieć pojęcia, co się dzieje | coloquial | Usted siempre está detrás del palo. | | 🌳 | |
-Andar con el moño torcido | Estar de mal humor | Być w złym humorze | coloquial | La jefa anda con el moño torcido hoy. | | 🎀 | | dudoso
-Ser un polo | Ser poco refinado, de gusto rústico | Być wieśniakiem / obciachowym | coloquial | Qué polo, llegó a la boda en chancletas. | Algo despectivo; se usa también en broma («qué polada»). | 🤠 | |
-Una polada | Algo de mal gusto, poco elegante | Obciach / wiocha | coloquial | Esa decoración es una polada. | | 🎭 | |
-Rajado | Muy bueno, excelente (o muy rápido) | Świetny / ekspres | coloquial | Ese mae es rajado para la guitarra. | «Ir rajado» = ir muy rápido. | ⚡ | |
-Darle vuelta a algo | Pensar mucho una cosa | Rozważać coś | neutral | Le estoy dando vuelta a la idea de mudarme. | | 🔄 | |
-Ponerse bravo | Enojarse | Wkurzyć się | neutral | Mi papá se puso bravo porque llegué tarde. | «Bravo» = enojado, no valiente. | 😠 | |
-Diay, ni modo | Bueno, qué se le va a hacer | Trudno, nic nie poradzisz | neutral | Se nos fue el bus. Diay, ni modo. | | 🤷 | |
-Hablar hasta por los codos | Hablar muchísimo | Gadać jak najęty | neutral | Mi suegra habla hasta por los codos. | No es solo tico, pero se oye mucho. | 🗣️ | |
-De a mentiritas | En broma, de mentira | Na niby | coloquial | No se enoje, era de a mentiritas. | | 🙃 | |
-Con el Jesús en la boca | Con mucho miedo o angustia | Z duszą na ramieniu | neutral | Pasamos el puente con el Jesús en la boca. | | 😰 | |
-Estar como un pollo | Tener mucho frío | Trząść się z zimna | coloquial | En Cartago estaba como un pollo. | | 🥶 | | dudoso
+Pura vida | Todo bien, la vida es buena | Wszystko gra, życie jest piękne | informal | —¿Qué tal el viaje? —Pura vida. | Más que un dicho: es la filosofía y la marca del país. | 🌴 |  | ok
+Más tico que el gallo pinto | Muy costarricense | Bardziej kostarykański się nie da | coloquial | Ese mae es más tico que el gallo pinto. |  | 🍚 |  | ok
+~ eliminada (ID 341, situación «dichos», marcada «dudoso» en la revisión)
+A cada chancho le llega su sábado | A cada uno le llega su castigo | Każdy w końcu dostanie za swoje | coloquial | Tanto joder a los demás… a cada chancho le llega su sábado. | Antes se mataba el cerdo el sábado para vender el domingo. | 🐖 |  | ok
+Hay más tiempo que vida | No hay prisa | Nie ma pośpiechu | neutral | Tranquila, hay más tiempo que vida. |  | ⏳ |  | ok
+Matar la culebra | Perder el tiempo, holgazanear | Obijać się | coloquial | Ese mae se pasa matando la culebra en el brete. |  | 🐍 |  | ok
+Le patina el coco | Está loco | Ma nierówno pod sufitem | coloquial | A ese mae le patina el coco. | «Coco» = cabeza. | 🥥 |  | ok
+La jupa | La cabeza | Łepetyna | coloquial | Me duele la jupa. |  | 🧠 |  | ok
+Jalarse una torta | Cometer un error grave | Narobić bigosu | coloquial | Me jalé una torta: le mandé el mensaje a la persona equivocada. | También puede significar dejar embarazada a alguien sin planearlo. | 🤦 |  | ok
+¡Qué torta! | ¡Qué desastre! / ¡qué metida de pata! | Ale wtopa! | coloquial | Se me olvidó el cumpleaños de mi suegra. ¡Qué torta! |  | 🎂 |  | ok
+~ eliminada (ID 349, situación «dichos», marcada «dudoso» en la revisión)
+~ eliminada (ID 350, situación «dichos», marcada «dudoso» en la revisión)
+Echarle el ojo a algo | Fijarse en algo con interés | Upatrzyć sobie coś | neutral | Le eché el ojo a esa casa. |  | 👁️ |  | ok
+Detrás del palo | Sin enterarse de nada | Nie mieć pojęcia, co się dzieje | coloquial | Usted siempre está detrás del palo. |  | 🌳 |  | ok
+~ eliminada (ID 353, situación «dichos», marcada «dudoso» en la revisión)
+Ser un polo | Ser poco refinado, de gusto rústico | Być wieśniakiem / obciachowym | coloquial | Qué polo, llegó a la boda en chancletas. | Algo despectivo; se usa también en broma («qué polada»). | 🤠 |  | ok
+Una polada | Algo de mal gusto, poco elegante | Obciach / wiocha | coloquial | Esa decoración es una polada. |  | 🎭 |  | ok
+Rajado | Muy bueno, excelente (o muy rápido) | Świetny / ekspres | coloquial | Ese mae es rajado para la guitarra. | «Ir rajado» = ir muy rápido. | ⚡ |  | ok
+Darle vuelta a algo | Pensar mucho una cosa | Rozważać coś | neutral | Le estoy dando vuelta a la idea de mudarme. |  | 🔄 |  | ok
+Ponerse bravo | Enojarse | Wkurzyć się | neutral | Mi papá se puso bravo porque llegué tarde. | «Bravo» = enojado, no valiente. | 😠 |  | ok
+Diay, ni modo | Bueno, qué se le va a hacer | Trudno, nic nie poradzisz | neutral | Se nos fue el bus. Diay, ni modo. |  | 🤷 |  | ok
+Hablar hasta por los codos | Hablar muchísimo | Gadać jak najęty | neutral | Mi suegra habla hasta por los codos. | No es solo tico, pero se oye mucho. | 🗣️ |  | ok
+De a mentiritas | En broma, de mentira | Na niby | coloquial | No se enoje, era de a mentiritas. |  | 🙃 |  | ok
+~ eliminada (ID 362, situación «dichos», marcada «dudoso» en la revisión)
+~ eliminada (ID 363, situación «dichos», marcada «dudoso» en la revisión)
 > Abuelo | Diay, mi hija, ¿qué le pasa? Anda con el moño torcido. | Bueno, hija, ¿qué te pasa? Estás de mal humor. | No, córeczko, co się stało? Masz zły humor.
 > Yo | Me jalé una torta en el brete, don Rafa. | Cometí un error grave en el trabajo, señor Rafa. | Narobiłam bigosu w pracy, panie Rafo.
 > Abuelo | Tranquila, hay más tiempo que vida. | Tranquila, no hay prisa. | Spokojnie, czasu jest więcej niż życia.
@@ -482,33 +482,33 @@ Estar como un pollo | Tener mucho frío | Trząść się z zimna | coloquial | E
 > Abuelo | ¡Más tico que el gallo pinto, mi hija! | ¡Soy muy costarricense, hija! | Bardziej kostarykański niż gallo pinto, córeczko!
 
 ## emo | Emociones y quejas | Emocje i narzekanie | 😤 | Cómo se queja, se alegra y se enoja un tico, y cómo decir que no sin decir no. | Jak Kostarykańczyk narzeka, cieszy się i złości, i jak odmówić, nie mówiąc „nie”.
-¡Qué salado! | ¡Qué mala suerte! | Ale pech! | coloquial | —Perdí el bus. —¡Qué salado! | También «estar salado» = tener mala racha. | 🧂 | |
-¡Qué mala nota! | ¡Qué mal! / ¡qué feo! | Ale słabo! / Nie fajnie! | coloquial | Qué mala nota lo que le hicieron. | | 👎 | |
-¡Qué despiche! | ¡Qué desorden! / ¡qué caos! | Co za bałagan! | coloquial | Mae, qué despiche dejaron en la cocina. | | 🌪️ | |
-Me da cólera | Me da rabia | Wkurza mnie | neutral | Me da cólera que siempre llegue tarde. | «¡Qué cólera!» = ¡qué rabia! | 😤 | |
-Estar enchilado / enchilarse | Estar enojado / enojarse | Być wkurzonym / wkurzyć się | coloquial | No le hable, está enchilado. | | 🌶️ | |
-Me cae mal / me cae bien | No me agrada / me agrada | Nie lubię go / lubię go | neutral | Ese mae me cae muy bien. | | 🙂 | |
-Me da cosa | Me da pena, vergüenza o lástima | Głupio mi / szkoda mi | neutral | Me da cosa decirle que no. | Expresión ambigua y muy útil. | 😳 | |
-Qué pena con usted | Disculpe la molestia, me da vergüenza | Bardzo przepraszam, głupio mi | neutral | Qué pena con usted, llegué tardísimo. | «Pena» = vergüenza, no tristeza. | 🙈 | |
-Diay, ¿qué le vamos a hacer? | Bueno, qué se le va a hacer | No, trudno | neutral | Se fue la luz. Diay, ¿qué le vamos a hacer? | | 🤷 | |
-Ahí vamos | Más o menos, tirando | Jakoś leci | neutral | —¿Cómo está? —Ahí vamos. | | 🐢 | |
-Aquí nada más | Aquí, sin novedades | Nic nowego | neutral | —¿Qué hace? —Aquí nada más. | | 🛋️ | |
+¡Qué salado! | ¡Qué mala suerte! | Ale pech! | coloquial | —Perdí el bus. —¡Qué salado! | También «estar salado» = tener mala racha. | 🧂 |  | ok
+¡Qué mala nota! | ¡Qué mal! / ¡qué feo! | Ale słabo! / Nie fajnie! | coloquial | Qué mala nota lo que le hicieron. |  | 👎 |  | ok
+~ eliminada (ID 366, situación «emo», marcada «dudoso» en la revisión)
+Me da cólera | Me da rabia | Wkurza mnie | neutral | Me da cólera que siempre llegue tarde. | «¡Qué cólera!» = ¡qué rabia! | 😤 |  | ok
+Estar enchilado / enchilarse | Estar enojado / enojarse | Być wkurzonym / wkurzyć się | coloquial | No le hable, está enchilado. |  | 🌶️ |  | ok
+Me cae mal / me cae bien | No me agrada / me agrada | Nie lubię go / lubię go | neutral | Ese mae me cae muy bien. |  | 🙂 |  | ok
+Me da cosa | Me da pena, vergüenza o lástima | Głupio mi / szkoda mi | neutral | Me da cosa decirle que no. | Expresión ambigua y muy útil. | 😳 |  | ok
+Qué pena con usted | Disculpe la molestia, me da vergüenza | Bardzo przepraszam, głupio mi | neutral | Qué pena con usted, llegué tardísimo. | «Pena» = vergüenza, no tristeza. | 🙈 |  | ok
+Diay, ¿qué le vamos a hacer? | Bueno, qué se le va a hacer | No, trudno | neutral | Se fue la luz. Diay, ¿qué le vamos a hacer? |  | 🤷 |  | ok
+Ahí vamos | Más o menos, tirando | Jakoś leci | neutral | —¿Cómo está? —Ahí vamos. |  | 🐢 |  | ok
+Aquí nada más | Aquí, sin novedades | Nic nowego | neutral | —¿Qué hace? —Aquí nada más. |  | 🛋️ |  | ok
 Estoy hecho leña | Estoy agotado | Jestem wykończony | coloquial | Después del brete estoy hecho leña. |  | 🪵 |  | ok
-Estar quemado | Estar agotado (o con mala fama) | Być wypalonym / spalonym | coloquial | Estoy quemada con este proyecto. | | 🔥 | |
-Estar en la luna | Estar distraído | Bujać w obłokach | neutral | Perdón, estaba en la luna. | | 🌙 | |
-Qué ganas | Qué ilusión / tengo muchas ganas | Ale mi się chce! / Nie mogę się doczekać | neutral | ¿Vamos a la playa? ¡Qué ganas! | | 🤩 | |
-Estar feliz de la vida | Estar contentísimo | Być w siódmym niebie | neutral | Con el nuevo brete está feliz de la vida. | | 😁 | |
-¡Qué vergüenza! | ¡Qué vergüenza! | Ale wstyd! | neutral | Me caí frente a todos, ¡qué vergüenza! | | 🫣 | |
-Qué chicha | Qué rabia, qué fastidio | Ale wkurzające | coloquial | Qué chicha, me cerraron la ventanilla en la cara. | «Chicha» = enojo («me dio chicha»). | 😾 | |
-No se preocupe | No te preocupes | Nie martw się | neutral | No se preocupe, son cosas que pasan. | | 🤗 | |
-Diay, déjeme ver | Déjeme pensarlo | No, pomyślę | neutral | —¿Me presta el carro? —Diay, déjeme ver. | Forma clásica de no decir «no» directamente. | 🧐 | |
-Es que fíjese que… | Es que verá… | Bo wie Pan/Pani… | neutral | Es que fíjese que el sábado tengo un compromiso. | Introducción típica antes de rechazar algo con cortesía. | 💬 | |
-Qué pereza | Qué flojera | Nie chce mi się | coloquial | Qué pereza levantarme temprano. | | 🥱 | |
-Estar de malas | Tener mala suerte, estar de mal humor | Mieć pecha / zły dzień | neutral | Hoy estoy de malas, todo me sale mal. | | 🌧️ | |
-¡Qué asco! | ¡Qué asco! | Fuj! | neutral | ¡Qué asco, una cucaracha! | | 🤢 | |
-¡Qué barbaridad! | ¡Qué exageración! / ¡increíble! | Niesamowite! / Co za przesada! | neutral | ¡Qué barbaridad, cuánta gente hay en la feria! | | 😮 | |
-¡Diay, qué varas! | ¡Qué cosas pasan! | Co za historia! | coloquial | Se le cayó el celular al río. ¡Diay, qué varas! | «Vara» = cosa, asunto. | 🙃 | | dudoso
-Estar hasta la coronilla | Estar harto | Mieć czegoś po dziurki w nosie | neutral | Estoy hasta la coronilla de la presa todos los días. | | 😫 | |
+Estar quemado | Estar agotado (o con mala fama) | Być wypalonym / spalonym | coloquial | Estoy quemada con este proyecto. |  | 🔥 |  | ok
+Estar en la luna | Estar distraído | Bujać w obłokach | neutral | Perdón, estaba en la luna. |  | 🌙 |  | ok
+Qué ganas | Qué ilusión / tengo muchas ganas | Ale mi się chce! / Nie mogę się doczekać | neutral | ¿Vamos a la playa? ¡Qué ganas! |  | 🤩 |  | ok
+Estar feliz de la vida | Estar contentísimo | Być w siódmym niebie | neutral | Con el nuevo brete está feliz de la vida. |  | 😁 |  | ok
+¡Qué vergüenza! | ¡Qué vergüenza! | Ale wstyd! | neutral | Me caí frente a todos, ¡qué vergüenza! |  | 🫣 |  | ok
+Qué chicha | Qué rabia, qué fastidio | Ale wkurzające | coloquial | Qué chicha, me cerraron la ventanilla en la cara. | «Chicha» = enojo («me dio chicha»). | 😾 |  | ok
+No se preocupe | No te preocupes | Nie martw się | neutral | No se preocupe, son cosas que pasan. |  | 🤗 |  | ok
+Diay, déjeme ver | Déjeme pensarlo | No, pomyślę | neutral | —¿Me presta el carro? —Diay, déjeme ver. | Forma clásica de no decir «no» directamente. | 🧐 |  | ok
+Es que fíjese que… | Es que verá… | Bo wie Pan/Pani… | neutral | Es que fíjese que el sábado tengo un compromiso. | Introducción típica antes de rechazar algo con cortesía. | 💬 |  | ok
+Qué pereza | Qué flojera | Nie chce mi się | coloquial | Qué pereza levantarme temprano. |  | 🥱 |  | ok
+Estar de malas | Tener mala suerte, estar de mal humor | Mieć pecha / zły dzień | neutral | Hoy estoy de malas, todo me sale mal. |  | 🌧️ |  | ok
+¡Qué asco! | ¡Qué asco! | Fuj! | neutral | ¡Qué asco, una cucaracha! |  | 🤢 |  | ok
+¡Qué barbaridad! | ¡Qué exageración! / ¡increíble! | Niesamowite! / Co za przesada! | neutral | ¡Qué barbaridad, cuánta gente hay en la feria! |  | 😮 |  | ok
+~ eliminada (ID 389, situación «emo», marcada «dudoso» en la revisión)
+~ eliminada (ID 390, situación «emo», marcada «dudoso» en la revisión)
 > Yo | ¡Qué salado! Se me fue el bus y llueve. | ¡Qué mala suerte! Perdí el autobús y llueve. | Ale pech! Uciekł mi autobus, a do tego pada.
 > María | Diay, ¿qué le vamos a hacer? ¿Cómo está? | Bueno, qué se le va a hacer. ¿Cómo estás? | No, trudno. Jak się masz?
 > Yo | Ahí vamos. Estoy hecha leña y la jefa anda enchilada. | Tirando. Estoy agotada y la jefa está enojada. | Jakoś leci. Jestem wykończona, a szefowa jest wkurzona.

@@ -19,7 +19,7 @@ const srcSits = SRC.filter(l => l.startsWith('##')).length, srcEntries = SRC.fil
 const srcOk = srcEntries.map((l, i) => [i, l.split('|')[8]?.trim()]).filter(([, st]) => st === 'ok').map(([i]) => i);
 ok(srcSits === 11, `content.txt: ${srcSits} situaciones (se eliminaron amigos, fútbol, brete y trámites)`);
 const gone = srcEntries.filter(l => l.startsWith('~')).length;
-ok(srcEntries.length === 391 && gone === 106, `content.txt: ${srcEntries.length} IDs, ${srcEntries.length - gone} entradas y ${gone} eliminadas`);
+ok(srcEntries.length === 391 && gone === 145, `content.txt: ${srcEntries.length} IDs, ${srcEntries.length - gone} entradas y ${gone} eliminadas`);
 const js = readFileSync(join(ROOT, 'web/data.js'), 'utf8');
 const win = {}; new Function('window', js)(win);
 const { SITS, ENTRIES } = win;
