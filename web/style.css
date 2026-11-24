@@ -239,8 +239,8 @@ nav{order:3}
 .say.big.tv:after{font-size:26px}
 .pic.photo{overflow:hidden;padding:0}.pic.photo img{width:100%;height:100%;object-fit:cover;border-radius:inherit}
 
-/* Tico Box: registros (formal · neutral · informal · coloquial · vulgar) y estados de entrada */
-.rg.N{background:var(--line);color:var(--mute)}.rg.C{background:var(--okb);color:var(--ok)}.rg.V{background:var(--badb);color:var(--bad)}
+/* Tico Box: registros (formal · neutral · informal · coloquial) y estados de entrada */
+.rg.N{background:var(--line);color:var(--mute)}.rg.C{background:var(--okb);color:var(--ok)}
 .tag.nv{background:var(--line);color:var(--mute)}.tag.rv{background:var(--ambb);color:var(--amb)}.tag.du{background:var(--badb);color:var(--bad)}
 .tico{font-weight:700}.neu{color:var(--mute)}
 .fld{margin-top:12px;text-align:left}.fld small{display:block;color:var(--mute);font-weight:700;font-size:12px;text-transform:uppercase;letter-spacing:.5px}.fld div{font-size:17px}

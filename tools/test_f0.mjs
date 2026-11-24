@@ -27,8 +27,8 @@ await new Promise(r => setTimeout(r, 700));
 /* contenido de prueba (solo para las pruebas; el contenido real llega en la Fase 1) */
 const FIX = (() => {
   const SITS = [{ k: 'p1', es: 'Situación de prueba', pl: 'Sytuacja testowa', ic: '1f4ac', ds: 'Descripción de prueba.', dp: 'Opis testowy.', dl: [{ w: 'Ana', tx: 'Línea uno', ne: 'Línea uno neutra', pl: 'Linia pierwsza', vk: 'dp1_0' }, { w: 'Vos', tx: 'Línea dos', ne: 'Línea dos neutra', pl: 'Linia druga', vk: 'dp1_1' }] }];
-  const regs = ['F', 'N', 'I', 'C', 'V'], ENTRIES = [];
-  for (let i = 0; i < 60; i++) ENTRIES.push({ i, s: 0, vk: 'e' + i, tx: 'Frase de prueba ' + i, ne: 'Equivalente neutro ' + i, pl: 'Zdanie testowe ' + i, r: regs[i % 5], ej: 'Ejemplo ' + i, ...(i === 2 ? { du: 1, nc: 'Nota de prueba', z: 'Valle Central' } : {}) });
+  const regs = ['F', 'N', 'I', 'C'], ENTRIES = [];
+  for (let i = 0; i < 60; i++) ENTRIES.push({ i, s: 0, vk: 'e' + i, tx: 'Frase de prueba ' + i, ne: 'Equivalente neutro ' + i, pl: 'Zdanie testowe ' + i, r: regs[i % 4], ej: 'Ejemplo ' + i, ...(i === 2 ? { du: 1, nc: 'Nota de prueba', z: 'Valle Central' } : {}) });
   return `window.SITS=${JSON.stringify(SITS)};window.ENTRIES=${JSON.stringify(ENTRIES)};`;
 })();
 

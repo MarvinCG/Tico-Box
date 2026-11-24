@@ -17,10 +17,10 @@ es: {
  sitIntro: 'Momentos reales de la vida en Costa Rica. Cada frase trae su equivalente neutro, la traducción al polaco y el registro.',
  noSit: 'Todavía no hay situaciones.', phrases: 'Frases', dialogues: 'Diálogo', back: '‹ Volver', close: 'Cerrar',
  search: 'Busca una frase, su equivalente o la traducción…', noResults: 'No se encontró nada.',
- r_F: 'formal', r_N: 'neutral', r_I: 'informal', r_C: 'coloquial', r_V: 'vulgar',
+ r_F: 'formal', r_N: 'neutral', r_I: 'informal', r_C: 'coloquial',
  fTico: 'Tico', fNeu: 'Español neutro', fPl: 'Polaco', fEj: 'Ejemplo', fNote: 'Nota cultural', fZone: 'Zona', fReg: 'Registro',
  noVoice: 'sin voz todavía', plRev: 'polaco por revisar', dudoso: 'dudoso',
- settings: 'Ajustes', ui: 'Idioma de la app', hideV: 'Ocultar las frases vulgares', hideVSub: 'Las frases marcadas como vulgares dejan de aparecer en toda la app.', sitToday: 'Situación del día', fDay: 'Frase del día', open: 'Abrir',
+ settings: 'Ajustes', ui: 'Idioma de la app', sitToday: 'Situación del día', fDay: 'Frase del día', open: 'Abrir',
  inst: 'Instalar la app', instSub: 'Tico Box es una web app: la instalas una vez y se actualiza sola. Funciona sin internet.', instBtn: 'Instalar Tico Box',
  instIOS: 'En iPad / iPhone: en Safari toca Compartir ⬆️ y luego «Añadir a pantalla de inicio».', instOther: 'En Chrome o Edge: abre el menú ⋮ y elige «Instalar app» (o «Agregar a la pantalla principal»).',
  backup: 'Copia de seguridad', export: 'Exportar progreso', import: 'Importar progreso', importPh: 'Pega aquí tu copia de seguridad', importGo: 'Importar', importBad: 'No se pudo leer esa copia.', importOk: 'Progreso restaurado.',
@@ -37,10 +37,10 @@ pl: {
  sitIntro: 'Prawdziwe chwile z życia w Kostaryce. Każdy zwrot ma neutralny odpowiednik, tłumaczenie na polski i rejestr.',
  noSit: 'Na razie nie ma sytuacji.', phrases: 'Zwroty', dialogues: 'Dialog', back: '‹ Wstecz', close: 'Zamknij',
  search: 'Szukaj zwrotu, odpowiednika lub tłumaczenia…', noResults: 'Nic nie znaleziono.',
- r_F: 'formalny', r_N: 'neutralny', r_I: 'nieformalny', r_C: 'potoczny', r_V: 'wulgarny',
+ r_F: 'formalny', r_N: 'neutralny', r_I: 'nieformalny', r_C: 'potoczny',
  fTico: 'Po kostarykańsku', fNeu: 'Neutralny hiszpański', fPl: 'Po polsku', fEj: 'Przykład', fNote: 'Uwaga kulturowa', fZone: 'Region', fReg: 'Rejestr',
  noVoice: 'jeszcze bez nagrania', plRev: 'polski do sprawdzenia', dudoso: 'niepewne',
- settings: 'Ustawienia', ui: 'Język aplikacji', hideV: 'Ukryj wulgarne zwroty', hideVSub: 'Zwroty oznaczone jako wulgarne przestają się pojawiać w całej aplikacji.', sitToday: 'Sytuacja dnia', fDay: 'Zwrot dnia', open: 'Otwórz',
+ settings: 'Ustawienia', ui: 'Język aplikacji', sitToday: 'Sytuacja dnia', fDay: 'Zwrot dnia', open: 'Otwórz',
  inst: 'Zainstaluj aplikację', instSub: 'Tico Box to aplikacja webowa: instalujesz ją raz, a aktualizuje się sama. Działa bez internetu.', instBtn: 'Zainstaluj Tico Box',
  instIOS: 'Na iPadzie / iPhonie: w Safari dotknij Udostępnij ⬆️, a potem „Do ekranu początkowego”.', instOther: 'W Chrome lub Edge: otwórz menu ⋮ i wybierz „Zainstaluj aplikację” (lub „Dodaj do ekranu głównego”).',
  backup: 'Kopia zapasowa', export: 'Eksportuj postępy', import: 'Importuj postępy', importPh: 'Wklej tu kopię zapasową', importGo: 'Importuj', importBad: 'Nie udało się odczytać kopii.', importOk: 'Postępy przywrócone.',
@@ -56,14 +56,14 @@ const t = (k, v) => { let s = (T[S.cfg.ui] || T.es)[k]; if (s == null) s = T.es[
 /* ------------------------------------------------------------ estado */
 const KEY = 'ticobox.v1';
 const newDev = () => 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-const blank = () => ({ v: 1, dev: newDev(), cards: {}, log: {}, hid: {}, ed: {}, cfgT: 0, resetAt: 0, cfg: { ui: 'es', ok: false, hideV: false } });
+const blank = () => ({ v: 1, dev: newDev(), cards: {}, log: {}, hid: {}, ed: {}, cfgT: 0, resetAt: 0, cfg: { ui: 'es', ok: false } });
 const store = {
   get() { try { const s = localStorage.getItem(KEY); if (s) return JSON.parse(s); } catch (e) {} return null; },
   set(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
 };
 function norm(o) {
   const b = blank(); if (!o || typeof o !== 'object') return b;
-  const r = Object.assign(b, o); r.cfg = Object.assign(blank().cfg, o.cfg || {}); if (r.cfg.ui !== 'pl') r.cfg.ui = 'es';
+  const r = Object.assign(b, o); r.cfg = Object.assign(blank().cfg, o.cfg || {}); if (r.cfg.ui !== 'pl') r.cfg.ui = 'es'; delete r.cfg.hideV;
   ['cards', 'log', 'hid', 'ed'].forEach(k => { r[k] = (o[k] && typeof o[k] === 'object') ? o[k] : {}; });
   if (!r.dev) r.dev = newDev();
   return r;
@@ -78,7 +78,7 @@ const sTitle = s => S.cfg.ui === 'pl' ? (s.pl || s.es) : s.es;
 const sOther = s => S.cfg.ui === 'pl' ? s.es : (s.pl || '');
 const sDesc = s => S.cfg.ui === 'pl' ? (s.dp || s.ds) : s.ds;
 const regChip = e => e.r ? `<em class="rg ${e.r}">${t('r_' + e.r)}</em>` : '';
-const isHid = e => { if (S.cfg.hideV && e.r === 'V') return true; const h = S.hid[e.vk]; return !!(h && h.h); };
+const isHid = e => { const h = S.hid[e.vk]; return !!(h && h.h); };
 const live = () => E.filter(e => e && !isHid(e));
 const ICO = {
   today: '<svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
@@ -163,7 +163,6 @@ function vMe() {
   const seg = (key, opts) => `<div class="seg">${opts.map(([v, l]) => `<button class="${String(S.cfg[key]) === String(v) ? 'on' : ''}" data-a="cfg" data-k="${key}" data-v="${v}">${l}</button>`).join('')}</div>`;
   return `<div class="card"><h2>${t('settings')}</h2>
    <div class="srow"><div class="l">${t('ui')}</div>${seg('ui', [['es', 'Español'], ['pl', 'Polski']])}</div>
-   <div class="srow"><div class="l">${t('hideV')}<small>${t('hideVSub')}</small></div><button class="sw ${S.cfg.hideV ? 'on' : ''}" data-a="tog" data-k="hideV" aria-label="${esc(t('hideV'))}"></button></div>
    <div class="srow"><div class="l small">${t('keys')}</div></div></div>
   ${installCard()}
   <div class="card"><h2>${t('backup')}</h2><div class="btns two"><button class="btn s sm" data-a="export">${t('export')}</button><button class="btn s sm" data-a="import">${t('import')}</button></div>
@@ -211,7 +210,6 @@ const A = {
   entry: d => { V.sheet = { k: 'entry', i: Number(d.i) }; render(); },
   close: () => { V.sheet = null; render(); },
   cfg: d => { if (d.k !== 'ui') return; S.cfg.ui = d.v === 'pl' ? 'pl' : 'es'; S.cfgT = Date.now(); save(); render(); },
-  tog: d => { if (d.k !== 'hideV') return; S.cfg.hideV = !S.cfg.hideV; S.cfgT = Date.now(); save(); render(); },
   sitopen: d => { V.tab = 'sit'; V.sit = Number(d.s); V.sheet = null; views[vkey()] = 0; render(); },
   lang: d => { S.cfg.ui = d.v === 'pl' ? 'pl' : 'es'; S.cfg.ok = true; S.cfgT = Date.now(); save(); V.sheet = null; render(); },
   export: () => copyText(JSON.stringify(S)),

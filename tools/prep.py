@@ -9,7 +9,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = ROOT + '/web'
 TW = ROOT + '/tools/node_modules/@twemoji/svg/'
 SRC = ROOT + '/tools/content.txt'
-REG = {'formal': 'F', 'neutral': 'N', 'informal': 'I', 'coloquial': 'C', 'vulgar': 'V'}
+REG = {'formal': 'F', 'neutral': 'N', 'informal': 'I', 'coloquial': 'C'}   # sin registro vulgar (decisión de Aaron, F1)
 UI_EMOJI = '📦 🇨🇷 🇵🇱 💬 📝'   # íconos fijos de la interfaz (situación sin ícono, frase sin emoji…)
 
 if not os.path.isdir(TW):

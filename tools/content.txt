@@ -5,7 +5,7 @@
 #   ## clave | título en español | tytuł po polsku | emoji | descripción en español | opis po polsku
 # Entrada (una por línea, debajo de su situación):
 #   tico | neutro | polaco | registro | ejemplo | nota | emoji | zona | estado
-#   registro: formal · neutral · informal · coloquial · vulgar
+#   registro: formal · neutral · informal · coloquial (no se incluye contenido vulgar)
 #   estado:   vacío (validado por Aaron) o «dudoso» (falta que Aaron lo valide)
 #   El polaco lo propone Claude y queda «por revisar» hasta que la estudiante lo corrija en su app.
 # Línea de diálogo:
@@ -81,9 +81,9 @@ Rajón / rajona | Presumido, fanfarrón | Chwalipięta | coloquial | No sea raj�
 Jetón / jetona | Mentiroso, exagerado | Kłamczuch / gaduła | coloquial | Qué jetón, eso nunca pasó. | | 🤥 | |
 Hacerse el mae | Hacerse el tonto | Udawać głupiego | coloquial | No se haga el mae, usted sabe de qué hablo. | | 🙄 | |
 ¡Nos vidrios! | ¡Nos vemos! | Na razie! / Do zobaczenia! | coloquial | Bueno, mae, nos vidrios. | Juego de palabras con «vemos / vidrios». | 👋 | |
-Mae, ¡qué hijueputa! | ¡Increíble! / ¡qué barbaridad! (o insulto) | O kurwa! / Ale jazda! | vulgar | Mae, qué hijueputa ese gol. | Entre amigos puede ser exclamación de asombro; dirigido a una persona es un insulto fuerte. Mejor reconocerlo que usarlo. | 🤬 | |
-Malparido | Desgraciado (insulto) | Skurwiel / drań | vulgar | Qué malparido, me robó el parqueo. | Insulto muy común y fuerte. Entre amigos muy cercanos a veces se usa en broma. | 😡 | |
-Estar agüevado | Estar aburrido o desanimado | Być znudzonym / przybitym | vulgar | Estoy agüevado, no hay nada que hacer. | Coloquial con un toque grosero («güevo»). Muy frecuente entre jóvenes. «Qué agüevazón» = qué aburrimiento. | 😒 | |
+Ser un pura vida | Ser buena persona, alguien tranquilo y agradable | Być porządnym, sympatycznym człowiekiem | coloquial | Su hermano es un pura vida, le cae bien a todo el mundo. | «Pura vida» también funciona como adjetivo para personas. | 😇 | |
+Dar pelota | Prestar atención, hacer caso (a veces, coquetear) | Zwracać uwagę / dawać komuś szansę | coloquial | Le escribe todos los días, pero ella no le da pelota. | | 👀 | |
+Estar en otra nota | Estar distraído, pensando en otra cosa | Być myślami gdzie indziej | coloquial | Perdón, estaba en otra nota, ¿qué me dijo? | | 🎧 | |
 > Andrés | ¡Diay, mae! ¿Qué hacés? | ¡Hola, tío! ¿Qué haces? | Siema, stary! Co robisz?
 > Yo | ¡Pura vida! Aquí, viendo qué es la vara para hoy. | ¡Todo bien! Aquí, viendo qué planes hay para hoy. | Spoko! Tu, patrzę, co dziś robimy.
 > Andrés | Vamos por unas birras al bar de la esquina. Tienen bocas gratis. | Vamos a tomar unas cervezas al bar de la esquina. Tienen tapas gratis. | Chodźmy na piwo do baru na rogu. Mają darmowe przekąski.
@@ -535,9 +535,9 @@ Es que fíjese que… | Es que verá… | Bo wie Pan/Pani… | neutral | Es que 
 Qué pereza | Qué flojera | Nie chce mi się | coloquial | Qué pereza levantarme temprano. | | 🥱 | |
 Estar de malas | Tener mala suerte, estar de mal humor | Mieć pecha / zły dzień | neutral | Hoy estoy de malas, todo me sale mal. | | 🌧️ | |
 ¡Qué asco! | ¡Qué asco! | Fuj! | neutral | ¡Qué asco, una cucaracha! | | 🤢 | |
-¡Puta, mae! | ¡Joder, tío! | Kurwa, stary! | vulgar | ¡Puta, mae, se me olvidaron las llaves! | Exclamación de sorpresa o fastidio muy frecuente; no apunta a nadie. Mejor reconocerla que usarla delante de la suegra. | 😱 | |
-Hijueputa (exclamación) | ¡Mierda! / ¡joder! | Kurwa mać! | vulgar | Hijueputa, qué susto me dio. | | 🤬 | |
-¡Qué mierda! | ¡Qué porquería! | Co za gówno! | vulgar | Qué mierda de servicio. | | 💩 | |
+¡Qué barbaridad! | ¡Qué exageración! / ¡increíble! | Niesamowite! / Co za przesada! | neutral | ¡Qué barbaridad, cuánta gente hay en la feria! | | 😮 | |
+¡Diay, qué varas! | ¡Qué cosas pasan! | Co za historia! | coloquial | Se le cayó el celular al río. ¡Diay, qué varas! | «Vara» = cosa, asunto. | 🙃 | | dudoso
+Estar hasta la coronilla | Estar harto | Mieć czegoś po dziurki w nosie | neutral | Estoy hasta la coronilla de la presa todos los días. | | 😫 | |
 > Yo | ¡Qué salado! Se me fue el bus y llueve. | ¡Qué mala suerte! Perdí el autobús y llueve. | Ale pech! Uciekł mi autobus, a do tego pada.
 > María | Diay, ¿qué le vamos a hacer? ¿Cómo está? | Bueno, qué se le va a hacer. ¿Cómo estás? | No, trudno. Jak się masz?
 > Yo | Ahí vamos. Estoy hecha leña y la jefa anda enchilada. | Tirando. Estoy agotada y la jefa está enojada. | Jakoś leci. Jestem wykończona, a szefowa jest wkurzona.

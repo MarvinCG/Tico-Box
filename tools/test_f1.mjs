@@ -1,4 +1,4 @@
-// Pruebas de la Fase 1: el contenido real cargado en web/data.js, el ajuste para ocultar lo vulgar y un recorrido por todas las situaciones.
+// Pruebas de la Fase 1: el contenido real cargado en web/data.js (sin contenido vulgar) y un recorrido por todas las situaciones.
 // Uso: cd tools && node test_f1.mjs     (levanta su propio servidor local en el puerto 8767)
 import { chromium } from 'playwright';
 import { spawn } from 'node:child_process';
@@ -20,14 +20,14 @@ ok(SITS.length >= 12 && SITS.length <= 15, `situaciones: ${SITS.length} (12–15
 ok(ENTRIES.length >= 350 && ENTRIES.length <= 450, `entradas: ${ENTRIES.length} (350–450)`);
 ok(ENTRIES.every((e, i) => e.i === i && e.vk === 'e' + i), 'IDs posicionales y claves e<ID>');
 ok(ENTRIES.every(e => e.tx && e.ne && e.pl), 'toda entrada trae tico, neutro y polaco');
-ok(ENTRIES.every(e => ['F', 'N', 'I', 'C', 'V'].includes(e.r)), 'registro válido en todas');
+ok(ENTRIES.every(e => ['F', 'N', 'I', 'C'].includes(e.r)), 'registro válido en todas (sin vulgar)');
 ok(ENTRIES.every(e => e.p), 'toda entrada trae emoji');
 ok(SITS.every(s => s.dl.length >= 5), 'cada situación trae un diálogo (≥ 5 líneas)');
 ok(SITS.every((s, k) => ENTRIES.filter(e => e.s === k).length >= 20), 'cada situación trae al menos 20 entradas');
 ok(new Set(SITS.flatMap(s => s.dl.map(l => l.vk))).size === SITS.reduce((a, s) => a + s.dl.length, 0), 'claves de diálogo únicas');
 const dud = ENTRIES.filter(e => e.du).length, vul = ENTRIES.filter(e => e.r === 'V').length;
 console.log(`  · ${dud} entradas «dudoso», ${vul} vulgares`);
-ok(dud > 0 && vul > 0, 'hay entradas «dudoso» y vulgares marcadas');
+ok(dud > 0 && vul === 0, 'hay entradas «dudoso» y ninguna vulgar');
 const IDS = JSON.parse(readFileSync(join(ROOT, 'tools/ids.json'), 'utf8'));
 ok(ENTRIES.length >= IDS.length && IDS.every((tx, i) => ENTRIES[i].tx === tx), `IDs estables: las ${IDS.length} entradas publicadas siguen en su lugar`);
 
@@ -71,25 +71,15 @@ async function device(name, vp) {
   await ctx.close();
 }
 
-/* ---- 3. ocultar lo vulgar */
+/* ---- 3. sin contenido vulgar ni ajuste para ocultarlo */
 {
-  const { ctx, p } = await device('vulgar', { width: 1280, height: 800 });
+  const { ctx, p } = await device('sin-vulgar', { width: 1280, height: 800 });
   await p.click('[data-a="lang"][data-v="pl"]');
   await p.click('[data-a="tab"][data-k="words"]');
-  const count = () => p.evaluate(() => document.querySelectorAll('#wres .wrow').length);
-  const all = await count();
-  await p.fill('#q', 'malparido'); await p.waitForTimeout(50);
-  ok(await count() === 1, 'búsqueda encuentra una entrada vulgar');
+  for (const w of ['malparido', 'hijueputa', 'mierda', 'agüevado']) { await p.fill('#q', w); await p.waitForTimeout(30); if (await p.evaluate(() => document.querySelectorAll('#wres .wrow').length)) errs.push('aparece ' + w); }
+  ok(true, 'ninguna palabra vulgar aparece en la búsqueda');
   await p.click('[data-a="tab"][data-k="me"]');
-  ok((await p.textContent('main')).includes('Ukryj wulgarne zwroty'), 'ajuste visible en polaco');
-  await p.click('[data-a="tog"][data-k="hideV"]');
-  await p.click('[data-a="tab"][data-k="words"]');
-  await p.fill('#q', 'malparido'); await p.waitForTimeout(50);
-  ok(await count() === 0, 'con el ajuste, lo vulgar no aparece');
-  await p.fill('#q', ''); await p.evaluate(() => document.querySelector('#q').dispatchEvent(new Event('input', { bubbles: true })));
-  ok(await count() === Math.min(120, all) || (await count()) <= all, 'la lista sigue funcionando');
-  await p.reload(); await p.waitForTimeout(200);
-  ok(await p.evaluate(() => window.__tb.S().cfg.hideV === true), 'el ajuste se conserva al recargar');
+  ok(!(await p.textContent('main')).match(/wulgar|vulgar/i) && !(await p.isVisible('[data-a="tog"]')), 'sin ajuste de vulgares en Progreso');
   await p.screenshot({ path: join(ROOT, 'shots/f1_dex_pl.png') });
   await ctx.close();
 }
