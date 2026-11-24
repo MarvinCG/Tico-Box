@@ -80,6 +80,15 @@ for n, ln in enumerate(open(SRC, encoding='utf-8').read().splitlines(), 1):
     if st: e['du'] = 1
     entries.append(e)
 
+# IDs estables: nunca se borran entradas. tools/ids.json guarda el texto tico de cada ID publicado.
+IDS = ROOT + '/tools/ids.json'
+prev = json.load(open(IDS, encoding='utf-8')) if os.path.exists(IDS) else []
+if len(entries) < len(prev):
+    errors.append(f'hay {len(entries)} entradas pero ya se publicaron {len(prev)}: nunca borrar entradas, reemplazarlas en su lugar')
+changed = [i for i, tx in enumerate(prev) if i < len(entries) and entries[i]['tx'] != tx]
+if changed:
+    print(f'Aviso: cambió el texto tico de {len(changed)} IDs (reemplazo en el mismo lugar): {changed[:20]}')
+
 if errors:
     sys.exit('Errores en content.txt:\n  ' + '\n  '.join(errors))
 
@@ -90,4 +99,5 @@ js = lambda o: json.dumps(o, ensure_ascii=False, separators=(',', ':'))
 with open(OUT + '/data.js', 'w', encoding='utf-8') as fh:
     fh.write('/* Generado por tools/prep.py desde tools/content.txt. No editar a mano. */\n')
     fh.write(f'window.SITS={js(sits)};\nwindow.ENTRIES={js(entries)};\n')
+json.dump([e['tx'] for e in entries], open(IDS, 'w', encoding='utf-8'), ensure_ascii=False, indent=0)
 print(f'data.js: {len(sits)} situaciones, {len(entries)} entradas, {sum(len(s["dl"]) for s in sits)} líneas de diálogo · {len(used)} emojis')

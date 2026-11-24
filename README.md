@@ -45,6 +45,9 @@ La fuente es `tools/content.txt` (formato descrito al inicio del archivo). Cada 
 - El ID de cada entrada es su posición: **nunca se borran ni se reordenan entradas**, se reemplazan en el mismo lugar. Las entradas del tutor usan IDs desde 5000.
 - Las traducciones al polaco quedan «por revisar» hasta que la estudiante las corrige.
 - Lo que no esté validado como uso costarricense va marcado «dudoso».
+- `tools/ids.json` guarda el texto tico de cada ID publicado: `prep.py` falla si alguna vez hay menos entradas que las publicadas y avisa de los IDs cuyo texto cambió.
+
+Contenido actual (F1): 15 situaciones, 391 entradas y un diálogo por situación. En **Progreso › Ajustes** se pueden ocultar las frases vulgares.
 
 ## Samsung DeX, tablets y PC
 
@@ -67,15 +70,16 @@ web/              la app (HTML/CSS/JS sin frameworks)
   e/              emojis Twemoji locales (CC-BY 4.0) · icons/ íconos de la PWA
 tools/
   content.txt     fuente del contenido
-  prep.py         genera web/data.js y copia los emojis usados
+  prep.py         genera web/data.js y copia los emojis usados · ids.json: registro de IDs publicados
   icon.py         genera los íconos de la PWA (Pillow + fuente DejaVu)
   test_f0.mjs     pruebas con Playwright: carga, es/pl, sin conexión, sin voz sintética y prueba monkey
+  test_f1.mjs     integridad del contenido, recorrido por todas las situaciones y fichas, ajuste de vulgares
 ```
 
 ```bash
 cd tools && npm i            # Twemoji y Playwright
 python3 prep.py              # regenerar web/data.js y web/e/
-node test_f0.mjs             # pruebas (levanta su propio servidor en el puerto 8766)
+npm test                     # pruebas F0 y F1 (levantan su propio servidor local)
 cd ../web && python3 -m http.server 8765   # probar en http://localhost:8765
 ```
 

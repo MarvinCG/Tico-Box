@@ -35,7 +35,7 @@ const FIX = (() => {
 const br = await chromium.launch();
 async function device(name, vp, opts = {}) {
   const ctx = await br.newContext({ viewport: vp, hasTouch: vp.width < 800, serviceWorkers: opts.sw ? 'allow' : 'block' });
-  if (opts.fixture) await ctx.route('**/data.js', r => r.fulfill({ status: 200, contentType: 'application/javascript', body: FIX }));
+  if (opts.fixture || opts.empty) await ctx.route('**/data.js', r => r.fulfill({ status: 200, contentType: 'application/javascript', body: opts.empty ? 'window.SITS=[];window.ENTRIES=[];' : FIX }));
   const p = await ctx.newPage();
   p.on('pageerror', e => errs.push(name + ': ' + e.message));
   p.on('console', m => { if (m.type() === 'error' && !/Failed to load resource/.test(m.text())) errs.push(name + ' consola: ' + m.text()); });
@@ -51,7 +51,7 @@ const txt = (p, s) => p.evaluate(s => [...document.querySelectorAll(s)].map(e =>
 
 /* ---- 2. carga e idiomas */
 {
-  const { ctx, p } = await device('carga', { width: 412, height: 860 });
+  const { ctx, p } = await device('carga', { width: 412, height: 860 }, { empty: true });
   ok(await p.isVisible('[data-a="lang"][data-v="es"]'), 'bienvenida con elección de idioma');
   await p.click('[data-a="lang"][data-v="es"]');
   ok(JSON.stringify(await txt(p, 'nav button span')) === JSON.stringify(['Hoy', 'Situaciones', 'Frases', 'Progreso']), 'navegación en español');

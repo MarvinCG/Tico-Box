@@ -20,7 +20,7 @@ es: {
  r_F: 'formal', r_N: 'neutral', r_I: 'informal', r_C: 'coloquial', r_V: 'vulgar',
  fTico: 'Tico', fNeu: 'Español neutro', fPl: 'Polaco', fEj: 'Ejemplo', fNote: 'Nota cultural', fZone: 'Zona', fReg: 'Registro',
  noVoice: 'sin voz todavía', plRev: 'polaco por revisar', dudoso: 'dudoso',
- settings: 'Ajustes', ui: 'Idioma de la app',
+ settings: 'Ajustes', ui: 'Idioma de la app', hideV: 'Ocultar las frases vulgares', hideVSub: 'Las frases marcadas como vulgares dejan de aparecer en toda la app.', sitToday: 'Situación del día', fDay: 'Frase del día', open: 'Abrir',
  inst: 'Instalar la app', instSub: 'Tico Box es una web app: la instalas una vez y se actualiza sola. Funciona sin internet.', instBtn: 'Instalar Tico Box',
  instIOS: 'En iPad / iPhone: en Safari toca Compartir ⬆️ y luego «Añadir a pantalla de inicio».', instOther: 'En Chrome o Edge: abre el menú ⋮ y elige «Instalar app» (o «Agregar a la pantalla principal»).',
  backup: 'Copia de seguridad', export: 'Exportar progreso', import: 'Importar progreso', importPh: 'Pega aquí tu copia de seguridad', importGo: 'Importar', importBad: 'No se pudo leer esa copia.', importOk: 'Progreso restaurado.',
@@ -40,7 +40,7 @@ pl: {
  r_F: 'formalny', r_N: 'neutralny', r_I: 'nieformalny', r_C: 'potoczny', r_V: 'wulgarny',
  fTico: 'Po kostarykańsku', fNeu: 'Neutralny hiszpański', fPl: 'Po polsku', fEj: 'Przykład', fNote: 'Uwaga kulturowa', fZone: 'Region', fReg: 'Rejestr',
  noVoice: 'jeszcze bez nagrania', plRev: 'polski do sprawdzenia', dudoso: 'niepewne',
- settings: 'Ustawienia', ui: 'Język aplikacji',
+ settings: 'Ustawienia', ui: 'Język aplikacji', hideV: 'Ukryj wulgarne zwroty', hideVSub: 'Zwroty oznaczone jako wulgarne przestają się pojawiać w całej aplikacji.', sitToday: 'Sytuacja dnia', fDay: 'Zwrot dnia', open: 'Otwórz',
  inst: 'Zainstaluj aplikację', instSub: 'Tico Box to aplikacja webowa: instalujesz ją raz, a aktualizuje się sama. Działa bez internetu.', instBtn: 'Zainstaluj Tico Box',
  instIOS: 'Na iPadzie / iPhonie: w Safari dotknij Udostępnij ⬆️, a potem „Do ekranu początkowego”.', instOther: 'W Chrome lub Edge: otwórz menu ⋮ i wybierz „Zainstaluj aplikację” (lub „Dodaj do ekranu głównego”).',
  backup: 'Kopia zapasowa', export: 'Eksportuj postępy', import: 'Importuj postępy', importPh: 'Wklej tu kopię zapasową', importGo: 'Importuj', importBad: 'Nie udało się odczytać kopii.', importOk: 'Postępy przywrócone.',
@@ -56,7 +56,7 @@ const t = (k, v) => { let s = (T[S.cfg.ui] || T.es)[k]; if (s == null) s = T.es[
 /* ------------------------------------------------------------ estado */
 const KEY = 'ticobox.v1';
 const newDev = () => 'd' + Date.now().toString(36) + Math.random().toString(36).slice(2, 7);
-const blank = () => ({ v: 1, dev: newDev(), cards: {}, log: {}, hid: {}, ed: {}, cfgT: 0, resetAt: 0, cfg: { ui: 'es', ok: false } });
+const blank = () => ({ v: 1, dev: newDev(), cards: {}, log: {}, hid: {}, ed: {}, cfgT: 0, resetAt: 0, cfg: { ui: 'es', ok: false, hideV: false } });
 const store = {
   get() { try { const s = localStorage.getItem(KEY); if (s) return JSON.parse(s); } catch (e) {} return null; },
   set(o) { try { localStorage.setItem(KEY, JSON.stringify(o)); } catch (e) {} }
@@ -78,7 +78,7 @@ const sTitle = s => S.cfg.ui === 'pl' ? (s.pl || s.es) : s.es;
 const sOther = s => S.cfg.ui === 'pl' ? s.es : (s.pl || '');
 const sDesc = s => S.cfg.ui === 'pl' ? (s.dp || s.ds) : s.ds;
 const regChip = e => e.r ? `<em class="rg ${e.r}">${t('r_' + e.r)}</em>` : '';
-const isHid = e => { const h = S.hid[e.vk]; return !!(h && h.h); };
+const isHid = e => { if (S.cfg.hideV && e.r === 'V') return true; const h = S.hid[e.vk]; return !!(h && h.h); };
 const live = () => E.filter(e => e && !isHid(e));
 const ICO = {
   today: '<svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7v9a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></svg>',
@@ -129,8 +129,9 @@ function vToday() {
   const L = live();
   const hero = `<div class="card hero"><h2>${t('today')}</h2><div class="big">${t('hello')}</div><p>${t('heroSub')}</p>${L.length ? `<p style="margin:0"><b>${t('heroStat', { n: L.length, s: SITS.length })}</b></p>` : ''}</div>`;
   if (!L.length) return hero + `<div class="card"><div class="empty"><div style="font-size:42px">📦</div><b>${t('emptyT')}</b><p class="small">${t('emptySub')}</p></div></div>`;
-  const e = L[today() % L.length];
-  return hero + `<div class="card"><h2>${t('fTico')}</h2>${erow(e)}</div>`;
+  const d = today(), e = L[(d * 37) % L.length], sk = d % SITS.length, s = SITS[sk];
+  const sit = s ? `<div class="card"><h2>${t('sitToday')}</h2><button class="wrow" style="border:0;padding:0" data-a="sitopen" data-s="${sk}"><img src="e/${s.ic}.svg" width="44" height="44" alt=""><div class="t"><b style="font-size:18px">${esc(sTitle(s))}</b><span class="gl">${esc(sOther(s))}</span></div><span class="tag">${t('open')}</span></button></div>` : '';
+  return hero + `<div class="card"><h2>${t('fDay')}</h2>${erow(e)}</div>` + sit;
 }
 const erow = e => `<button class="wrow" data-a="entry" data-i="${e.i}">${picHTML(e, 'sm')}<div class="t"><b class="tico">${esc(e.tx)}</b><span class="gl neu">${esc(S.cfg.ui === 'pl' && e.pl ? e.pl : e.ne)}${regChip(e)}</span></div>${e.du ? '<span class="tag du">❓</span>' : ''}</button>`;
 function vSits() {
@@ -162,6 +163,7 @@ function vMe() {
   const seg = (key, opts) => `<div class="seg">${opts.map(([v, l]) => `<button class="${String(S.cfg[key]) === String(v) ? 'on' : ''}" data-a="cfg" data-k="${key}" data-v="${v}">${l}</button>`).join('')}</div>`;
   return `<div class="card"><h2>${t('settings')}</h2>
    <div class="srow"><div class="l">${t('ui')}</div>${seg('ui', [['es', 'Español'], ['pl', 'Polski']])}</div>
+   <div class="srow"><div class="l">${t('hideV')}<small>${t('hideVSub')}</small></div><button class="sw ${S.cfg.hideV ? 'on' : ''}" data-a="tog" data-k="hideV" aria-label="${esc(t('hideV'))}"></button></div>
    <div class="srow"><div class="l small">${t('keys')}</div></div></div>
   ${installCard()}
   <div class="card"><h2>${t('backup')}</h2><div class="btns two"><button class="btn s sm" data-a="export">${t('export')}</button><button class="btn s sm" data-a="import">${t('import')}</button></div>
@@ -209,6 +211,8 @@ const A = {
   entry: d => { V.sheet = { k: 'entry', i: Number(d.i) }; render(); },
   close: () => { V.sheet = null; render(); },
   cfg: d => { if (d.k !== 'ui') return; S.cfg.ui = d.v === 'pl' ? 'pl' : 'es'; S.cfgT = Date.now(); save(); render(); },
+  tog: d => { if (d.k !== 'hideV') return; S.cfg.hideV = !S.cfg.hideV; S.cfgT = Date.now(); save(); render(); },
+  sitopen: d => { V.tab = 'sit'; V.sit = Number(d.s); V.sheet = null; views[vkey()] = 0; render(); },
   lang: d => { S.cfg.ui = d.v === 'pl' ? 'pl' : 'es'; S.cfg.ok = true; S.cfgT = Date.now(); save(); V.sheet = null; render(); },
   export: () => copyText(JSON.stringify(S)),
   import: () => { V.sheet = { k: 'import' }; render(); },
